@@ -72,18 +72,6 @@ app.get("/check-trait-guess/:guess", async (req, res) => {
     }
 });
 
-app.get("/check-champion-guess/:championId", async (req, res) => {
-    if(championGuessChampion.id === req.params.championId){
-        res.json({
-            correct: true
-        });
-    }else{
-        res.json({
-            correct: false
-        }); 
-    }
-});
-
 app.get("/check-champion-guess-attr/:championId/:attr", async (req, res) => {
     const userGuessedChampion = allChampions.find(c => c.id === req.params.championId);
 
@@ -97,6 +85,7 @@ app.get("/check-champion-guess-attr/:championId/:attr", async (req, res) => {
             searchValue.forEach(trait => {
                 if(userGuessValue.includes(trait)) matchState = "some";
             })
+            if(JSON.stringify(searchValue) === JSON.stringify(userGuessValue)) matchState = "exact";
             return res.json(matchState);
         }
         else{
