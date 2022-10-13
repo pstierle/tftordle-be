@@ -7,7 +7,7 @@ const port = 8080;
 var fs = require("fs");
 const isDevelopment = process.env.NODE_ENV === "DEV"
 const devUrl = "http://localhost:8080";
-const prodUrl = "https://tftordle-9wpzx.ondigitalocean.app"
+const prodUrl = "https://oyster-app-jqjom.ondigitalocean.app"
 const hostUrl = isDevelopment ? devUrl : prodUrl;
 
 var corsOptions = {
