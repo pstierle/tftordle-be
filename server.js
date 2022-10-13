@@ -41,13 +41,13 @@ app.get("/champion-guess-champion", async (req, res) => {
     return res.json(championGuessChampion);
 });
 
-app.get("/same-trait-clue", async (req, res) => {
+app.get("/trait-guess-same-trait-clue", async (req, res) => {
     const withInSet = allChampions.filter(c => c.set === traitGuessChampion.set);
     const withSameTrait = withInSet.filter(c => c.traits.some(t => traitGuessChampion.traits.includes(t)))
     res.json(withSameTrait.map(c => c.name));
 });
 
-app.get("/stat-clue", async (req, res) => {
+app.get("/trait-guess-stat-clue", async (req, res) => {
     res.json({
         cost: traitGuessChampion.cost,
         oneTraitStartsWith: traitGuessChampion.traits[Math.floor(Math.random() * traitGuessChampion.traits.length)].charAt(0),
@@ -55,7 +55,7 @@ app.get("/stat-clue", async (req, res) => {
     });
 });
 
-app.get("/check-guess/:guess", async (req, res) => {
+app.get("/check-trait-guess/:guess", async (req, res) => {
     const guess = allTraits.find(t => t.label === req.params.guess);
 
     if (traitGuessChampion.traits.find((trait) => trait.toLowerCase() === req.params.guess.toLowerCase())) {
@@ -69,6 +69,47 @@ app.get("/check-guess/:guess", async (req, res) => {
             correct: false,
             guess: guess
         });
+    }
+});
+
+app.get("/check-champion-guess/:championId", async (req, res) => {
+    if(championGuessChampion.id === req.params.championId){
+        res.json({
+            correct: true
+        });
+    }else{
+        res.json({
+            correct: false
+        }); 
+    }
+});
+
+app.get("/check-champion-guess-attr/:championId/:attr", async (req, res) => {
+    const userGuessedChampion = allChampions.find(c => c.id === req.params.championId);
+
+    if(!userGuessedChampion) return res.json("err");
+    else{
+        const searchValue = championGuessChampion[req.params.attr];
+        const userGuessValue = userGuessedChampion[req.params.attr];
+
+        if(req.params.attr === "traits"){
+            let matchState = "wrong";
+            searchValue.forEach(trait => {
+                if(userGuessValue.includes(trait)) matchState = "some";
+            })
+            return res.json(matchState);
+        }
+        else{
+            if(userGuessValue === searchValue){
+                return res.json("exact");
+            }
+            if(userGuessValue > searchValue){
+                return res.json("lower");
+            }
+            if(userGuessValue < searchValue){
+                return res.json("higher");
+            }
+        }
     }
 });
 
@@ -91,10 +132,21 @@ app.get("/query-traits/:query", async (req, res) => {
 });
 
 app.get("/query-champions/:query", async (req, res) => {
-    const results = allChampions.filter((champion) =>
-        champion.name.toLowerCase().includes(req.params.query.toLowerCase())
+    const startsWith = allChampions.filter((champion) =>
+        champion.name.toLowerCase()[0] === req.params.query.toLowerCase()[0]
     );
-    res.json(results);
+
+    const results = startsWith.filter((champion) => champion.name.toLowerCase().includes(req.params.query.toLowerCase())).slice(0, 10);
+
+    res.json(results.sort((x, y) => {
+        if (x.label > y.label) {
+            return 1;
+        }
+        if (x.label < y.label) {
+            return -1;
+        }
+        return 0;
+    }));
 });
 
 app.get("/reset-guesses-timer", async (req, res) => {
@@ -148,15 +200,17 @@ app.listen(port, async () => {
                         trait.replace("_", "").replace(/[0-9]/g, "").replace("Set", "")
                     );
 
+                    const name = champion.name ?? champion.champion;
+                    const id = name + set;
+
                     const parsed = {
-                        id: champion.championId ?? champion.champion,
-                        name: champion.name ?? champion.champion,
+                        id: id,
+                        name: name,
                         traits: parsedTraits,
                         set: set,
                         traitCount: parsedTraits.length,
                         imagePath: `${hostUrl}/${set}/champions/${champion.name.toLowerCase().replace("'", "").replace("&", "").replace(" ", "")}.png`,
                         cost: champion.cost,
-                        firstApperance: 0
                     };
 
                     parsed.traits.forEach((trait) => {
