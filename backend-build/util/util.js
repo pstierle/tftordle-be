@@ -37,6 +37,8 @@ const generateRandomGuesses = () => __awaiter(void 0, void 0, void 0, function* 
         raw: true,
     })
         .then((champions) => {
+        if (champions.length === 0)
+            return;
         models_1.ChampionGuessChampion.create({
             champion_id: champions[0].id,
         });
@@ -85,7 +87,7 @@ exports.championWithImagePath = championWithImagePath;
 const importData = () => __awaiter(void 0, void 0, void 0, function* () {
     console.log("Importing Data.");
     yield Promise.all(consts_1.sets.map((set) => __awaiter(void 0, void 0, void 0, function* () {
-        const data = yield promises_1.default.readFile(__dirname + `/../sets/${set}/champions.json`, "utf-8");
+        const data = yield promises_1.default.readFile(consts_1.publicFolder + `/sets/${set}/champions.json`, "utf-8");
         const champions = JSON.parse(data);
         yield Promise.all(champions.map((champion) => __awaiter(void 0, void 0, void 0, function* () {
             const parsedChampion = {

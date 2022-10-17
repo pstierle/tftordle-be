@@ -6,7 +6,7 @@ import {
   TraitGuessChampion,
 } from "../database/models/models";
 import { database } from "../database/connection";
-import { devUrl, prodUrl, sets } from "../consts";
+import { devUrl, prodUrl, sets, publicFolder } from "../consts";
 
 import fs from "fs/promises";
 
@@ -30,6 +30,8 @@ const generateRandomGuesses = async () => {
       raw: true,
     })
     .then((champions: any[]) => {
+      if(champions.length === 0) return;
+
       ChampionGuessChampion.create({
         champion_id: champions[0].id,
       });
@@ -90,7 +92,7 @@ export const importData = async () => {
   await Promise.all(
     sets.map(async (set) => {
       const data = await fs.readFile(
-        __dirname + `/../sets/${set}/champions.json`,
+        publicFolder + `/sets/${set}/champions.json`,
         "utf-8"
       );
       const champions = JSON.parse(data);

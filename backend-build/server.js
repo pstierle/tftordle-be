@@ -55,18 +55,19 @@ app.get("/test", (req, res) => {
 //   res.json(timer);
 // });
 try {
+    const doImportData = process.env.IMPORT_DATA === "TRUE";
     connection_1.database.authenticate();
     models_1.Trait.sync({
-        force: process.env.IMPORT_DATA === "TRUE",
+        force: doImportData,
     });
     models_1.Champion.sync({
-        force: process.env.IMPORT_DATA === "TRUE",
+        force: doImportData,
     });
     models_1.ChampionGuessChampion.sync();
     models_1.TraitGuessChampion.sync();
     connection_1.database.sync().then(() => __awaiter(void 0, void 0, void 0, function* () {
         console.log("Database connection successfull.");
-        if (process.env.IMPORT_DATA === "TRUE") {
+        if (doImportData) {
             yield (0, util_1.importData)();
         }
         app.listen(port, () => {

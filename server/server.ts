@@ -60,20 +60,23 @@ app.get("/test", (req, res) => {
 // });
 
 try {
+  const doImportData = process.env.IMPORT_DATA === "TRUE"; 
+
   database.authenticate();
+
   Trait.sync({
-    force: process.env.IMPORT_DATA === "TRUE",
+    force: doImportData,
   });
   Champion.sync({
-    force: process.env.IMPORT_DATA === "TRUE",
+    force: doImportData,
   });
 
   ChampionGuessChampion.sync();
   TraitGuessChampion.sync();
 
   database.sync().then(async () => {
-    console.log("Database connection successfull.");
-    if (process.env.IMPORT_DATA === "TRUE") {
+  console.log("Database connection successfull.");
+    if (doImportData) {
       await importData();
     }
 
