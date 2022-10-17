@@ -8,14 +8,18 @@ import { championWithImagePath } from "../util/util";
 import { Op } from "sequelize";
 
 const getGuessChampion = async () => {
-  const guessChampion: any = await ChampionGuessChampion.findOne({
+  const guessChampion: any = await ChampionGuessChampion.findAll({
     order: [["createdAt", "DESC"]],
+    limit: 1,
     raw: true,
   });
 
-  const champion: any = await Champion.findByPk(guessChampion.id, {
+  const champion: any = await Champion.findByPk(guessChampion[0].champion_id, {
     raw: true,
   });
+
+  console.log("Championguess Champion: ", champion)
+
 
   return champion;
 };

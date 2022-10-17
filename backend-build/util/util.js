@@ -38,6 +38,7 @@ const generateRandomGuesses = () => __awaiter(void 0, void 0, void 0, function* 
         raw: true,
     })
         .then((champions) => {
+        console.log(champions);
         if (champions.length === 0)
             return;
         models_1.ChampionGuessChampion.create({

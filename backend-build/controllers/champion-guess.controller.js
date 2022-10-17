@@ -14,13 +14,15 @@ const models_1 = require("./../database/models/models");
 const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
-    const guessChampion = yield models_1.ChampionGuessChampion.findOne({
+    const guessChampion = yield models_1.ChampionGuessChampion.findAll({
         order: [["createdAt", "DESC"]],
+        limit: 1,
         raw: true,
     });
-    const champion = yield models_1.Champion.findByPk(guessChampion.id, {
+    const champion = yield models_1.Champion.findByPk(guessChampion[0].champion_id, {
         raw: true,
     });
+    console.log("Championguess Champion: ", champion);
     return champion;
 });
 const queryChampions = (req, res) => __awaiter(void 0, void 0, void 0, function* () {

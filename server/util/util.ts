@@ -30,6 +30,8 @@ export const generateRandomGuesses = async () => {
       raw: true,
     })
     .then((champions: any[]) => {
+      console.log(champions)
+
       if(champions.length === 0) return;
 
       ChampionGuessChampion.create({
