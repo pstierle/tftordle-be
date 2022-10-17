@@ -36,7 +36,7 @@ const generateRandomGuesses = async () => {
         champion_id: champions[0].id,
       });
       TraitGuessChampion.create({
-        champion_id: champions[0].id,
+        champion_id: champions[1].id,
       });
     })
     .catch((error) => {
