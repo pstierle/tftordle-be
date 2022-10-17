@@ -19,11 +19,11 @@ export const secondsUntilMidnight = () => {
   return (midnight.getTime() - new Date().getTime()) / 1000;
 };
 
-const isDevelopment = process.env.NODE_ENV === "DEV";
-const baseIntervall = isDevelopment ? 600 : 86400;
-let timer = isDevelopment ? 600 : secondsUntilMidnight();
+export const isDevelopment = () => {
+  return process.env.NODE_ENV === "DEV";
+}
 
-const generateRandomGuesses = async () => {
+export const generateRandomGuesses = async () => {
   await database
     .query("SELECT * FROM `Champions` ORDER BY random() LIMIT 2", {
       type: QueryTypes.SELECT,
@@ -42,18 +42,6 @@ const generateRandomGuesses = async () => {
     .catch((error) => {
       throw error;
     });
-};
-
-export const resetGuessesIntervall = async () => {
-  if (!isDevelopment) await generateRandomGuesses();
-
-  setInterval(async () => {
-    timer -= 1;
-    if (timer === 0) {
-      timer = baseIntervall;
-      await generateRandomGuesses();
-    }
-  }, 1000);
 };
 
 const getChampionImagePath = (name: string, set: number) => {

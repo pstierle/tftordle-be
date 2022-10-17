@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.resetGuessesIntervall = exports.secondsUntilMidnight = void 0;
+exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.generateRandomGuesses = exports.isDevelopment = exports.secondsUntilMidnight = void 0;
 const sequelize_1 = require("sequelize");
 const models_1 = require("../database/models/models");
 const connection_1 = require("../database/connection");
@@ -27,9 +27,10 @@ const secondsUntilMidnight = () => {
     return (midnight.getTime() - new Date().getTime()) / 1000;
 };
 exports.secondsUntilMidnight = secondsUntilMidnight;
-const isDevelopment = process.env.NODE_ENV === "DEV";
-const baseIntervall = isDevelopment ? 600 : 86400;
-let timer = isDevelopment ? 600 : (0, exports.secondsUntilMidnight)();
+const isDevelopment = () => {
+    return process.env.NODE_ENV === "DEV";
+};
+exports.isDevelopment = isDevelopment;
 const generateRandomGuesses = () => __awaiter(void 0, void 0, void 0, function* () {
     yield connection_1.database
         .query("SELECT * FROM `Champions` ORDER BY random() LIMIT 2", {
@@ -43,25 +44,14 @@ const generateRandomGuesses = () => __awaiter(void 0, void 0, void 0, function* 
             champion_id: champions[0].id,
         });
         models_1.TraitGuessChampion.create({
-            champion_id: champions[0].id,
+            champion_id: champions[1].id,
         });
     })
         .catch((error) => {
         throw error;
     });
 });
-const resetGuessesIntervall = () => __awaiter(void 0, void 0, void 0, function* () {
-    if (!isDevelopment)
-        yield generateRandomGuesses();
-    setInterval(() => __awaiter(void 0, void 0, void 0, function* () {
-        timer -= 1;
-        if (timer === 0) {
-            timer = baseIntervall;
-            yield generateRandomGuesses();
-        }
-    }), 1000);
-});
-exports.resetGuessesIntervall = resetGuessesIntervall;
+exports.generateRandomGuesses = generateRandomGuesses;
 const getChampionImagePath = (name, set) => {
     const isDevelopment = process.env.NODE_ENV === "DEV";
     const hostUrl = isDevelopment ? consts_1.devUrl : consts_1.prodUrl;

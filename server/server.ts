@@ -8,16 +8,16 @@ import {
   ChampionGuessChampion,
   TraitGuessChampion,
 } from "./database/models/models";
-import { resetGuessesIntervall, importData } from "./util/util";
+import { generateRandomGuesses, importData, isDevelopment, secondsUntilMidnight } from "./util/util";
 
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import EventEmitter from "events";
 
 const app = express();
 const port = 8080;
-const Stream = new EventEmitter();
+
+let clients : any = [];
 
 dotenv.config();
 
@@ -36,28 +36,6 @@ app.use("/champion-guess", championGuessRouter);
 app.get("/", (req, res) => {
   res.sendFile(frontendFolder + "/index.html");
 });
-
-app.get("/reset-timer-event", (req, res) => {
-  res.writeHead(200, {
-    Connection: "keep-alive",
-    "Cache-Control": "no-cache",
-    "Content-Type": "text/event-stream",
-  });
-
-  Stream.on("push", (evt, data) => {
-    res.write("lololol");
-  });
-});
-
-app.get("/test", (req, res) => {
-  Stream.emit("push");
-  console.log("push");
-  res.json("");
-});
-
-// app.get("/reset-guesses-timer", async (req, res) => {
-//   res.json(timer);
-// });
 
 try {
   const doImportData = process.env.IMPORT_DATA === "TRUE"; 
@@ -88,3 +66,30 @@ try {
 } catch (error) {
   console.log("Unable to connect to the database.");
 }
+
+let timer = isDevelopment() ? 600 : secondsUntilMidnight();
+const baseIntervall = isDevelopment() ? 600 : 86400;
+
+export const resetGuessesIntervall = async () => {
+    generateRandomGuesses();
+    setInterval(async () => {
+      timer -= 1;
+      clients.forEach((client: any) => client.write(`data: ${timer}\n\n`))
+      if (timer === 0) {
+        timer = baseIntervall;
+        await generateRandomGuesses();
+      }
+    }, 1000);
+};
+
+
+app.get('/reset-timer-event', async(req, res) =>{
+  res.set({
+    'Cache-Control': 'no-cache',
+    'Content-Type': 'text/event-stream',
+    'Connection': 'keep-alive'
+  });
+  res.flushHeaders();
+  res.write('retry: 10000\n\n');
+  clients.push(res);
+});

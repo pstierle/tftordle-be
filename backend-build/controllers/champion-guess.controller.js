@@ -46,7 +46,6 @@ const queryChampions = (req, res) => __awaiter(void 0, void 0, void 0, function*
 exports.queryChampions = queryChampions;
 const checkGuessAttr = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const guessChampion = yield getGuessChampion();
-    console.log(guessChampion);
     const userGuessChampion = yield models_1.Champion.findByPk(req.params.id, {
         raw: true,
     });

@@ -56,7 +56,6 @@ export const checkGuessAttr = async (
   res: Response
 ): Promise<void> => {
   const guessChampion: any = await getGuessChampion();
-  console.log(guessChampion);
   const userGuessChampion: any = await Champion.findByPk(req.params.id, {
     raw: true,
   });
