@@ -75,4 +75,10 @@ exports.resetGuessesTimer = resetGuessesTimer;
 app.get("/reset-timer", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.json((0, util_1.secondsUntilMidnight)());
 }));
+app.get("/riot.txt", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.sendFile("riot.txt");
+}));
+app.get("//riot.txt", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.sendFile("riot.txt");
+}));
 //# sourceMappingURL=server.js.map

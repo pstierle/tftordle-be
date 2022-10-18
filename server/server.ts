@@ -86,3 +86,11 @@ export const resetGuessesTimer = async () => {
 app.get("/reset-timer", async (req, res) => {
   res.json(secondsUntilMidnight());
 });
+
+app.get("/riot.txt", async (req, res) => {
+  res.sendFile("riot.txt");
+});
+
+app.get("//riot.txt", async (req, res) => {
+  res.sendFile("riot.txt");
+});
