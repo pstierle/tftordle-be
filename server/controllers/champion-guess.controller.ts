@@ -7,6 +7,8 @@ import { Request, Response } from "express";
 import { championWithImagePath } from "../util/util";
 import { Op } from "sequelize";
 
+type Match = "exact" | "higher" | "lower" | "wrong" | "some";
+
 const getGuessChampion = async () => {
   const guessChampion: any = await ChampionGuessChampion.findAll({
     order: [["createdAt", "DESC"]],
@@ -18,8 +20,7 @@ const getGuessChampion = async () => {
     raw: true,
   });
 
-  console.log("Championguess Champion: ", champion)
-
+  console.log("Championguess Champion: ", champion);
 
   return champion;
 };
@@ -59,65 +60,107 @@ export const checkGuessAttr = async (
   req: Request,
   res: Response
 ): Promise<void> => {
+  const attrs = ["set", "cost", "traits"];
+
+  let setResult: {
+    attrLabel: string;
+    matchState: Match;
+    userGuessValue: any;
+  } = {
+    attrLabel: "set",
+    matchState: undefined,
+    userGuessValue: undefined,
+  };
+
+  let costResult: {
+    attrLabel: string;
+    matchState: Match;
+    userGuessValue: any;
+  } = {
+    attrLabel: "cost",
+    matchState: undefined,
+    userGuessValue: undefined,
+  };
+
+  let traitsResult: {
+    attrLabel: string;
+    matchState: Match;
+    userGuessValue: any;
+  } = {
+    attrLabel: "traits",
+    matchState: undefined,
+    userGuessValue: undefined,
+  };
+
   const guessChampion: any = await getGuessChampion();
   const userGuessChampion: any = await Champion.findByPk(req.params.id, {
     raw: true,
   });
 
-  const searchValue = (guessChampion as any)[req.params.attr];
-  const userGuessValue = (userGuessChampion as any)[req.params.attr];
+  await Promise.all(
+    attrs.map(async (attr) => {
+      const searchValue = (guessChampion as any)[attr];
+      let userGuessValue = (userGuessChampion as any)[attr];
+      let matchState: Match = "wrong";
 
-  if (req.params.attr === "traits") {
-    let matchState = "wrong";
+      if (attr === "traits") {
+        const guessChampionTraits = await Trait.findAll({
+          raw: true,
+          where: {
+            champion_id: guessChampion.id,
+          },
+        });
 
-    const guessChampionTraits = await Trait.findAll({
-      raw: true,
-      where: {
-        champion_id: guessChampion.id,
-      },
-    });
+        const userGuessChampionTraits = await Trait.findAll({
+          raw: true,
+          where: {
+            champion_id: userGuessChampion.id,
+          },
+        });
 
-    const userGuessChampionTraits = await Trait.findAll({
-      raw: true,
-      where: {
-        champion_id: userGuessChampion.id,
-      },
-    });
+        guessChampionTraits
+          .map((t: any) => t.label)
+          .forEach((trait: any) => {
+            if (
+              userGuessChampionTraits.map((t: any) => t.label).includes(trait)
+            )
+              matchState = "some";
+          });
+        if (
+          JSON.stringify(guessChampionTraits) ===
+          JSON.stringify(userGuessChampionTraits)
+        ) {
+          matchState = "exact";
+        }
+        userGuessValue = userGuessChampionTraits.map((t: any) => t.label);
+      } else {
+        if (userGuessValue === searchValue) {
+          matchState = "exact";
+        }
+        if (userGuessValue > searchValue) {
+          matchState = "lower";
+        }
+        if (userGuessValue < searchValue) {
+          matchState = "higher";
+        }
+      }
 
-    guessChampionTraits
-      .map((t: any) => t.label)
-      .forEach((trait: any) => {
-        if (userGuessChampionTraits.map((t: any) => t.label).includes(trait))
-          matchState = "some";
-      });
-    if (
-      JSON.stringify(guessChampionTraits) ===
-      JSON.stringify(userGuessChampionTraits)
-    ) {
-      matchState = "exact";
-    }
-    res.json({
-      matchState: matchState,
-      userGuessValue: userGuessChampionTraits.map((t: any) => t.label),
-    });
-  } else {
-    if (userGuessValue === searchValue) {
-      res.json({
-        matchState: "exact",
-        userGuessValue: userGuessValue,
-      });
-    }
-    if (userGuessValue > searchValue) {
-      res.json({
-        matchState: "lower",
-        userGuessValue: userGuessValue,
-      });
-    }
-    if (userGuessValue < searchValue) {
-      res.json({
-        matchState: "higher",
-        userGuessValue: userGuessValue,
-      });
-    }
-  }
+      if (attr === "set") {
+        setResult.matchState = matchState;
+        setResult.userGuessValue = userGuessValue;
+      }
+
+      if (attr === "cost") {
+        costResult.matchState = matchState;
+        costResult.userGuessValue = userGuessValue;
+      }
+
+      if (attr === "traits") {
+        traitsResult.matchState = matchState;
+        traitsResult.userGuessValue = userGuessValue;
+      }
+    })
+  );
+
+  res.json([setResult, traitsResult, costResult]);
 };

@@ -31,7 +31,7 @@ exports.ChampionGuessChampion = connection_1.database.define("ChampionGuessChamp
         primaryKey: true,
     },
     champion_id: {
-        type: sequelize_1.DataTypes.STRING,
+        type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
     },
 }, {
@@ -44,7 +44,7 @@ exports.TraitGuessChampion = connection_1.database.define("TraitGuessChampion", 
         primaryKey: true,
     },
     champion_id: {
-        type: sequelize_1.DataTypes.STRING,
+        type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
     },
 }, {

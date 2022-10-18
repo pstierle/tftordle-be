@@ -36,7 +36,7 @@ export const ChampionGuessChampion = database.define(
       primaryKey: true,
     },
     champion_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
@@ -54,7 +54,7 @@ export const TraitGuessChampion = database.define(
       primaryKey: true,
     },
     champion_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },

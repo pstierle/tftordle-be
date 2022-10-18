@@ -17,7 +17,7 @@ const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* 
     const traitGuessChampion = yield models_1.TraitGuessChampion.findAll({
         order: [["createdAt", "DESC"]],
         raw: true,
-        limit: 1
+        limit: 1,
     });
     const champion = yield models_1.Champion.findByPk(traitGuessChampion[0].champion_id, {
         raw: true,

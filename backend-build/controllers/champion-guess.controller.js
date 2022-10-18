@@ -47,61 +47,80 @@ const queryChampions = (req, res) => __awaiter(void 0, void 0, void 0, function*
 });
 exports.queryChampions = queryChampions;
 const checkGuessAttr = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const attrs = ["set", "cost", "traits"];
+    let setResult = {
+        attrLabel: "set",
+        matchState: undefined,
+        userGuessValue: undefined,
+    };
+    let costResult = {
+        attrLabel: "cost",
+        matchState: undefined,
+        userGuessValue: undefined,
+    };
+    let traitsResult = {
+        attrLabel: "traits",
+        matchState: undefined,
+        userGuessValue: undefined,
+    };
     const guessChampion = yield getGuessChampion();
     const userGuessChampion = yield models_1.Champion.findByPk(req.params.id, {
         raw: true,
     });
-    const searchValue = guessChampion[req.params.attr];
-    const userGuessValue = userGuessChampion[req.params.attr];
-    if (req.params.attr === "traits") {
+    yield Promise.all(attrs.map((attr) => __awaiter(void 0, void 0, void 0, function* () {
+        const searchValue = guessChampion[attr];
+        let userGuessValue = userGuessChampion[attr];
         let matchState = "wrong";
-        const guessChampionTraits = yield models_1.Trait.findAll({
-            raw: true,
-            where: {
-                champion_id: guessChampion.id,
-            },
-        });
-        const userGuessChampionTraits = yield models_1.Trait.findAll({
-            raw: true,
-            where: {
-                champion_id: userGuessChampion.id,
-            },
-        });
-        guessChampionTraits
-            .map((t) => t.label)
-            .forEach((trait) => {
-            if (userGuessChampionTraits.map((t) => t.label).includes(trait))
-                matchState = "some";
-        });
-        if (JSON.stringify(guessChampionTraits) ===
-            JSON.stringify(userGuessChampionTraits)) {
-            matchState = "exact";
-        }
-        res.json({
-            matchState: matchState,
-            userGuessValue: userGuessChampionTraits.map((t) => t.label),
-        });
-    }
-    else {
-        if (userGuessValue === searchValue) {
-            res.json({
-                matchState: "exact",
-                userGuessValue: userGuessValue,
+        if (attr === "traits") {
+            const guessChampionTraits = yield models_1.Trait.findAll({
+                raw: true,
+                where: {
+                    champion_id: guessChampion.id,
+                },
             });
-        }
-        if (userGuessValue > searchValue) {
-            res.json({
-                matchState: "lower",
-                userGuessValue: userGuessValue,
+            const userGuessChampionTraits = yield models_1.Trait.findAll({
+                raw: true,
+                where: {
+                    champion_id: userGuessChampion.id,
+                },
             });
-        }
-        if (userGuessValue < searchValue) {
-            res.json({
-                matchState: "higher",
-                userGuessValue: userGuessValue,
+            guessChampionTraits
+                .map((t) => t.label)
+                .forEach((trait) => {
+                if (userGuessChampionTraits.map((t) => t.label).includes(trait))
+                    matchState = "some";
             });
+            if (JSON.stringify(guessChampionTraits) ===
+                JSON.stringify(userGuessChampionTraits)) {
+                matchState = "exact";
+            }
+            userGuessValue = userGuessChampionTraits.map((t) => t.label);
         }
-    }
+        else {
+            if (userGuessValue === searchValue) {
+                matchState = "exact";
+            }
+            if (userGuessValue > searchValue) {
+                matchState = "lower";
+            }
+            if (userGuessValue < searchValue) {
+                matchState = "higher";
+            }
+        }
+        if (attr === "set") {
+            setResult.matchState = matchState;
+            setResult.userGuessValue = userGuessValue;
+        }
+        if (attr === "cost") {
+            costResult.matchState = matchState;
+            costResult.userGuessValue = userGuessValue;
+        }
+        if (attr === "traits") {
+            traitsResult.matchState = matchState;
+            traitsResult.userGuessValue = userGuessValue;
+        }
+    })));
+    res.json([setResult, traitsResult, costResult]);
 });
 exports.checkGuessAttr = checkGuessAttr;
 //# sourceMappingURL=champion-guess.controller.js.map

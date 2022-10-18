@@ -45,8 +45,12 @@ try {
     models_1.Champion.sync({
         force: doImportData,
     });
-    models_1.ChampionGuessChampion.sync();
-    models_1.TraitGuessChampion.sync();
+    models_1.ChampionGuessChampion.sync({
+        force: doImportData,
+    });
+    models_1.TraitGuessChampion.sync({
+        force: doImportData,
+    });
     connection_1.database.sync().then(() => __awaiter(void 0, void 0, void 0, function* () {
         console.log("Database connection successfull.");
         if (doImportData) {
@@ -55,6 +59,7 @@ try {
         app.listen(port, () => {
             console.log(`Server started on port: ${port}`);
             (0, exports.resetGuessesIntervall)();
+            console.log("yeet");
         });
     }));
 }
@@ -75,14 +80,14 @@ const resetGuessesIntervall = () => __awaiter(void 0, void 0, void 0, function* 
     }), 1000);
 });
 exports.resetGuessesIntervall = resetGuessesIntervall;
-app.get('/reset-timer-event', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+app.get("/reset-timer-event", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.set({
-        'Cache-Control': 'no-cache',
-        'Content-Type': 'text/event-stream',
-        'Connection': 'keep-alive'
+        "Cache-Control": "no-cache",
+        "Content-Type": "text/event-stream",
+        Connection: "keep-alive",
     });
     res.flushHeaders();
-    res.write('retry: 10000\n\n');
+    res.write("retry: 10000\n\n");
     clients.push(res);
 }));
 //# sourceMappingURL=server.js.map
