@@ -9,7 +9,7 @@ import { Op } from "sequelize";
 
 const getTraitGuessChampion = async () => {
   const traitGuessChampion: any = await TraitGuessChampion.findAll({
-    order: [["createdAt", "DESC"]],
+    order: [["created", "DESC"]],
     raw: true,
     limit: 1,
   });

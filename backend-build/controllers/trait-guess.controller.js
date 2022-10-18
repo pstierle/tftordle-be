@@ -15,7 +15,7 @@ const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
     const traitGuessChampion = yield models_1.TraitGuessChampion.findAll({
-        order: [["createdAt", "DESC"]],
+        order: [["created", "DESC"]],
         raw: true,
         limit: 1,
     });

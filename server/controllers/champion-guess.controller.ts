@@ -11,7 +11,7 @@ type Match = "exact" | "higher" | "lower" | "wrong" | "some";
 
 const getGuessChampion = async () => {
   const guessChampion: any = await ChampionGuessChampion.findAll({
-    order: [["createdAt", "DESC"]],
+    order: [["created", "DESC"]],
     limit: 1,
     raw: true,
   });
