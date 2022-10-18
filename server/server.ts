@@ -1,5 +1,5 @@
 import { championGuessRouter } from "./routes/champion-guess.router";
-import { frontendFolder, publicFolder, setsFolder } from "./consts";
+import { frontendFolder, publicFolder } from "./consts";
 import { traitGuessRouter } from "./routes/trait-guess.router";
 import { database } from "./database/connection";
 import {
@@ -11,7 +11,6 @@ import {
 import {
   generateRandomGuesses,
   importData,
-  isDevelopment,
   secondsUntilMidnight,
 } from "./util/util";
 
@@ -67,38 +66,23 @@ try {
       await importData();
     }
 
+    await resetGuessesTimer();
+
     app.listen(port, (): void => {
       console.log(`Server started on port: ${port}`);
-      resetGuessesIntervall();
-      console.log("yeet");
     });
   });
 } catch (error) {
   console.log("Unable to connect to the database.");
 }
 
-let timer = isDevelopment() ? 600 : secondsUntilMidnight();
-const baseIntervall = isDevelopment() ? 600 : 86400;
-
-export const resetGuessesIntervall = async () => {
-  generateRandomGuesses();
-  setInterval(async () => {
-    timer -= 1;
-    clients.forEach((client: any) => client.write(`data: ${timer}\n\n`));
-    if (timer === 0) {
-      timer = baseIntervall;
-      await generateRandomGuesses();
-    }
-  }, 1000);
+export const resetGuessesTimer = async () => {
+  await generateRandomGuesses();
+  setTimeout(async () => {
+    await resetGuessesTimer();
+  }, secondsUntilMidnight() * 1000);
 };
 
-app.get("/reset-timer-event", async (req, res) => {
-  res.set({
-    "Cache-Control": "no-cache",
-    "Content-Type": "text/event-stream",
-    Connection: "keep-alive",
-  });
-  res.flushHeaders();
-  res.write("retry: 10000\n\n");
-  clients.push(res);
+app.get("/reset-timer", async (req, res) => {
+  res.json(secondsUntilMidnight());
 });

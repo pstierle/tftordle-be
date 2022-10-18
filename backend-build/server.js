@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.resetGuessesIntervall = void 0;
+exports.resetGuessesTimer = void 0;
 const champion_guess_router_1 = require("./routes/champion-guess.router");
 const consts_1 = require("./consts");
 const trait_guess_router_1 = require("./routes/trait-guess.router");
@@ -56,38 +56,23 @@ try {
         if (doImportData) {
             yield (0, util_1.importData)();
         }
+        yield (0, exports.resetGuessesTimer)();
         app.listen(port, () => {
             console.log(`Server started on port: ${port}`);
-            (0, exports.resetGuessesIntervall)();
-            console.log("yeet");
         });
     }));
 }
 catch (error) {
     console.log("Unable to connect to the database.");
 }
-let timer = (0, util_1.isDevelopment)() ? 600 : (0, util_1.secondsUntilMidnight)();
-const baseIntervall = (0, util_1.isDevelopment)() ? 600 : 86400;
-const resetGuessesIntervall = () => __awaiter(void 0, void 0, void 0, function* () {
-    (0, util_1.generateRandomGuesses)();
-    setInterval(() => __awaiter(void 0, void 0, void 0, function* () {
-        timer -= 1;
-        clients.forEach((client) => client.write(`data: ${timer}\n\n`));
-        if (timer === 0) {
-            timer = baseIntervall;
-            yield (0, util_1.generateRandomGuesses)();
-        }
-    }), 1000);
+const resetGuessesTimer = () => __awaiter(void 0, void 0, void 0, function* () {
+    yield (0, util_1.generateRandomGuesses)();
+    setTimeout(() => __awaiter(void 0, void 0, void 0, function* () {
+        yield (0, exports.resetGuessesTimer)();
+    }), (0, util_1.secondsUntilMidnight)() * 1000);
 });
-exports.resetGuessesIntervall = resetGuessesIntervall;
-app.get("/reset-timer-event", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.set({
-        "Cache-Control": "no-cache",
-        "Content-Type": "text/event-stream",
-        Connection: "keep-alive",
-    });
-    res.flushHeaders();
-    res.write("retry: 10000\n\n");
-    clients.push(res);
+exports.resetGuessesTimer = resetGuessesTimer;
+app.get("/reset-timer", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.json((0, util_1.secondsUntilMidnight)());
 }));
 //# sourceMappingURL=server.js.map

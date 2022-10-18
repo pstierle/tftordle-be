@@ -21,7 +21,7 @@ export const secondsUntilMidnight = () => {
 
 export const isDevelopment = () => {
   return process.env.NODE_ENV === "DEV";
-}
+};
 
 export const generateRandomGuesses = async () => {
   await database
@@ -30,9 +30,9 @@ export const generateRandomGuesses = async () => {
       raw: true,
     })
     .then((champions: any[]) => {
-      console.log(champions)
+      console.log(champions);
 
-      if(champions.length === 0) return;
+      if (champions.length === 0) return;
 
       ChampionGuessChampion.create({
         champion_id: champions[0].id,
