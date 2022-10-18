@@ -39,9 +39,13 @@ export const ChampionGuessChampion = database.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    created: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
-    timestamps: true,
+    timestamps: false,
   }
 );
 
@@ -57,9 +61,13 @@ export const TraitGuessChampion = database.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    created: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
-    timestamps: true,
+    timestamps: false,
   }
 );
 

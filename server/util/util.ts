@@ -24,26 +24,39 @@ export const isDevelopment = () => {
 };
 
 export const generateRandomGuesses = async () => {
-  await database
-    .query("SELECT * FROM `Champions` ORDER BY random() LIMIT 2", {
-      type: QueryTypes.SELECT,
-      raw: true,
-    })
-    .then((champions: any[]) => {
-      console.log(champions);
+  const today = new Date().toLocaleDateString();
 
-      if (champions.length === 0) return;
+  const championGuessChampion = await ChampionGuessChampion.findOne({
+    where: {
+      created: today,
+    },
+  });
 
-      ChampionGuessChampion.create({
-        champion_id: champions[0].id,
+  const traitGuessChampion = await TraitGuessChampion.findOne({
+    where: {
+      created: today,
+    },
+  });
+
+  if (!championGuessChampion && !traitGuessChampion) {
+    await database
+      .query("SELECT * FROM `Champions` ORDER BY random() LIMIT 2", {
+        type: QueryTypes.SELECT,
+        raw: true,
+      })
+      .then((champions: any[]) => {
+        if (champions.length === 0) return;
+
+        ChampionGuessChampion.create({
+          champion_id: champions[0].id,
+          created: today,
+        });
+        TraitGuessChampion.create({
+          champion_id: champions[1].id,
+          created: today,
+        });
       });
-      TraitGuessChampion.create({
-        champion_id: champions[1].id,
-      });
-    })
-    .catch((error) => {
-      throw error;
-    });
+  }
 };
 
 const getChampionImagePath = (name: string, set: number) => {

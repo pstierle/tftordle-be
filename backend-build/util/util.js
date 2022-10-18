@@ -32,25 +32,36 @@ const isDevelopment = () => {
 };
 exports.isDevelopment = isDevelopment;
 const generateRandomGuesses = () => __awaiter(void 0, void 0, void 0, function* () {
-    yield connection_1.database
-        .query("SELECT * FROM `Champions` ORDER BY random() LIMIT 2", {
-        type: sequelize_1.QueryTypes.SELECT,
-        raw: true,
-    })
-        .then((champions) => {
-        console.log(champions);
-        if (champions.length === 0)
-            return;
-        models_1.ChampionGuessChampion.create({
-            champion_id: champions[0].id,
-        });
-        models_1.TraitGuessChampion.create({
-            champion_id: champions[1].id,
-        });
-    })
-        .catch((error) => {
-        throw error;
+    const today = new Date().toLocaleDateString();
+    const championGuessChampion = yield models_1.ChampionGuessChampion.findOne({
+        where: {
+            created: today,
+        },
     });
+    const traitGuessChampion = yield models_1.TraitGuessChampion.findOne({
+        where: {
+            created: today,
+        },
+    });
+    if (!championGuessChampion && !traitGuessChampion) {
+        yield connection_1.database
+            .query("SELECT * FROM `Champions` ORDER BY random() LIMIT 2", {
+            type: sequelize_1.QueryTypes.SELECT,
+            raw: true,
+        })
+            .then((champions) => {
+            if (champions.length === 0)
+                return;
+            models_1.ChampionGuessChampion.create({
+                champion_id: champions[0].id,
+                created: today,
+            });
+            models_1.TraitGuessChampion.create({
+                champion_id: champions[1].id,
+                created: today,
+            });
+        });
+    }
 });
 exports.generateRandomGuesses = generateRandomGuesses;
 const getChampionImagePath = (name, set) => {

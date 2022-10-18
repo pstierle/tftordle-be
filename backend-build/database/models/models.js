@@ -34,8 +34,12 @@ exports.ChampionGuessChampion = connection_1.database.define("ChampionGuessChamp
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
     },
+    created: {
+        type: sequelize_1.DataTypes.STRING,
+        allowNull: false,
+    },
 }, {
-    timestamps: true,
+    timestamps: false,
 });
 exports.TraitGuessChampion = connection_1.database.define("TraitGuessChampion", {
     id: {
@@ -47,8 +51,12 @@ exports.TraitGuessChampion = connection_1.database.define("TraitGuessChampion", 
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
     },
+    created: {
+        type: sequelize_1.DataTypes.STRING,
+        allowNull: false,
+    },
 }, {
-    timestamps: true,
+    timestamps: false,
 });
 exports.Trait = connection_1.database.define("Trait", {
     id: {

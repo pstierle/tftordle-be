@@ -53,13 +53,6 @@ try {
     force: doImportData,
   });
 
-  ChampionGuessChampion.sync({
-    force: doImportData,
-  });
-  TraitGuessChampion.sync({
-    force: doImportData,
-  });
-
   database.sync().then(async () => {
     console.log("Database connection successfull.");
     if (doImportData) {
