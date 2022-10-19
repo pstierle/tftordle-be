@@ -73,7 +73,10 @@ const getChampionImagePath = (name: string, set: number) => {
 const getTraitImagePath = (label: string) => {
   const isDevelopment = process.env.NODE_ENV === "DEV";
   const hostUrl = isDevelopment ? devUrl : prodUrl;
-  return `${hostUrl}/sets/traits/${label.toLowerCase().replace(" ", "")}.png`;
+  return `${hostUrl}/sets/traits/${label
+    .toLowerCase()
+    .replace("-", "")
+    .replace(" ", "")}.png`;
 };
 
 export const traitWithImagePath = (trait: any) => {

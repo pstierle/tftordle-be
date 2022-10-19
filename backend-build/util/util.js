@@ -76,7 +76,10 @@ const getChampionImagePath = (name, set) => {
 const getTraitImagePath = (label) => {
     const isDevelopment = process.env.NODE_ENV === "DEV";
     const hostUrl = isDevelopment ? consts_1.devUrl : consts_1.prodUrl;
-    return `${hostUrl}/sets/traits/${label.toLowerCase().replace(" ", "")}.png`;
+    return `${hostUrl}/sets/traits/${label
+        .toLowerCase()
+        .replace("-", "")
+        .replace(" ", "")}.png`;
 };
 const traitWithImagePath = (trait) => {
     return Object.assign(Object.assign({}, trait), { imagePath: getTraitImagePath(trait.label) });
