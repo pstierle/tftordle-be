@@ -34,7 +34,8 @@ const queryChampions = (req, res) => __awaiter(void 0, void 0, void 0, function*
     const results = champions
         .filter((champion) => champion.name.toLowerCase()[0] === req.params.query.toLowerCase()[0])
         .slice(0, 10);
-    res.json(results.map((champion) => {
+    res.json(results
+        .map((champion) => {
         const withImagePath = (0, util_1.championWithImagePath)(champion);
         return {
             id: withImagePath.id,
@@ -43,6 +44,15 @@ const queryChampions = (req, res) => __awaiter(void 0, void 0, void 0, function*
             cost: withImagePath.cost,
             imagePath: withImagePath.imagePath,
         };
+    })
+        .sort((a, b) => {
+        if (a.set < b.set) {
+            return -1;
+        }
+        if (a.set > b.set) {
+            return 1;
+        }
+        return 0;
     }));
 });
 exports.queryChampions = queryChampions;

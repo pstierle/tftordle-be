@@ -10,6 +10,6 @@ exports.publicFolder = path_1.default.join(__dirname, "..", "public");
 exports.frontendFolder = path_1.default.join(exports.publicFolder, "frontend");
 exports.setsFolder = path_1.default.join(exports.publicFolder, "sets");
 exports.prodUrl = "https://oyster-app-jqjom.ondigitalocean.app";
-exports.sets = ["2", "3", "3.5", "4", "4.5", "5", "5.5"];
+exports.sets = ["1", "2", "3", "3.5", "4", "4.5", "5", "5.5"];
 exports.databaseRoute = "backend-build/database/index.sqlite";
 //# sourceMappingURL=consts.js.map

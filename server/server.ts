@@ -43,6 +43,7 @@ app.get("/", (req, res) => {
 
 try {
   const doImportData = process.env.IMPORT_DATA === "TRUE";
+  const doImportData1 = process.env.IMPORT_DATA === "TRUE";
 
   database.authenticate();
 
@@ -50,6 +51,12 @@ try {
     force: doImportData,
   });
   Champion.sync({
+    force: doImportData,
+  });
+  ChampionGuessChampion.sync({
+    force: doImportData,
+  });
+  TraitGuessChampion.sync({
     force: doImportData,
   });
 

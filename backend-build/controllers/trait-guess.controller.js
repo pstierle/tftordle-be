@@ -95,12 +95,22 @@ const queryTraits = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     const results = startsWith
         .filter((trait) => trait.label.toLowerCase().includes(req.params.query.toLowerCase()))
         .slice(0, 10);
-    res.json(results.map((trait) => {
+    res.json(results
+        .map((trait) => {
         const withImagePath = (0, util_1.traitWithImagePath)(trait);
         return {
             label: withImagePath.label,
             imagePath: withImagePath.imagePath,
         };
+    })
+        .sort((a, b) => {
+        if (a.label < b.label) {
+            return -1;
+        }
+        if (a.label > b.label) {
+            return 1;
+        }
+        return 0;
     }));
 });
 exports.queryTraits = queryTraits;

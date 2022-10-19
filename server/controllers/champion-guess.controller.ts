@@ -43,16 +43,26 @@ export const queryChampions = async (
     .slice(0, 10);
 
   res.json(
-    results.map((champion: any) => {
-      const withImagePath = championWithImagePath(champion);
-      return {
-        id: withImagePath.id,
-        name: withImagePath.name,
-        set: withImagePath.set,
-        cost: withImagePath.cost,
-        imagePath: withImagePath.imagePath,
-      };
-    })
+    results
+      .map((champion: any) => {
+        const withImagePath = championWithImagePath(champion);
+        return {
+          id: withImagePath.id,
+          name: withImagePath.name,
+          set: withImagePath.set,
+          cost: withImagePath.cost,
+          imagePath: withImagePath.imagePath,
+        };
+      })
+      .sort((a: any, b: any) => {
+        if (a.set < b.set) {
+          return -1;
+        }
+        if (a.set > b.set) {
+          return 1;
+        }
+        return 0;
+      })
   );
 };
 

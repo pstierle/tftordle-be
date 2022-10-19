@@ -131,14 +131,24 @@ export const queryTraits = async (
     .slice(0, 10);
 
   res.json(
-    results.map((trait: any) => {
-      const withImagePath = traitWithImagePath(trait);
+    results
+      .map((trait: any) => {
+        const withImagePath = traitWithImagePath(trait);
 
-      return {
-        label: withImagePath.label,
-        imagePath: withImagePath.imagePath,
-      };
-    })
+        return {
+          label: withImagePath.label,
+          imagePath: withImagePath.imagePath,
+        };
+      })
+      .sort((a: any, b: any) => {
+        if (a.label < b.label) {
+          return -1;
+        }
+        if (a.label > b.label) {
+          return 1;
+        }
+        return 0;
+      })
   );
 };
 
