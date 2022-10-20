@@ -19,8 +19,12 @@ const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* 
         raw: true,
         limit: 1,
     });
-    const champion = yield models_1.Champion.findByPk(traitGuessChampion[0].champion_id, {
+    const champion = yield models_1.Champion.findOne({
         raw: true,
+        where: {
+            name: traitGuessChampion[0].name,
+            set: traitGuessChampion[0].set,
+        },
     });
     console.log("Traitguess Champion: ", champion);
     return champion;

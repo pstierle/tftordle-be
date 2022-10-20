@@ -16,8 +16,12 @@ const getGuessChampion = async () => {
     raw: true,
   });
 
-  const champion: any = await Champion.findByPk(guessChampion[0].champion_id, {
+  const champion: any = await Champion.findOne({
     raw: true,
+    where: {
+      name: guessChampion[0].name,
+      set: guessChampion[0].set,
+    },
   });
 
   console.log("Championguess Champion: ", champion);

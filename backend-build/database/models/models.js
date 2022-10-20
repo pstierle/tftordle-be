@@ -30,8 +30,12 @@ exports.ChampionGuessChampion = connection_1.database.define("ChampionGuessChamp
         autoIncrement: true,
         primaryKey: true,
     },
-    champion_id: {
+    set: {
         type: sequelize_1.DataTypes.INTEGER,
+        allowNull: false,
+    },
+    name: {
+        type: sequelize_1.DataTypes.STRING,
         allowNull: false,
     },
     created: {
@@ -47,8 +51,12 @@ exports.TraitGuessChampion = connection_1.database.define("TraitGuessChampion", 
         autoIncrement: true,
         primaryKey: true,
     },
-    champion_id: {
+    set: {
         type: sequelize_1.DataTypes.INTEGER,
+        allowNull: false,
+    },
+    name: {
+        type: sequelize_1.DataTypes.STRING,
         allowNull: false,
     },
     created: {

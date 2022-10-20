@@ -35,8 +35,12 @@ export const ChampionGuessChampion = database.define(
       autoIncrement: true,
       primaryKey: true,
     },
-    champion_id: {
+    set: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     created: {
@@ -57,8 +61,12 @@ export const TraitGuessChampion = database.define(
       autoIncrement: true,
       primaryKey: true,
     },
-    champion_id: {
+    set: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     created: {

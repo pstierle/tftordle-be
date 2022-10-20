@@ -48,11 +48,13 @@ export const generateRandomGuesses = async () => {
         if (champions.length === 0) return;
 
         ChampionGuessChampion.create({
-          champion_id: champions[0].id,
+          name: champions[0].name,
+          set: champions[0].set,
           created: today,
         });
         TraitGuessChampion.create({
-          champion_id: champions[1].id,
+          name: champions[1].name,
+          set: champions[1].set,
           created: today,
         });
       });

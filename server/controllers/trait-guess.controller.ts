@@ -14,12 +14,13 @@ const getTraitGuessChampion = async () => {
     limit: 1,
   });
 
-  const champion: any = await Champion.findByPk(
-    traitGuessChampion[0].champion_id,
-    {
-      raw: true,
-    }
-  );
+  const champion: any = await Champion.findOne({
+    raw: true,
+    where: {
+      name: traitGuessChampion[0].name,
+      set: traitGuessChampion[0].set,
+    },
+  });
 
   console.log("Traitguess Champion: ", champion);
 

@@ -19,8 +19,12 @@ const getGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
         limit: 1,
         raw: true,
     });
-    const champion = yield models_1.Champion.findByPk(guessChampion[0].champion_id, {
+    const champion = yield models_1.Champion.findOne({
         raw: true,
+        where: {
+            name: guessChampion[0].name,
+            set: guessChampion[0].set,
+        },
     });
     console.log("Championguess Champion: ", champion);
     return champion;
