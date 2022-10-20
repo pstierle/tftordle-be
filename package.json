@@ -12,14 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "@types/sequelize": "^4.28.14",
-    "@types/socket.io": "^3.0.2",
     "concurrently": "^7.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "nodemon": "^2.0.20",
     "sequelize": "^6.25.1",
-    "socket.io": "^4.5.3",
     "sqlite3": "^5.1.2"
   },
   "devDependencies": {
