@@ -1,350 +1,408 @@
 [
   {
     "name": "Aatrox",
-    "championId": "TFT4_Aatrox",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Cultist", "Set4_Vanguard"]
+    "range": 1,
+    "traits": ["Cultist", "Vanguard"]
   },
   {
     "name": "Akali",
-    "championId": "TFT4_Akali",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Ninja", "Set4_Assassin"]
+    "range": 1,
+    "traits": ["Ninja", "Assassin"]
   },
   {
     "name": "Annie",
-    "championId": "TFT4_Annie",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Fortune", "Set4_Mage"]
+    "range": 2,
+    "traits": ["Fortune", "Mage"]
   },
   {
     "name": "Aurelion Sol",
-    "championId": "TFT4_AurelionSol",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Set4_Dragonsoul", "Set4_Mage"]
+    "range": 4,
+    "traits": ["Dragonsoul", "Mage"]
   },
   {
     "name": "Azir",
-    "championId": "TFT4_Azir",
+    "set": 4.5,
     "cost": 5,
-    "traits": ["Warlord", "Keeper", "Emperor"]
+    "range": 4,
+    "traits": ["Warlord", "Emperor", "Keeper"]
   },
   {
     "name": "Brand",
-    "championId": "TFT4_Brand",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Set4_Dragonsoul", "Set4_Mage"]
+    "range": 4,
+    "traits": ["Dragonsoul", "Mage"]
   },
   {
     "name": "Braum",
-    "championId": "TFT4_Braum",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Set4_Dragonsoul", "Set4_Vanguard"]
+    "range": 1,
+    "traits": ["Dragonsoul", "Vanguard"]
   },
   {
     "name": "Cho'Gath",
-    "championId": "TFT4_ChoGath",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Set4_Fabled", "Set4_Brawler"]
+    "range": 1,
+    "traits": ["Fabled", "Brawler"]
   },
   {
     "name": "Darius",
-    "championId": "TFT4_Darius",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Fortune", "Set4_Slayer"]
+    "range": 1,
+    "traits": ["Fortune", "Slayer"]
   },
   {
     "name": "Diana",
-    "championId": "TFT4b_Diana",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Set4_Spirit", "Set4_Assassin"]
+    "range": 1,
+    "traits": ["Spirit", "Assassin"]
   },
   {
     "name": "Elise",
-    "championId": "TFT4_Elise",
+    "set": 4.5,
     "cost": 1,
+    "range": 2,
     "traits": ["Cultist", "Keeper"]
   },
   {
     "name": "Fiora",
-    "championId": "TFT4_Fiora",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Set4_Enlightened", "Duelist"]
+    "range": 1,
+    "traits": ["Enlightened", "Duelist"]
   },
   {
     "name": "Garen",
-    "championId": "TFT4_Garen",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Warlord", "Set4_Vanguard"]
+    "range": 1,
+    "traits": ["Warlord", "Vanguard"]
   },
   {
     "name": "Irelia",
-    "championId": "TFT4_Irelia",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Enlightened", "Divine", "Set4_Adept"]
+    "range": 1,
+    "traits": ["Divine", "Enlightened", "Adept"]
   },
   {
     "name": "Janna",
-    "championId": "TFT4_Janna",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Set4_Enlightened", "Set4_Mystic"]
+    "range": 4,
+    "traits": ["Enlightened", "Mystic"]
   },
   {
     "name": "Jarvan IV",
-    "championId": "TFT4_JarvanIV",
+    "set": 4.5,
     "cost": 2,
+    "range": 1,
     "traits": ["Warlord", "Keeper"]
   },
   {
     "name": "Jax",
-    "championId": "TFT4_Jax",
+    "set": 4.5,
     "cost": 2,
+    "range": 1,
     "traits": ["Divine", "Duelist"]
   },
   {
     "name": "Kalista",
-    "championId": "TFT4_Kalista",
+    "set": 4.5,
     "cost": 3,
+    "range": 3,
     "traits": ["Cultist", "Duelist"]
   },
   {
     "name": "Katarina",
-    "championId": "TFT4_Katarina",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Warlord", "Fortune", "Set4_Assassin"]
+    "range": 1,
+    "traits": ["Fortune", "Warlord", "Assassin"]
   },
   {
     "name": "Kayle",
-    "championId": "TFT4_Kayle",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Divine", "Set4_Executioner"]
+    "range": 3,
+    "traits": ["Divine", "Executioner"]
   },
   {
     "name": "Kennen",
-    "championId": "TFT4_Kennen",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Ninja", "Keeper"]
+    "range": 2,
+    "traits": ["Ninja", "Keeper"]
   },
   {
     "name": "Kindred",
-    "championId": "TFT4b_Kindred",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Spirit", "Set4_Executioner"]
+    "range": 3,
+    "traits": ["Spirit", "Executioner"]
   },
   {
     "name": "Lee Sin",
-    "championId": "TFT4_LeeSin",
+    "set": 4.5,
     "cost": 5,
+    "range": 1,
     "traits": ["Divine", "Duelist"]
   },
   {
     "name": "Lulu",
-    "championId": "TFT4_Lulu",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Set4_Elderwood", "Set4_Mage"]
+    "range": 3,
+    "traits": ["Elderwood", "Mage"]
   },
   {
     "name": "Maokai",
-    "championId": "TFT4_Maokai",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Set4_Elderwood", "Set4_Brawler"]
+    "range": 1,
+    "traits": ["Elderwood", "Brawler"]
   },
   {
     "name": "Morgana",
-    "championId": "TFT4b_Morgana",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Set4_Enlightened", "Set4_Syphoner"]
+    "range": 2,
+    "traits": ["Enlightened", "Syphoner"]
   },
   {
     "name": "Nasus",
-    "championId": "TFT4_Nasus",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Divine", "Set4_Syphoner"]
+    "range": 1,
+    "traits": ["Divine", "Syphoner"]
   },
   {
     "name": "Nautilus",
-    "championId": "TFT4_Nautilus",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Set4_Fabled", "Set4_Vanguard"]
+    "range": 1,
+    "traits": ["Fabled", "Vanguard"]
   },
   {
     "name": "Neeko",
-    "championId": "TFT4_Neeko",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Fabled", "Set4_Mystic"]
+    "range": 3,
+    "traits": ["Fabled", "Mystic"]
   },
   {
     "name": "Nidalee",
-    "championId": "TFT4_Nidalee",
+    "set": 4.5,
     "cost": 1,
+    "range": 4,
     "traits": ["Warlord", "Sharpshooter"]
   },
   {
-    "name": "Nunu & Willump",
-    "championId": "TFT4_Nunu",
+    "name": "Nunu",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Elderwood", "Set4_Brawler"]
+    "range": 1,
+    "traits": ["Elderwood", "Brawler"]
   },
   {
     "name": "Olaf",
-    "championId": "TFT4_Olaf",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Set4_Dragonsoul", "Set4_Slayer"]
+    "range": 1,
+    "traits": ["Dragonsoul", "Slayer"]
   },
   {
     "name": "Ornn",
-    "championId": "TFT4_Ornn",
+    "set": 4.5,
     "cost": 5,
-    "traits": ["Set4_Elderwood", "Set4_Vanguard", "Set4_Blacksmith"]
+    "range": 1,
+    "traits": ["Elderwood", "Blacksmith", "Vanguard"]
   },
   {
     "name": "Pyke",
-    "championId": "TFT4_Pyke",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Cultist", "Set4_Assassin", "Set4_Slayer"]
+    "range": 1,
+    "traits": ["Cultist", "Assassin", "Slayer"]
   },
   {
     "name": "Rakan",
-    "championId": "TFT4_Rakan",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Set4_Elderwood", "Keeper"]
+    "range": 2,
+    "traits": ["Elderwood", "Keeper"]
   },
   {
     "name": "Samira",
-    "championId": "TFT4_Samira",
+    "set": 4.5,
     "cost": 5,
-    "traits": ["Set4_Daredevil", "Sharpshooter", "Set4_Slayer"]
+    "range": 2,
+    "traits": ["Daredevil", "Sharpshooter", "Slayer"]
   },
   {
     "name": "Sejuani",
-    "championId": "TFT4_Sejuani",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Fortune", "Set4_Vanguard"]
+    "range": 1,
+    "traits": ["Fortune", "Vanguard"]
   },
   {
     "name": "Sett",
-    "championId": "TFT4_Sett",
+    "set": 4.5,
     "cost": 5,
-    "traits": ["Boss", "Set4_Brawler"]
+    "range": 1,
+    "traits": ["The Boss", "Brawler"]
   },
   {
     "name": "Shen",
-    "championId": "TFT4_Shen",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Set4_Ninja", "Set4_Adept", "Set4_Mystic"]
+    "range": 1,
+    "traits": ["Ninja", "Adept", "Mystic"]
   },
   {
     "name": "Shyvana",
-    "championId": "TFT4_Shyvana",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Dragonsoul", "Set4_Brawler"]
+    "range": 1,
+    "traits": ["Dragonsoul", "Brawler"]
   },
   {
     "name": "Sivir",
-    "championId": "TFT4_Sivir",
+    "set": 4.5,
     "cost": 3,
+    "range": 3,
     "traits": ["Cultist", "Sharpshooter"]
   },
   {
     "name": "Swain",
-    "championId": "TFT4_Swain",
+    "set": 4.5,
     "cost": 5,
-    "traits": ["Set4_Dragonsoul", "Set4_Syphoner"]
+    "range": 2,
+    "traits": ["Dragonsoul", "Syphoner"]
   },
   {
     "name": "Tahm Kench",
-    "championId": "TFT4_TahmKench",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Fortune", "Set4_Brawler"]
+    "range": 1,
+    "traits": ["Fortune", "Brawler"]
   },
   {
     "name": "Talon",
-    "championId": "TFT4_Talon",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Set4_Enlightened", "Set4_Assassin"]
+    "range": 1,
+    "traits": ["Enlightened", "Assassin"]
   },
   {
     "name": "Teemo",
-    "championId": "TFT4_Teemo",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Set4_Spirit", "Sharpshooter"]
+    "range": 3,
+    "traits": ["Spirit", "Sharpshooter"]
   },
   {
     "name": "Tristana",
-    "championId": "TFT4_Tristana",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Set4_Dragonsoul", "Sharpshooter"]
+    "range": 4,
+    "traits": ["Dragonsoul", "Sharpshooter"]
   },
   {
     "name": "Tryndamere",
-    "championId": "TFT4_Tryndamere",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Warlord", "Set4_Slayer", "Duelist"]
+    "range": 1,
+    "traits": ["Warlord", "Duelist", "Slayer"]
   },
   {
-    "name": "Twisted Fate",
-    "championId": "TFT4_TwistedFate",
+    "name": "TwistedFate",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Cultist", "Set4_Mage"]
+    "range": 3,
+    "traits": ["Cultist", "Mage"]
   },
   {
     "name": "Veigar",
-    "championId": "TFT4_Veigar",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Elderwood", "Set4_Mage"]
+    "range": 3,
+    "traits": ["Elderwood", "Mage"]
   },
   {
     "name": "Vi",
-    "championId": "TFT4_Vi",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Warlord", "Set4_Brawler"]
+    "range": 1,
+    "traits": ["Warlord", "Brawler"]
   },
   {
     "name": "Vladimir",
-    "championId": "TFT4_Vladimir",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Cultist", "Set4_Syphoner"]
+    "range": 2,
+    "traits": ["Cultist", "Syphoner"]
   },
   {
     "name": "Wukong",
-    "championId": "TFT4_Wukong",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Divine", "Set4_Vanguard"]
+    "range": 1,
+    "traits": ["Divine", "Vanguard"]
   },
   {
     "name": "Xayah",
-    "championId": "TFT4_Xayah",
+    "set": 4.5,
     "cost": 4,
-    "traits": ["Set4_Elderwood", "Set4_Executioner", "Keeper"]
+    "range": 3,
+    "traits": ["Elderwood", "Executioner", "Keeper"]
   },
   {
     "name": "Yasuo",
-    "championId": "TFT4_Yasuo",
+    "set": 4.5,
     "cost": 1,
-    "traits": ["Set4_Exile", "Duelist"]
+    "range": 1,
+    "traits": ["Exile", "Duelist"]
   },
   {
     "name": "Yone",
-    "championId": "TFT4_Yone",
+    "set": 4.5,
     "cost": 5,
-    "traits": ["Set4_Exile", "Set4_Adept"]
+    "range": 1,
+    "traits": ["Exile", "Adept"]
   },
   {
     "name": "Yuumi",
-    "championId": "TFT4_Yuumi",
+    "set": 4.5,
     "cost": 3,
-    "traits": ["Set4_Spirit", "Set4_Mystic"]
+    "range": 3,
+    "traits": ["Spirit", "Mystic"]
   },
   {
     "name": "Zed",
-    "championId": "TFT4b_Zed",
+    "set": 4.5,
     "cost": 2,
-    "traits": ["Set4_Ninja", "Set4_Slayer"]
+    "range": 1,
+    "traits": ["Ninja", "Slayer"]
   },
   {
     "name": "Zilean",
-    "championId": "TFT4_Zilean",
+    "set": 4.5,
     "cost": 5,
-    "traits": ["Cultist", "Set4_Mystic"]
+    "range": 3,
+    "traits": ["Cultist", "Mystic"]
   }
 ]

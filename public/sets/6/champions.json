@@ -1,0 +1,415 @@
+[
+  {
+    "name": "Akali",
+    "set": 6,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Syndicate", "Assassin"]
+  },
+  {
+    "name": "Blitzcrank",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Scrap", "Bodyguard", "Protector"]
+  },
+  {
+    "name": "Braum",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Syndicate", "Bodyguard"]
+  },
+  {
+    "name": "Caitlyn",
+    "set": 6,
+    "cost": 1,
+    "range": 5,
+    "traits": ["Enforcer", "Sniper"]
+  },
+  {
+    "name": "Camille",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Clockwork", "Challenger"]
+  },
+  {
+    "name": "ChoGath",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Mutant", "Bruiser", "Colossus"]
+  },
+  {
+    "name": "Darius",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Syndicate", "Bodyguard"]
+  },
+  {
+    "name": "DrMundo",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Chemtech", "Mutant", "Bruiser"]
+  },
+  {
+    "name": "Ekko",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Scrap", "Assassin"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 6,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Scrap", "Innovator"]
+  },
+  {
+    "name": "Fiora",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Enforcer", "Challenger"]
+  },
+  {
+    "name": "Galio",
+    "set": 6,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Socialite", "Bodyguard", "Colossus"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Mercenary", "Twinshot"]
+  },
+  {
+    "name": "Garen",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Academy", "Protector"]
+  },
+  {
+    "name": "Graves",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Academy", "Twinshot"]
+  },
+  {
+    "name": "Heimerdinger",
+    "set": 6,
+    "cost": 3,
+    "range": 4,
+    "traits": ["Yordle", "Innovator", "Scholar"]
+  },
+  {
+    "name": "Illaoi",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Mercenary", "Bruiser"]
+  },
+  {
+    "name": "Janna",
+    "set": 6,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Scrap", "Enchanter", "Scholar"]
+  },
+  {
+    "name": "Jayce",
+    "set": 6,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Enforcer", "Innovator", "Transformer"]
+  },
+  {
+    "name": "Jhin",
+    "set": 6,
+    "cost": 4,
+    "range": 5,
+    "traits": ["Clockwork", "Sniper"]
+  },
+  {
+    "name": "Jinx",
+    "set": 6,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Scrap", "Sister", "Twinshot"]
+  },
+  {
+    "name": "KaiSa",
+    "set": 6,
+    "cost": 5,
+    "range": 3,
+    "traits": ["Mutant", "Challenger"]
+  },
+  {
+    "name": "Kassadin",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Mutant", "Protector"]
+  },
+  {
+    "name": "Katarina",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Academy", "Assassin"]
+  },
+  {
+    "name": "KogMaw",
+    "set": 6,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Mutant", "Sniper", "Twinshot"]
+  },
+  {
+    "name": "Leona",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Academy", "Bodyguard"]
+  },
+  {
+    "name": "Lissandra",
+    "set": 6,
+    "cost": 3,
+    "range": 2,
+    "traits": ["Chemtech", "Scholar"]
+  },
+  {
+    "name": "Lulu",
+    "set": 6,
+    "cost": 2,
+    "range": 3,
+    "traits": ["Yordle", "Enchanter"]
+  },
+  {
+    "name": "Lux",
+    "set": 6,
+    "cost": 4,
+    "range": 4,
+    "traits": ["Academy", "Arcanist"]
+  },
+  {
+    "name": "Malzahar",
+    "set": 6,
+    "cost": 3,
+    "range": 4,
+    "traits": ["Mutant", "Arcanist"]
+  },
+  {
+    "name": "MissFortune",
+    "set": 6,
+    "cost": 3,
+    "range": 4,
+    "traits": ["Mercenary", "Sniper"]
+  },
+  {
+    "name": "Orianna",
+    "set": 6,
+    "cost": 4,
+    "range": 4,
+    "traits": ["Clockwork", "Enchanter"]
+  },
+  {
+    "name": "Poppy",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Yordle", "Bodyguard"]
+  },
+  {
+    "name": "Quinn",
+    "set": 6,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Mercenary", "Challenger"]
+  },
+  {
+    "name": "Samira",
+    "set": 6,
+    "cost": 3,
+    "range": 3,
+    "traits": ["Imperial", "Challenger"]
+  },
+  {
+    "name": "Seraphine",
+    "set": 6,
+    "cost": 4,
+    "range": 4,
+    "traits": ["Socialite", "Innovator"]
+  },
+  {
+    "name": "Shaco",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Syndicate", "Assassin"]
+  },
+  {
+    "name": "Singed",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Chemtech", "Innovator"]
+  },
+  {
+    "name": "Sion",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Imperial", "Colossus", "Protector"]
+  },
+  {
+    "name": "Swain",
+    "set": 6,
+    "cost": 2,
+    "range": 2,
+    "traits": ["Imperial", "Arcanist"]
+  },
+  {
+    "name": "TahmKench",
+    "set": 6,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Glutton", "Mercenary", "Bruiser"]
+  },
+  {
+    "name": "Talon",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Imperial", "Assassin"]
+  },
+  {
+    "name": "Taric",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Socialite", "Enchanter"]
+  },
+  {
+    "name": "Tristana",
+    "set": 6,
+    "cost": 2,
+    "range": 5,
+    "traits": ["Yordle", "Sniper"]
+  },
+  {
+    "name": "Trundle",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Scrap", "Bruiser"]
+  },
+  {
+    "name": "TwistedFate",
+    "set": 6,
+    "cost": 1,
+    "range": 3,
+    "traits": ["Syndicate", "Arcanist"]
+  },
+  {
+    "name": "Twitch",
+    "set": 6,
+    "cost": 1,
+    "range": 3,
+    "traits": ["Chemtech", "Assassin"]
+  },
+  {
+    "name": "Urgot",
+    "set": 6,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Chemtech", "Twinshot"]
+  },
+  {
+    "name": "Veigar",
+    "set": 6,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Yordle-Lord"]
+  },
+  {
+    "name": "Vex",
+    "set": 6,
+    "cost": 3,
+    "range": 2,
+    "traits": ["Yordle", "Arcanist"]
+  },
+  {
+    "name": "Vi",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Enforcer", "Sister", "Bruiser"]
+  },
+  {
+    "name": "Viktor",
+    "set": 6,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Chemtech", "Arcanist"]
+  },
+  {
+    "name": "Warwick",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Chemtech", "Challenger"]
+  },
+  {
+    "name": "Yone",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Academy", "Challenger"]
+  },
+  {
+    "name": "Yuumi",
+    "set": 6,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Academy", "Cuddly", "Scholar"]
+  },
+  {
+    "name": "Zac",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Chemtech", "Bruiser"]
+  },
+  {
+    "name": "Ziggs",
+    "set": 6,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Scrap", "Yordle", "Arcanist"]
+  },
+  {
+    "name": "Zilean",
+    "set": 6,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Clockwork", "Innovator"]
+  },
+  {
+    "name": "Zyra",
+    "set": 6,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Syndicate", "Scholar"]
+  }
+]

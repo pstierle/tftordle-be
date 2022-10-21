@@ -69,6 +69,7 @@ const getChampionImagePath = (name: string, set: number) => {
     .toLowerCase()
     .replace("'", "")
     .replace("&", "")
+    .replace(" ", "")
     .replace(" ", "")}.png`;
 };
 
@@ -91,7 +92,10 @@ export const traitWithImagePath = (trait: any) => {
 export const championWithImagePath = (champion: any) => {
   return {
     ...champion,
-    imagePath: getChampionImagePath(champion.name, champion.set),
+    imagePath: getChampionImagePath(
+      champion.name,
+      champion.set.toString().charAt(0)
+    ),
   };
 };
 
@@ -109,12 +113,15 @@ export const importData = async () => {
           async (champion: {
             name: string;
             cost: number;
+            set: number;
+            range: number;
             traits: string[];
           }) => {
             const parsedChampion: any = {
               name: champion.name,
-              set: Number(set),
+              set: champion.set,
               cost: champion.cost,
+              range: champion.range,
             };
             await Champion.create({
               ...parsedChampion,

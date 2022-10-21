@@ -56,6 +56,7 @@ export const queryChampions = async (
           set: withImagePath.set,
           cost: withImagePath.cost,
           imagePath: withImagePath.imagePath,
+          range: withImagePath.range,
         };
       })
       .sort((a: any, b: any) => {
@@ -70,41 +71,18 @@ export const queryChampions = async (
   );
 };
 
+type Result = {
+  attrLabel: string;
+  matchState: Match;
+  userGuessValue: any;
+};
+
 export const checkGuessAttr = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const attrs = ["set", "cost", "traits"];
-
-  let setResult: {
-    attrLabel: string;
-    matchState: Match;
-    userGuessValue: any;
-  } = {
-    attrLabel: "set",
-    matchState: undefined,
-    userGuessValue: undefined,
-  };
-
-  let costResult: {
-    attrLabel: string;
-    matchState: Match;
-    userGuessValue: any;
-  } = {
-    attrLabel: "cost",
-    matchState: undefined,
-    userGuessValue: undefined,
-  };
-
-  let traitsResult: {
-    attrLabel: string;
-    matchState: Match;
-    userGuessValue: any;
-  } = {
-    attrLabel: "traits",
-    matchState: undefined,
-    userGuessValue: undefined,
-  };
+  const attrs = ["set", "cost", "range", "traits"];
+  let results: Result[] = [];
 
   const guessChampion: any = await getGuessChampion();
   const userGuessChampion: any = await Champion.findByPk(req.params.id, {
@@ -115,7 +93,12 @@ export const checkGuessAttr = async (
     attrs.map(async (attr) => {
       const searchValue = (guessChampion as any)[attr];
       let userGuessValue = (userGuessChampion as any)[attr];
-      let matchState: Match = "wrong";
+
+      let result: Result = {
+        attrLabel: attr,
+        matchState: "wrong",
+        userGuessValue: userGuessValue,
+      };
 
       if (attr === "traits") {
         const guessChampionTraits = await Trait.findAll({
@@ -138,43 +121,32 @@ export const checkGuessAttr = async (
             if (
               userGuessChampionTraits.map((t: any) => t.label).includes(trait)
             )
-              matchState = "some";
+              result.matchState = "some";
           });
         if (
           JSON.stringify(guessChampionTraits) ===
           JSON.stringify(userGuessChampionTraits)
         ) {
-          matchState = "exact";
+          result.matchState = "exact";
         }
-        userGuessValue = userGuessChampionTraits.map((t: any) => t.label);
+        result.userGuessValue = userGuessChampionTraits.map(
+          (t: any) => t.label
+        );
       } else {
         if (userGuessValue === searchValue) {
-          matchState = "exact";
+          result.matchState = "exact";
         }
         if (userGuessValue > searchValue) {
-          matchState = "lower";
+          result.matchState = "lower";
         }
         if (userGuessValue < searchValue) {
-          matchState = "higher";
+          result.matchState = "higher";
         }
       }
 
-      if (attr === "set") {
-        setResult.matchState = matchState;
-        setResult.userGuessValue = userGuessValue;
-      }
-
-      if (attr === "cost") {
-        costResult.matchState = matchState;
-        costResult.userGuessValue = userGuessValue;
-      }
-
-      if (attr === "traits") {
-        traitsResult.matchState = matchState;
-        traitsResult.userGuessValue = userGuessValue;
-      }
+      results.push(result);
     })
   );
 
-  res.json([setResult, traitsResult, costResult]);
+  res.json(results);
 };

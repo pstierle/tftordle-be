@@ -1,287 +1,401 @@
 [
   {
-    "name": "Elise",
-    "cost": 1,
-    "traits": ["Demon", "Shapeshifter"]
-  },
-  {
-    "name": "Varus",
-    "cost": 2,
-    "traits": ["Demon", "Ranger"]
-  },
-  {
     "name": "Aatrox",
+    "set": 1,
     "cost": 3,
+    "range": 1,
     "traits": ["Demon", "Blademaster"]
   },
   {
-    "name": "Evelynn",
-    "cost": 3,
-    "traits": ["Demon", "Assassin"]
-  },
-  {
-    "name": "Morgana",
-    "cost": 3,
-    "traits": ["Demon", "Sorcerer"]
-  },
-  {
-    "name": "Brand",
-    "cost": 4,
-    "traits": ["Demon", "Elementalist"]
-  },
-  {
-    "name": "Swain",
-    "cost": 5,
-    "traits": ["Demon", "Shapeshifter", "Imperial"]
-  },
-  {
-    "name": "Shyvana",
-    "cost": 3,
-    "traits": ["Dragon", "Shapeshifter"]
-  },
-  {
-    "name": "Aurelion Sol",
-    "cost": 4,
-    "traits": ["Dragon", "Sorcerer"]
-  },
-  {
-    "name": "Pantheon",
-    "cost": 5,
-    "traits": ["Dragon", "Guardian"]
-  },
-  {
-    "name": "Yasuo",
-    "cost": 5,
-    "traits": ["Exile", "Blademaster"]
-  },
-  {
-    "name": "Braum",
+    "name": "Ahri",
+    "set": 1,
     "cost": 2,
-    "traits": ["Glacial", "Guardian"]
+    "range": 3,
+    "traits": ["Wild", "Sorcerer"]
   },
   {
-    "name": "Lissandra",
-    "cost": 2,
+    "name": "Akali",
+    "set": 1,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Ninja", "Assassin"]
+  },
+  {
+    "name": "Anivia",
+    "set": 1,
+    "cost": 5,
+    "range": 3,
     "traits": ["Glacial", "Elementalist"]
   },
   {
     "name": "Ashe",
+    "set": 1,
     "cost": 3,
+    "range": 4,
     "traits": ["Glacial", "Ranger"]
   },
   {
-    "name": "Volibear",
-    "cost": 3,
-    "traits": ["Glacial", "Brawler"]
-  },
-  {
-    "name": "Sejuani",
+    "name": "Aurelion Sol",
+    "set": 1,
     "cost": 4,
-    "traits": ["Glacial", "Knight"]
-  },
-  {
-    "name": "Anivia",
-    "cost": 5,
-    "traits": ["Glacial", "Elementalist"]
-  },
-  {
-    "name": "Camille",
-    "cost": 1,
-    "traits": ["Hextech", "Blademaster"]
-  },
-  {
-    "name": "Jayce",
-    "cost": 2,
-    "traits": ["Hextech", "Shapeshifter"]
-  },
-  {
-    "name": "Vi",
-    "cost": 3,
-    "traits": ["Hextech", "Brawler"]
-  },
-  {
-    "name": "Jinx",
-    "cost": 4,
-    "traits": ["Hextech", "Gunslinger"]
-  },
-  {
-    "name": "Darius",
-    "cost": 1,
-    "traits": ["Imperial", "Knight"]
-  },
-  {
-    "name": "Katarina",
-    "cost": 3,
-    "traits": ["Imperial", "Assassin"]
-  },
-  {
-    "name": "Draven",
-    "cost": 4,
-    "traits": ["Imperial", "Blademaster"]
-  },
-  {
-    "name": "Shen",
-    "cost": 2,
-    "traits": ["Ninja", "Blademaster"]
-  },
-  {
-    "name": "Zed",
-    "cost": 2,
-    "traits": ["Ninja", "Assassin"]
-  },
-  {
-    "name": "Kennen",
-    "cost": 3,
-    "traits": ["Ninja", "Yordle", "Elementalist"]
-  },
-  {
-    "name": "Akali",
-    "cost": 4,
-    "traits": ["Ninja", "Assassin"]
-  },
-  {
-    "name": "Fiora",
-    "cost": 1,
-    "traits": ["Noble", "Blademaster"]
-  },
-  {
-    "name": "Garen",
-    "cost": 1,
-    "traits": ["Noble", "Knight"]
-  },
-  {
-    "name": "Vayne",
-    "cost": 1,
-    "traits": ["Noble", "Ranger"]
-  },
-  {
-    "name": "Lucian",
-    "cost": 2,
-    "traits": ["Noble", "Gunslinger"]
-  },
-  {
-    "name": "Leona",
-    "cost": 4,
-    "traits": ["Noble", "Guardian"]
-  },
-  {
-    "name": "Kayle",
-    "cost": 5,
-    "traits": ["Noble", "Knight"]
-  },
-  {
-    "name": "Mordekaiser",
-    "cost": 1,
-    "traits": ["Phantom", "Knight"]
-  },
-  {
-    "name": "Kindred",
-    "cost": 4,
-    "traits": ["Phantom", "Ranger"]
-  },
-  {
-    "name": "Karthus",
-    "cost": 5,
-    "traits": ["Phantom", "Sorcerer"]
-  },
-  {
-    "name": "Graves",
-    "cost": 1,
-    "traits": ["Pirate", "Gunslinger"]
-  },
-  {
-    "name": "Pyke",
-    "cost": 2,
-    "traits": ["Pirate", "Assassin"]
-  },
-  {
-    "name": "Twisted Fate",
-    "cost": 2,
-    "traits": ["Pirate", "Sorcerer"]
-  },
-  {
-    "name": "Gangplank",
-    "cost": 3,
-    "traits": ["Pirate", "Blademaster", "Gunslinger"]
-  },
-  {
-    "name": "Miss Fortune",
-    "cost": 5,
-    "traits": ["Pirate", "Gunslinger"]
+    "range": 3,
+    "traits": ["Dragon", "Sorcerer"]
   },
   {
     "name": "Blitzcrank",
+    "set": 1,
     "cost": 2,
+    "range": 1,
     "traits": ["Robot", "Brawler"]
   },
   {
-    "name": "Kassadin",
-    "cost": 1,
-    "traits": ["Void", "Sorcerer"]
+    "name": "Brand",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Demon", "Elementalist"]
   },
   {
-    "name": "Kha'Zix",
-    "cost": 1,
-    "traits": ["Void", "Assassin"]
-  },
-  {
-    "name": "Rek'Sai",
+    "name": "Braum",
+    "set": 1,
     "cost": 2,
-    "traits": ["Void", "Brawler"]
+    "range": 1,
+    "traits": ["Glacial", "Guardian"]
+  },
+  {
+    "name": "Camille",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Hextech", "Blademaster"]
   },
   {
     "name": "Cho'Gath",
+    "set": 1,
     "cost": 4,
+    "range": 1,
     "traits": ["Void", "Brawler"]
   },
   {
-    "name": "Kai'Sa",
-    "cost": 5,
-    "traits": ["Void", "Assassin", "Ranger"]
-  },
-  {
-    "name": "Nidalee",
+    "name": "Darius",
+    "set": 1,
     "cost": 1,
-    "traits": ["Wild", "Shapeshifter"]
+    "range": 1,
+    "traits": ["Imperial", "Knight"]
   },
   {
-    "name": "Warwick",
+    "name": "Draven",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Imperial", "Blademaster"]
+  },
+  {
+    "name": "Elise",
+    "set": 1,
     "cost": 1,
-    "traits": ["Wild", "Brawler"]
+    "range": 2,
+    "traits": ["Demon", "Shapeshifter"]
   },
   {
-    "name": "Ahri",
-    "cost": 2,
-    "traits": ["Wild", "Sorcerer"]
-  },
-  {
-    "name": "Rengar",
+    "name": "Evelynn",
+    "set": 1,
     "cost": 3,
-    "traits": ["Wild", "Assassin"]
+    "range": 1,
+    "traits": ["Demon", "Assassin"]
+  },
+  {
+    "name": "Fiora",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Noble", "Blademaster"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Pirate", "Blademaster", "Gunslinger"]
+  },
+  {
+    "name": "Garen",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Noble", "Knight"]
   },
   {
     "name": "Gnar",
+    "set": 1,
     "cost": 4,
+    "range": 2,
     "traits": ["Wild", "Yordle", "Shapeshifter"]
   },
   {
-    "name": "Tristana",
+    "name": "Graves",
+    "set": 1,
     "cost": 1,
-    "traits": ["Yordle", "Gunslinger"]
+    "range": 1,
+    "traits": ["Pirate", "Gunslinger"]
+  },
+  {
+    "name": "Jayce",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Hextech", "Shapeshifter"]
+  },
+  {
+    "name": "Jinx",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Hextech", "Gunslinger"]
+  },
+  {
+    "name": "Kai'Sa",
+    "set": 1,
+    "cost": 5,
+    "range": 2,
+    "traits": ["Void", "Assassin", "Ranger"]
+  },
+  {
+    "name": "Karthus",
+    "set": 1,
+    "cost": 5,
+    "range": 3,
+    "traits": ["Phantom", "Sorcerer"]
+  },
+  {
+    "name": "Kassadin",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Void", "Sorcerer"]
+  },
+  {
+    "name": "Katarina",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Imperial", "Assassin"]
+  },
+  {
+    "name": "Kayle",
+    "set": 1,
+    "cost": 5,
+    "range": 3,
+    "traits": ["Noble", "Knight"]
+  },
+  {
+    "name": "Kennen",
+    "set": 1,
+    "cost": 3,
+    "range": 2,
+    "traits": ["Ninja", "Yordle", "Elementalist"]
+  },
+  {
+    "name": "Kha'Zix",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Void", "Assassin"]
+  },
+  {
+    "name": "Kindred",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Phantom", "Ranger"]
+  },
+  {
+    "name": "Leona",
+    "set": 1,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Noble", "Guardian"]
+  },
+  {
+    "name": "Lissandra",
+    "set": 1,
+    "cost": 2,
+    "range": 2,
+    "traits": ["Glacial", "Elementalist"]
+  },
+  {
+    "name": "Lucian",
+    "set": 1,
+    "cost": 2,
+    "range": 3,
+    "traits": ["Noble", "Gunslinger"]
   },
   {
     "name": "Lulu",
+    "set": 1,
     "cost": 2,
+    "range": 2,
     "traits": ["Yordle", "Sorcerer"]
+  },
+  {
+    "name": "Miss Fortune",
+    "set": 1,
+    "cost": 5,
+    "range": 3,
+    "traits": ["Pirate", "Gunslinger"]
+  },
+  {
+    "name": "Mordekaiser",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Phantom", "Knight"]
+  },
+  {
+    "name": "Morgana",
+    "set": 1,
+    "cost": 3,
+    "range": 2,
+    "traits": ["Demon", "Sorcerer"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 1,
+    "cost": 1,
+    "range": 3,
+    "traits": ["Wild", "Shapeshifter"]
+  },
+  {
+    "name": "Pantheon",
+    "set": 1,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Dragon", "Guardian"]
   },
   {
     "name": "Poppy",
+    "set": 1,
     "cost": 3,
+    "range": 1,
     "traits": ["Yordle", "Knight"]
   },
   {
-    "name": "Veigar",
+    "name": "Pyke",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Pirate", "Assassin"]
+  },
+  {
+    "name": "Rek'Sai",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Void", "Brawler"]
+  },
+  {
+    "name": "Rengar",
+    "set": 1,
     "cost": 3,
+    "range": 1,
+    "traits": ["Wild", "Assassin"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 1,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Glacial", "Knight"]
+  },
+  {
+    "name": "Shen",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Ninja", "Blademaster"]
+  },
+  {
+    "name": "Shyvana",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Dragon", "Shapeshifter"]
+  },
+  {
+    "name": "Swain",
+    "set": 1,
+    "cost": 5,
+    "range": 2,
+    "traits": ["Demon", "Imperial", "Shapeshifter"]
+  },
+  {
+    "name": "Tristana",
+    "set": 1,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Yordle", "Gunslinger"]
+  },
+  {
+    "name": "Twisted Fate",
+    "set": 1,
+    "cost": 2,
+    "range": 3,
+    "traits": ["Pirate", "Sorcerer"]
+  },
+  {
+    "name": "Varus",
+    "set": 1,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Demon", "Ranger"]
+  },
+  {
+    "name": "Vayne",
+    "set": 1,
+    "cost": 1,
+    "range": 3,
+    "traits": ["Noble", "Ranger"]
+  },
+  {
+    "name": "Veigar",
+    "set": 1,
+    "cost": 3,
+    "range": 3,
     "traits": ["Yordle", "Sorcerer"]
+  },
+  {
+    "name": "Vi",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Hextech", "Brawler"]
+  },
+  {
+    "name": "Volibear",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Glacial", "Brawler"]
+  },
+  {
+    "name": "Warwick",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Wild", "Brawler"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 1,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Exile", "Blademaster"]
+  },
+  {
+    "name": "Zed",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Ninja", "Assassin"]
   }
 ]

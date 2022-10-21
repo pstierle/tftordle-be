@@ -21,6 +21,10 @@ exports.Champion = connection_1.database.define("Champion", {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
     },
+    range: {
+        type: sequelize_1.DataTypes.INTEGER,
+        allowNull: false,
+    },
 }, {
     timestamps: false,
 });

@@ -73,6 +73,7 @@ const getChampionImagePath = (name, set) => {
         .toLowerCase()
         .replace("'", "")
         .replace("&", "")
+        .replace(" ", "")
         .replace(" ", "")}.png`;
 };
 const getTraitImagePath = (label) => {
@@ -88,7 +89,7 @@ const traitWithImagePath = (trait) => {
 };
 exports.traitWithImagePath = traitWithImagePath;
 const championWithImagePath = (champion) => {
-    return Object.assign(Object.assign({}, champion), { imagePath: getChampionImagePath(champion.name, champion.set) });
+    return Object.assign(Object.assign({}, champion), { imagePath: getChampionImagePath(champion.name, champion.set.toString().charAt(0)) });
 };
 exports.championWithImagePath = championWithImagePath;
 const importData = () => __awaiter(void 0, void 0, void 0, function* () {
@@ -99,8 +100,9 @@ const importData = () => __awaiter(void 0, void 0, void 0, function* () {
         yield Promise.all(champions.map((champion) => __awaiter(void 0, void 0, void 0, function* () {
             const parsedChampion = {
                 name: champion.name,
-                set: Number(set),
+                set: champion.set,
                 cost: champion.cost,
+                range: champion.range,
             };
             yield models_1.Champion.create(Object.assign({}, parsedChampion)).then((c) => __awaiter(void 0, void 0, void 0, function* () {
                 yield Promise.all(champion.traits.map((trait) => __awaiter(void 0, void 0, void 0, function* () {

@@ -21,6 +21,10 @@ export const Champion = database.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    range: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     timestamps: false,

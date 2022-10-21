@@ -1,0 +1,415 @@
+[
+  {
+    "name": "Ao Shin",
+    "set": 7.5,
+    "cost": 8,
+    "range": 4,
+    "traits": ["Tempest", "Dragon"]
+  },
+  {
+    "name": "Aphelios",
+    "set": 7.5,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Darkflight", "Cannoneer"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 7.5,
+    "cost": 8,
+    "range": 4,
+    "traits": ["Astral", "Dragon", "Evoker"]
+  },
+  {
+    "name": "Bard",
+    "set": 7.5,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Guild", "Bard", "Mystic"]
+  },
+  {
+    "name": "Braum",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Scalescorn", "Guardian"]
+  },
+  {
+    "name": "Daeja",
+    "set": 7.5,
+    "cost": 7,
+    "range": 4,
+    "traits": ["Mirage", "Dragon"]
+  },
+  {
+    "name": "Diana",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Scalescorn", "Assassin"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 7.5,
+    "cost": 1,
+    "range": 3,
+    "traits": ["Tempest", "Swiftshot"]
+  },
+  {
+    "name": "Gnar",
+    "set": 7.5,
+    "cost": 2,
+    "range": 2,
+    "traits": ["Jade", "Shapeshifter"]
+  },
+  {
+    "name": "Graves",
+    "set": 7.5,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Tempest", "Cannoneer"]
+  },
+  {
+    "name": "Hecarim",
+    "set": 7.5,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Ragewing", "Cavalier"]
+  },
+  {
+    "name": "Idas",
+    "set": 7.5,
+    "cost": 7,
+    "range": 1,
+    "traits": ["Shimmerscale", "Dragon", "Guardian"]
+  },
+  {
+    "name": "Jax",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Jade", "Shimmerscale", "Bruiser"]
+  },
+  {
+    "name": "Jayce",
+    "set": 7.5,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Guild", "Shapeshifter"]
+  },
+  {
+    "name": "Kai'sa",
+    "set": 7.5,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Lagoon", "Dragonmancer"]
+  },
+  {
+    "name": "Karma",
+    "set": 7.5,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Jade", "Dragonmancer"]
+  },
+  {
+    "name": "Lee Sin",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Tempest", "Dragonmancer"]
+  },
+  {
+    "name": "Leona",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Mirage", "Guardian"]
+  },
+  {
+    "name": "Lillia",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Scalescorn", "Cavalier", "Mage"]
+  },
+  {
+    "name": "Lux",
+    "set": 7.5,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Astral", "Mage"]
+  },
+  {
+    "name": "Malphite",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Lagoon", "Bruiser"]
+  },
+  {
+    "name": "Nasus",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Shimmerscale", "Guardian"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 7.5,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Astral", "Shapeshifter"]
+  },
+  {
+    "name": "Nilah",
+    "set": 7.5,
+    "cost": 4,
+    "range": 2,
+    "traits": ["Lagoon", "Assassin"]
+  },
+  {
+    "name": "Nomsy",
+    "set": 7.5,
+    "cost": 6,
+    "range": 3,
+    "traits": ["Prodigy", "Dragon"]
+  },
+  {
+    "name": "Nunu",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Mirage", "Cavalier"]
+  },
+  {
+    "name": "Olaf",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Scalescorn", "Bruiser", "Warrior"]
+  },
+  {
+    "name": "Pantheon",
+    "set": 7.5,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Whispers", "Warrior"]
+  },
+  {
+    "name": "Qiyana",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Tempest", "Assassin"]
+  },
+  {
+    "name": "Rakan",
+    "set": 7.5,
+    "cost": 3,
+    "range": 2,
+    "traits": ["Ragewing", "Guardian", "Mystic"]
+  },
+  {
+    "name": "Rell",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Darkflight", "Cavalier"]
+  },
+  {
+    "name": "Rengar",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Darkflight", "Assassin"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Guild", "Cavalier"]
+  },
+  {
+    "name": "Senna",
+    "set": 7.5,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Ragewing", "Cannoneer"]
+  },
+  {
+    "name": "Seraphine",
+    "set": 7.5,
+    "cost": 3,
+    "range": 3,
+    "traits": ["Lagoon", "Evoker", "Mystic"]
+  },
+  {
+    "name": "Sett",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Ragewing", "Dragonmancer"]
+  },
+  {
+    "name": "Shi Oh Yu",
+    "set": 7.5,
+    "cost": 7,
+    "range": 1,
+    "traits": ["Jade", "Dragon", "Mystic"]
+  },
+  {
+    "name": "Shyvana",
+    "set": 7.5,
+    "cost": 8,
+    "range": 1,
+    "traits": ["Ragewing", "Dragon", "Shapeshifter"]
+  },
+  {
+    "name": "Skarner",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Astral", "Bruiser"]
+  },
+  {
+    "name": "Sohm",
+    "set": 7.5,
+    "cost": 7,
+    "range": 4,
+    "traits": ["Lagoon", "Dragon", "Mage"]
+  },
+  {
+    "name": "Soraka",
+    "set": 7.5,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Jade", "Starcaller"]
+  },
+  {
+    "name": "Sy'fen",
+    "set": 7.5,
+    "cost": 7,
+    "range": 1,
+    "traits": ["Whispers", "Bruiser", "Dragon"]
+  },
+  {
+    "name": "Sylas",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Whispers", "Bruiser", "Mage"]
+  },
+  {
+    "name": "Taliyah",
+    "set": 7.5,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Lagoon", "Mage"]
+  },
+  {
+    "name": "Terra",
+    "set": 7.5,
+    "cost": 8,
+    "range": 1,
+    "traits": ["Monolith", "Dragon"]
+  },
+  {
+    "name": "Twitch",
+    "set": 7.5,
+    "cost": 2,
+    "range": 3,
+    "traits": ["Guild", "Swiftshot"]
+  },
+  {
+    "name": "Tyrant Swain",
+    "set": 7.5,
+    "cost": 7,
+    "range": 2,
+    "traits": ["Darkflight", "Dragon"]
+  },
+  {
+    "name": "Varus",
+    "set": 7.5,
+    "cost": 3,
+    "range": 3,
+    "traits": ["Astral", "Swiftshot"]
+  },
+  {
+    "name": "Vladimir",
+    "set": 7.5,
+    "cost": 1,
+    "range": 2,
+    "traits": ["Astral", "Mage"]
+  },
+  {
+    "name": "Volibear",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Shimmerscale", "Dragonmancer"]
+  },
+  {
+    "name": "Wukong",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Jade", "Warrior"]
+  },
+  {
+    "name": "Xayah",
+    "set": 7.5,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Ragewing", "Swiftshot"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 7.5,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Mirage", "Dragonmancer", "Warrior"]
+  },
+  {
+    "name": "Yone",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Mirage", "Warrior"]
+  },
+  {
+    "name": "Zac",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Lagoon", "Guardian"]
+  },
+  {
+    "name": "Zeri",
+    "set": 7.5,
+    "cost": 3,
+    "range": 4,
+    "traits": ["Lagoon", "Cannoneer"]
+  },
+  {
+    "name": "Zippy",
+    "set": 7.5,
+    "cost": 6,
+    "range": 1,
+    "traits": ["Guild", "Dragon"]
+  },
+  {
+    "name": "Zoe",
+    "set": 7.5,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Shimmerscale", "Mage", "Spell Thief"]
+  },
+  {
+    "name": "Zyra",
+    "set": 7.5,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Whispers", "Evoker"]
+  }
+]

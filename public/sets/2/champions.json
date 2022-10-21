@@ -1,279 +1,406 @@
 [
   {
     "name": "Aatrox",
+    "set": 2,
     "cost": 3,
+    "range": 1,
     "traits": ["Light", "Blademaster"]
   },
   {
+    "name": "Amumu",
+    "set": 2,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Inferno", "Warden"]
+  },
+  {
     "name": "Annie",
+    "set": 2,
     "cost": 4,
+    "range": 3,
     "traits": ["Inferno", "Summoner"]
   },
   {
     "name": "Ashe",
+    "set": 2,
     "cost": 4,
+    "range": 4,
     "traits": ["Crystal", "Ranger"]
   },
   {
     "name": "Azir",
+    "set": 2,
     "cost": 3,
+    "range": 3,
     "traits": ["Desert", "Summoner"]
   },
   {
     "name": "Brand",
+    "set": 2,
     "cost": 4,
+    "range": 3,
     "traits": ["Inferno", "Mage"]
   },
   {
     "name": "Braum",
+    "set": 2,
     "cost": 2,
+    "range": 1,
     "traits": ["Glacial", "Warden"]
   },
   {
     "name": "Diana",
+    "set": 2,
     "cost": 1,
+    "range": 1,
     "traits": ["Inferno", "Assassin"]
   },
   {
-    "name": "DrMundo",
+    "name": "Dr. Mundo",
+    "set": 2,
     "cost": 3,
+    "range": 1,
     "traits": ["Poison", "Berserker"]
   },
   {
     "name": "Ezreal",
+    "set": 2,
     "cost": 3,
+    "range": 3,
     "traits": ["Glacial", "Ranger"]
   },
   {
     "name": "Ivern",
+    "set": 2,
     "cost": 1,
+    "range": 2,
     "traits": ["Woodland", "Druid"]
   },
   {
     "name": "Janna",
+    "set": 2,
     "cost": 4,
-    "traits": ["Cloud", "Mystic"]
+    "range": 3,
+    "traits": ["Wind", "Mystic"]
   },
   {
     "name": "Jax",
+    "set": 2,
     "cost": 2,
+    "range": 1,
     "traits": ["Light", "Berserker"]
   },
   {
     "name": "Karma",
+    "set": 2,
     "cost": 3,
+    "range": 3,
     "traits": ["Lunar", "Mystic"]
   },
   {
-    "name": "KhaZix",
+    "name": "Khazix",
+    "set": 2,
     "cost": 4,
+    "range": 1,
     "traits": ["Desert", "Assassin"]
   },
   {
     "name": "Kindred",
+    "set": 2,
     "cost": 3,
-    "traits": ["Shadow", "Inferno"]
+    "range": 3,
+    "traits": ["Inferno", "Shadow", "Ranger"]
   },
   {
-    "name": "KogMaw",
+    "name": "Kog'Maw",
+    "set": 2,
     "cost": 1,
+    "range": 4,
     "traits": ["Poison", "Predator"]
   },
   {
     "name": "LeBlanc",
+    "set": 2,
     "cost": 2,
-    "traits": ["Woodland", "Assassin"]
+    "range": 2,
+    "traits": ["Woodland", "Assassin", "Mage"]
   },
   {
     "name": "Leona",
+    "set": 2,
     "cost": 1,
+    "range": 1,
     "traits": ["Lunar", "Warden"]
   },
   {
+    "name": "Lucian",
+    "set": 2,
+    "cost": 4,
+    "range": 3,
+    "traits": ["Light", "Soulbound"]
+  },
+  {
     "name": "Lux",
+    "set": 2,
     "cost": 7,
+    "range": 4,
     "traits": [
       "Crystal",
       "Electric",
       "Glacial",
       "Inferno",
       "Light",
-      "Steel",
       "Ocean",
       "Shadow",
-      "Cloud",
+      "Steel",
+      "Wind",
       "Woodland",
       "Avatar"
     ]
   },
   {
     "name": "Malphite",
+    "set": 2,
     "cost": 4,
+    "range": 1,
     "traits": ["Mountain", "Warden"]
   },
   {
     "name": "Malzahar",
+    "set": 2,
     "cost": 2,
+    "range": 3,
     "traits": ["Shadow", "Summoner"]
   },
   {
     "name": "Maokai",
+    "set": 2,
     "cost": 1,
+    "range": 1,
     "traits": ["Woodland", "Druid"]
   },
   {
-    "name": "MasterYi",
+    "name": "Master Yi",
+    "set": 2,
     "cost": 5,
-    "traits": ["Shadow", "Mystic"]
+    "range": 1,
+    "traits": ["Shadow", "Blademaster", "Mystic"]
   },
   {
     "name": "Nami",
+    "set": 2,
     "cost": 5,
+    "range": 4,
     "traits": ["Ocean", "Mystic"]
   },
   {
     "name": "Nasus",
+    "set": 2,
     "cost": 1,
+    "range": 1,
     "traits": ["Light", "Warden"]
   },
   {
     "name": "Nautilus",
+    "set": 2,
     "cost": 3,
+    "range": 1,
     "traits": ["Ocean", "Warden"]
   },
   {
     "name": "Neeko",
+    "set": 2,
     "cost": 2,
+    "range": 3,
     "traits": ["Woodland", "Druid"]
   },
   {
     "name": "Nocturne",
+    "set": 2,
     "cost": 3,
+    "range": 1,
     "traits": ["Steel", "Assassin"]
   },
   {
     "name": "Olaf",
+    "set": 2,
     "cost": 4,
+    "range": 1,
     "traits": ["Glacial", "Berserker"]
   },
   {
     "name": "Ornn",
+    "set": 2,
     "cost": 1,
+    "range": 1,
     "traits": ["Electric", "Warden"]
   },
   {
     "name": "Qiyana",
+    "set": 2,
     "cost": 3,
-    "traits": ["Ocean", "Inferno", "Cloud", "Woodland", "Assassin"]
+    "range": 1,
+    "traits": ["Inferno", "Mountain", "Ocean", "Wind", "Assassin"]
   },
   {
-    "name": "RekSai",
+    "name": "Rek'Sai",
+    "set": 2,
     "cost": 2,
+    "range": 1,
     "traits": ["Steel", "Predator"]
   },
   {
     "name": "Renekton",
+    "set": 2,
     "cost": 1,
+    "range": 1,
     "traits": ["Desert", "Berserker"]
   },
   {
+    "name": "Senna",
+    "set": 2,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Shadow", "Soulbound"]
+  },
+  {
     "name": "Singed",
+    "set": 2,
     "cost": 5,
+    "range": 1,
     "traits": ["Poison", "Alchemist"]
   },
   {
     "name": "Sion",
+    "set": 2,
     "cost": 3,
+    "range": 1,
     "traits": ["Shadow", "Berserker"]
   },
   {
     "name": "Sivir",
+    "set": 2,
     "cost": 3,
+    "range": 3,
     "traits": ["Desert", "Blademaster"]
   },
   {
     "name": "Skarner",
+    "set": 2,
     "cost": 2,
+    "range": 1,
     "traits": ["Crystal", "Predator"]
   },
   {
     "name": "Soraka",
+    "set": 2,
     "cost": 3,
+    "range": 3,
     "traits": ["Light", "Mystic"]
   },
   {
     "name": "Syndra",
+    "set": 2,
     "cost": 2,
+    "range": 3,
     "traits": ["Ocean", "Mage"]
   },
   {
     "name": "Taliyah",
+    "set": 2,
     "cost": 1,
+    "range": 3,
     "traits": ["Mountain", "Mage"]
   },
   {
     "name": "Taric",
+    "set": 2,
     "cost": 5,
+    "range": 1,
     "traits": ["Crystal", "Warden"]
   },
   {
     "name": "Thresh",
+    "set": 2,
     "cost": 2,
+    "range": 2,
     "traits": ["Ocean", "Warden"]
   },
   {
     "name": "Twitch",
+    "set": 2,
     "cost": 4,
+    "range": 4,
     "traits": ["Poison", "Ranger"]
   },
   {
     "name": "Varus",
+    "set": 2,
     "cost": 2,
+    "range": 4,
     "traits": ["Inferno", "Ranger"]
   },
   {
     "name": "Vayne",
+    "set": 2,
     "cost": 1,
+    "range": 3,
     "traits": ["Light", "Ranger"]
   },
   {
     "name": "Veigar",
+    "set": 2,
     "cost": 3,
+    "range": 3,
     "traits": ["Shadow", "Mage"]
   },
   {
     "name": "Vladimir",
+    "set": 2,
     "cost": 1,
+    "range": 2,
     "traits": ["Ocean", "Mage"]
   },
   {
     "name": "Volibear",
+    "set": 2,
     "cost": 2,
-    "traits": ["Glacial", "Electric"]
+    "range": 1,
+    "traits": ["Electric", "Glacial", "Berserker"]
   },
   {
     "name": "Warwick",
+    "set": 2,
     "cost": 1,
+    "range": 1,
     "traits": ["Glacial", "Predator"]
   },
   {
     "name": "Yasuo",
+    "set": 2,
     "cost": 2,
-    "traits": ["Cloud", "Blademaster"]
+    "range": 1,
+    "traits": ["Wind", "Blademaster"]
   },
   {
     "name": "Yorick",
+    "set": 2,
     "cost": 4,
+    "range": 1,
     "traits": ["Light", "Summoner"]
   },
   {
     "name": "Zed",
+    "set": 2,
     "cost": 5,
-    "traits": ["Electric", "Summoner", "Assassin"]
+    "range": 1,
+    "traits": ["Electric", "Assassin", "Summoner"]
   },
   {
     "name": "Zyra",
+    "set": 2,
     "cost": 1,
+    "range": 3,
     "traits": ["Inferno", "Summoner"]
   }
 ]
