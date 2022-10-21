@@ -43,7 +43,6 @@ app.get("/", (req, res) => {
 
 try {
   const doImportData = process.env.IMPORT_DATA === "TRUE";
-  const doImportData1 = process.env.IMPORT_DATA === "TRUE";
 
   database.authenticate();
 
@@ -61,7 +60,7 @@ try {
   });
 
   database.sync().then(async () => {
-    console.log("Database connection successfull.");
+    console.log("Database connection successfull!");
     if (doImportData) {
       await importData();
     }
