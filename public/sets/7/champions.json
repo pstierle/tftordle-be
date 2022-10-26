@@ -18,7 +18,7 @@
     "set": 7,
     "cost": 10,
     "range": 4,
-    "traits": ["Tempest", "Dragons"]
+    "traits": ["Tempest", "Dragon"]
   },
   {
     "name": "Ashe",
@@ -32,7 +32,7 @@
     "set": 7,
     "cost": 10,
     "range": 4,
-    "traits": ["Astral", "Dragons", "Evoker"]
+    "traits": ["Astral", "Dragon", "Evoker"]
   },
   {
     "name": "Bard",
@@ -60,7 +60,7 @@
     "set": 7,
     "cost": 8,
     "range": 4,
-    "traits": ["Mirage", "Dragons"]
+    "traits": ["Mirage", "Dragon"]
   },
   {
     "name": "Diana",
@@ -109,7 +109,7 @@
     "set": 7,
     "cost": 8,
     "range": 1,
-    "traits": ["Shimmerscale", "Dragons", "Guardian"]
+    "traits": ["Shimmerscale", "Dragon", "Guardian"]
   },
   {
     "name": "Illaoi",
@@ -263,14 +263,14 @@
     "set": 7,
     "cost": 8,
     "range": 1,
-    "traits": ["Jade", "Dragons", "Mystic"]
+    "traits": ["Jade", "Dragon", "Mystic"]
   },
   {
     "name": "Shyvana",
     "set": 7,
     "cost": 10,
     "range": 1,
-    "traits": ["Ragewing", "Dragons", "Shapeshifter"]
+    "traits": ["Ragewing", "Dragon", "Shapeshifter"]
   },
   {
     "name": "Skarner",
@@ -305,7 +305,7 @@
     "set": 7,
     "cost": 8,
     "range": 1,
-    "traits": ["Whispers", "Bruiser", "Dragons"]
+    "traits": ["Whispers", "Bruiser", "Dragon"]
   },
   {
     "name": "Sylas",
