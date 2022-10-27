@@ -19,12 +19,15 @@ const connection_1 = require("../database/connection");
 const consts_1 = require("../consts");
 const promises_1 = __importDefault(require("fs/promises"));
 const secondsUntilMidnight = () => {
-    var midnight = new Date();
+    var d = new Date();
+    var midnight = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds(), d.getUTCMilliseconds()));
     midnight.setHours(24);
     midnight.setMinutes(0);
     midnight.setSeconds(0);
     midnight.setMilliseconds(0);
-    return (midnight.getTime() - new Date().getTime()) / 1000;
+    return ((midnight.getTime() -
+        new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds(), d.getUTCMilliseconds())).getTime()) /
+        1000);
 };
 exports.secondsUntilMidnight = secondsUntilMidnight;
 const isDevelopment = () => {

@@ -11,12 +11,37 @@ import { devUrl, prodUrl, sets, publicFolder } from "../consts";
 import fs from "fs/promises";
 
 export const secondsUntilMidnight = () => {
-  var midnight = new Date();
+  var d = new Date();
+  var midnight = new Date(
+    Date.UTC(
+      d.getUTCFullYear(),
+      d.getUTCMonth(),
+      d.getUTCDate(),
+      d.getUTCHours(),
+      d.getUTCMinutes(),
+      d.getUTCSeconds(),
+      d.getUTCMilliseconds()
+    )
+  );
   midnight.setHours(24);
   midnight.setMinutes(0);
   midnight.setSeconds(0);
   midnight.setMilliseconds(0);
-  return (midnight.getTime() - new Date().getTime()) / 1000;
+  return (
+    (midnight.getTime() -
+      new Date(
+        Date.UTC(
+          d.getUTCFullYear(),
+          d.getUTCMonth(),
+          d.getUTCDate(),
+          d.getUTCHours(),
+          d.getUTCMinutes(),
+          d.getUTCSeconds(),
+          d.getUTCMilliseconds()
+        )
+      ).getTime()) /
+    1000
+  );
 };
 
 export const isDevelopment = () => {
