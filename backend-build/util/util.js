@@ -18,16 +18,21 @@ const models_1 = require("../database/models/models");
 const connection_1 = require("../database/connection");
 const consts_1 = require("../consts");
 const promises_1 = __importDefault(require("fs/promises"));
+const changeTimeZone = (date, timeZone) => {
+    if (typeof date === "string") {
+        return new Date(new Date(date).toLocaleString("en-US", {
+            timeZone,
+        }));
+    }
+    return new Date(date.toLocaleString("en-US", {
+        timeZone,
+    }));
+};
 const secondsUntilMidnight = () => {
-    var d = new Date();
-    var midnight = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds(), d.getUTCMilliseconds()));
-    midnight.setHours(24);
-    midnight.setMinutes(0);
-    midnight.setSeconds(0);
-    midnight.setMilliseconds(0);
-    return ((midnight.getTime() -
-        new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds(), d.getUTCMilliseconds())).getTime()) /
-        1000);
+    var midnight = new Date();
+    midnight.setHours(24, 0, 0, 0);
+    const berlinDate = changeTimeZone(new Date(), "Europe/Berlin");
+    return (midnight.getTime() - berlinDate.getTime()) / 1000;
 };
 exports.secondsUntilMidnight = secondsUntilMidnight;
 const isDevelopment = () => {
