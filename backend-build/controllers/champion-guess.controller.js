@@ -24,8 +24,8 @@ const getGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
     const champion = yield models_1.Champion.findOne({
         raw: true,
         where: {
-            name: guessChampion[0].name,
-            set: guessChampion[0].set,
+            name: guessChampion.name,
+            set: guessChampion.set,
         },
     });
     console.log("Championguess Champion: ", champion);

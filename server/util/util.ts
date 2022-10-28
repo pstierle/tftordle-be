@@ -27,9 +27,9 @@ export const changeTimeZone = (date: any, timeZone: any) => {
 };
 
 export const secondsUntilMidnight = () => {
-  var midnight = new Date();
-  midnight.setHours(24, 0, 0, 0);
   const berlinDate = changeTimeZone(new Date(), "Europe/Berlin");
+  const midnight = changeTimeZone(new Date(), "Europe/Berlin");
+  midnight.setHours(24, 0, 0, 0);
   return (midnight.getTime() - berlinDate.getTime()) / 1000;
 };
 

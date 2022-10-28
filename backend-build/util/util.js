@@ -30,9 +30,9 @@ const changeTimeZone = (date, timeZone) => {
 };
 exports.changeTimeZone = changeTimeZone;
 const secondsUntilMidnight = () => {
-    var midnight = new Date();
-    midnight.setHours(24, 0, 0, 0);
     const berlinDate = (0, exports.changeTimeZone)(new Date(), "Europe/Berlin");
+    const midnight = (0, exports.changeTimeZone)(new Date(), "Europe/Berlin");
+    midnight.setHours(24, 0, 0, 0);
     return (midnight.getTime() - berlinDate.getTime()) / 1000;
 };
 exports.secondsUntilMidnight = secondsUntilMidnight;
