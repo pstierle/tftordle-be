@@ -12,7 +12,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.resetGuessesTimer = void 0;
 const champion_guess_router_1 = require("./routes/champion-guess.router");
 const consts_1 = require("./consts");
 const trait_guess_router_1 = require("./routes/trait-guess.router");
@@ -56,7 +55,6 @@ try {
         if (doImportData) {
             yield (0, util_1.importData)();
         }
-        yield (0, exports.resetGuessesTimer)();
         app.listen(port, () => {
             console.log(`Server started on port: ${port}`);
         });
@@ -65,13 +63,6 @@ try {
 catch (error) {
     console.log("Unable to connect to the database.");
 }
-const resetGuessesTimer = () => __awaiter(void 0, void 0, void 0, function* () {
-    yield (0, util_1.generateRandomGuesses)();
-    setTimeout(() => __awaiter(void 0, void 0, void 0, function* () {
-        yield (0, exports.resetGuessesTimer)();
-    }), (0, util_1.secondsUntilMidnight)() * 1000);
-});
-exports.resetGuessesTimer = resetGuessesTimer;
 app.get("/reset-timer", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.json((0, util_1.secondsUntilMidnight)());
 }));

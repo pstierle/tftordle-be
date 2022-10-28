@@ -8,11 +8,7 @@ import {
   ChampionGuessChampion,
   TraitGuessChampion,
 } from "./database/models/models";
-import {
-  generateRandomGuesses,
-  importData,
-  secondsUntilMidnight,
-} from "./util/util";
+import { importData, nextDays, secondsUntilMidnight } from "./util/util";
 
 import express from "express";
 import cors from "cors";
@@ -65,8 +61,6 @@ try {
       await importData();
     }
 
-    await resetGuessesTimer();
-
     app.listen(port, (): void => {
       console.log(`Server started on port: ${port}`);
     });
@@ -74,13 +68,6 @@ try {
 } catch (error) {
   console.log("Unable to connect to the database.");
 }
-
-export const resetGuessesTimer = async () => {
-  await generateRandomGuesses();
-  setTimeout(async () => {
-    await resetGuessesTimer();
-  }, secondsUntilMidnight() * 1000);
-};
 
 app.get("/reset-timer", async (req, res) => {
   res.json(secondsUntilMidnight());

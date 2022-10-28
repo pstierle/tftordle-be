@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.generateRandomGuesses = exports.isDevelopment = exports.secondsUntilMidnight = void 0;
+exports.nextDays = exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.isDevelopment = exports.secondsUntilMidnight = void 0;
 const sequelize_1 = require("sequelize");
 const models_1 = require("../database/models/models");
 const connection_1 = require("../database/connection");
@@ -39,41 +39,6 @@ const isDevelopment = () => {
     return process.env.NODE_ENV === "DEV";
 };
 exports.isDevelopment = isDevelopment;
-const generateRandomGuesses = () => __awaiter(void 0, void 0, void 0, function* () {
-    const today = new Date().toLocaleDateString();
-    const championGuessChampion = yield models_1.ChampionGuessChampion.findOne({
-        where: {
-            created: today,
-        },
-    });
-    const traitGuessChampion = yield models_1.TraitGuessChampion.findOne({
-        where: {
-            created: today,
-        },
-    });
-    if (!championGuessChampion && !traitGuessChampion) {
-        yield connection_1.database
-            .query("SELECT * FROM `Champions` ORDER BY random() LIMIT 2", {
-            type: sequelize_1.QueryTypes.SELECT,
-            raw: true,
-        })
-            .then((champions) => {
-            if (champions.length === 0)
-                return;
-            models_1.ChampionGuessChampion.create({
-                name: champions[0].name,
-                set: champions[0].set,
-                created: today,
-            });
-            models_1.TraitGuessChampion.create({
-                name: champions[1].name,
-                set: champions[1].set,
-                created: today,
-            });
-        });
-    }
-});
-exports.generateRandomGuesses = generateRandomGuesses;
 const getChampionImagePath = (name, set) => {
     const isDevelopment = process.env.NODE_ENV === "DEV";
     const hostUrl = isDevelopment ? consts_1.devUrl : consts_1.prodUrl;
@@ -130,4 +95,45 @@ const importData = () => __awaiter(void 0, void 0, void 0, function* () {
     })));
 });
 exports.importData = importData;
+const nextDays = () => __awaiter(void 0, void 0, void 0, function* () {
+    let dates = [];
+    for (let i = 1; i < 64; i++) {
+        let today = new Date();
+        today.setDate(today.getDate() + i);
+        dates.push(today.toLocaleDateString());
+    }
+    let randomChampions = [];
+    yield connection_1.database
+        .query("SELECT * FROM `Champions` ORDER BY random() LIMIT " + dates.length * 2, {
+        type: sequelize_1.QueryTypes.SELECT,
+        raw: true,
+    })
+        .then((champions) => {
+        randomChampions = champions;
+    });
+    let takenIndecies = [];
+    dates.forEach((date, i) => {
+        console.log(date);
+        let randomIndex = Math.floor(Math.random() * randomChampions.length);
+        while (takenIndecies.includes(randomIndex)) {
+            randomIndex = Math.floor(Math.random() * randomChampions.length);
+        }
+        models_1.ChampionGuessChampion.create({
+            name: randomChampions[randomIndex].name,
+            set: randomChampions[randomIndex].set,
+            created: date,
+        });
+        takenIndecies.push(randomIndex);
+        while (takenIndecies.includes(randomIndex)) {
+            randomIndex = Math.floor(Math.random() * randomChampions.length);
+        }
+        takenIndecies.push(randomIndex);
+        models_1.TraitGuessChampion.create({
+            name: randomChampions[randomIndex].name,
+            set: randomChampions[randomIndex].set,
+            created: date,
+        });
+    });
+});
+exports.nextDays = nextDays;
 //# sourceMappingURL=util.js.map

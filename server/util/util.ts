@@ -37,44 +37,6 @@ export const isDevelopment = () => {
   return process.env.NODE_ENV === "DEV";
 };
 
-export const generateRandomGuesses = async () => {
-  const today = new Date().toLocaleDateString();
-
-  const championGuessChampion = await ChampionGuessChampion.findOne({
-    where: {
-      created: today,
-    },
-  });
-
-  const traitGuessChampion = await TraitGuessChampion.findOne({
-    where: {
-      created: today,
-    },
-  });
-
-  if (!championGuessChampion && !traitGuessChampion) {
-    await database
-      .query("SELECT * FROM `Champions` ORDER BY random() LIMIT 2", {
-        type: QueryTypes.SELECT,
-        raw: true,
-      })
-      .then((champions: any[]) => {
-        if (champions.length === 0) return;
-
-        ChampionGuessChampion.create({
-          name: champions[0].name,
-          set: champions[0].set,
-          created: today,
-        });
-        TraitGuessChampion.create({
-          name: champions[1].name,
-          set: champions[1].set,
-          created: today,
-        });
-      });
-  }
-};
-
 const getChampionImagePath = (name: string, set: number) => {
   const isDevelopment = process.env.NODE_ENV === "DEV";
   const hostUrl = isDevelopment ? devUrl : prodUrl;
@@ -163,4 +125,59 @@ export const importData = async () => {
       );
     })
   );
+};
+
+export const nextDays = async () => {
+  let dates = [];
+
+  for (let i = 1; i < 64; i++) {
+    let today = new Date();
+    today.setDate(today.getDate() + i);
+    dates.push(today.toLocaleDateString());
+  }
+
+  let randomChampions: any = [];
+
+  await database
+    .query(
+      "SELECT * FROM `Champions` ORDER BY random() LIMIT " + dates.length * 2,
+      {
+        type: QueryTypes.SELECT,
+        raw: true,
+      }
+    )
+    .then((champions: any[]) => {
+      randomChampions = champions;
+    });
+
+  let takenIndecies: number[] = [];
+
+  dates.forEach((date, i) => {
+    console.log(date);
+
+    let randomIndex = Math.floor(Math.random() * randomChampions.length);
+
+    while (takenIndecies.includes(randomIndex)) {
+      randomIndex = Math.floor(Math.random() * randomChampions.length);
+    }
+
+    ChampionGuessChampion.create({
+      name: randomChampions[randomIndex].name,
+      set: randomChampions[randomIndex].set,
+      created: date,
+    });
+
+    takenIndecies.push(randomIndex);
+
+    while (takenIndecies.includes(randomIndex)) {
+      randomIndex = Math.floor(Math.random() * randomChampions.length);
+    }
+    takenIndecies.push(randomIndex);
+
+    TraitGuessChampion.create({
+      name: randomChampions[randomIndex].name,
+      set: randomChampions[randomIndex].set,
+      created: date,
+    });
+  });
 };
