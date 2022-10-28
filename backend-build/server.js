@@ -44,12 +44,6 @@ try {
     models_1.Champion.sync({
         force: doImportData,
     });
-    models_1.ChampionGuessChampion.sync({
-        force: doImportData,
-    });
-    models_1.TraitGuessChampion.sync({
-        force: doImportData,
-    });
     connection_1.database.sync().then(() => __awaiter(void 0, void 0, void 0, function* () {
         console.log("Database connection successfull!");
         if (doImportData) {

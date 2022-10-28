@@ -4,14 +4,24 @@ import {
   Champion,
 } from "./../database/models/models";
 import { Request, Response } from "express";
-import { championWithImagePath, traitWithImagePath } from "../util/util";
+import {
+  championWithImagePath,
+  changeTimeZone,
+  traitWithImagePath,
+} from "../util/util";
 import { Op } from "sequelize";
 
 const getTraitGuessChampion = async () => {
-  const traitGuessChampion: any = await TraitGuessChampion.findAll({
-    order: [["created", "DESC"]],
+  const today = changeTimeZone(
+    new Date(),
+    "Europe/Berlin"
+  ).toLocaleDateString();
+
+  const traitGuessChampion: any = await TraitGuessChampion.findOne({
+    where: {
+      created: today,
+    },
     raw: true,
-    limit: 1,
   });
 
   const champion: any = await Champion.findOne({

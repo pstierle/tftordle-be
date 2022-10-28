@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.nextDays = exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.isDevelopment = exports.secondsUntilMidnight = void 0;
+exports.nextDays = exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.isDevelopment = exports.secondsUntilMidnight = exports.changeTimeZone = void 0;
 const sequelize_1 = require("sequelize");
 const models_1 = require("../database/models/models");
 const connection_1 = require("../database/connection");
@@ -28,10 +28,11 @@ const changeTimeZone = (date, timeZone) => {
         timeZone,
     }));
 };
+exports.changeTimeZone = changeTimeZone;
 const secondsUntilMidnight = () => {
     var midnight = new Date();
     midnight.setHours(24, 0, 0, 0);
-    const berlinDate = changeTimeZone(new Date(), "Europe/Berlin");
+    const berlinDate = (0, exports.changeTimeZone)(new Date(), "Europe/Berlin");
     return (midnight.getTime() - berlinDate.getTime()) / 1000;
 };
 exports.secondsUntilMidnight = secondsUntilMidnight;

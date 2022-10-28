@@ -4,15 +4,21 @@ import {
   Trait,
 } from "./../database/models/models";
 import { Request, Response } from "express";
-import { championWithImagePath } from "../util/util";
+import { championWithImagePath, changeTimeZone } from "../util/util";
 import { Op } from "sequelize";
 
 type Match = "exact" | "higher" | "lower" | "wrong" | "some";
 
 const getGuessChampion = async () => {
-  const guessChampion: any = await ChampionGuessChampion.findAll({
-    order: [["created", "DESC"]],
-    limit: 1,
+  const today = changeTimeZone(
+    new Date(),
+    "Europe/Berlin"
+  ).toLocaleDateString();
+
+  const guessChampion: any = await ChampionGuessChampion.findOne({
+    where: {
+      created: today,
+    },
     raw: true,
   });
 

@@ -14,10 +14,12 @@ const models_1 = require("./../database/models/models");
 const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
-    const traitGuessChampion = yield models_1.TraitGuessChampion.findAll({
-        order: [["created", "DESC"]],
+    const today = (0, util_1.changeTimeZone)(new Date(), "Europe/Berlin").toLocaleDateString();
+    const traitGuessChampion = yield models_1.TraitGuessChampion.findOne({
+        where: {
+            created: today,
+        },
         raw: true,
-        limit: 1,
     });
     const champion = yield models_1.Champion.findOne({
         raw: true,

@@ -10,7 +10,7 @@ import { devUrl, prodUrl, sets, publicFolder } from "../consts";
 
 import fs from "fs/promises";
 
-const changeTimeZone = (date: any, timeZone: any) => {
+export const changeTimeZone = (date: any, timeZone: any) => {
   if (typeof date === "string") {
     return new Date(
       new Date(date).toLocaleString("en-US", {

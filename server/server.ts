@@ -8,7 +8,12 @@ import {
   ChampionGuessChampion,
   TraitGuessChampion,
 } from "./database/models/models";
-import { importData, nextDays, secondsUntilMidnight } from "./util/util";
+import {
+  changeTimeZone,
+  importData,
+  nextDays,
+  secondsUntilMidnight,
+} from "./util/util";
 
 import express from "express";
 import cors from "cors";
@@ -46,12 +51,6 @@ try {
     force: doImportData,
   });
   Champion.sync({
-    force: doImportData,
-  });
-  ChampionGuessChampion.sync({
-    force: doImportData,
-  });
-  TraitGuessChampion.sync({
     force: doImportData,
   });
 
