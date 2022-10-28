@@ -27,8 +27,8 @@ const getTraitGuessChampion = async () => {
   const champion: any = await Champion.findOne({
     raw: true,
     where: {
-      name: traitGuessChampion[0].name,
-      set: traitGuessChampion[0].set,
+      name: traitGuessChampion.name,
+      set: traitGuessChampion.set,
     },
   });
 

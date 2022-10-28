@@ -25,8 +25,8 @@ const getGuessChampion = async () => {
   const champion: any = await Champion.findOne({
     raw: true,
     where: {
-      name: guessChampion[0].name,
-      set: guessChampion[0].set,
+      name: guessChampion.name,
+      set: guessChampion.set,
     },
   });
 
