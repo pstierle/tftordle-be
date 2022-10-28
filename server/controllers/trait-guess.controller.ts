@@ -17,6 +17,10 @@ const getTraitGuessChampion = async () => {
     "Europe/Berlin"
   ).toLocaleDateString();
 
+  console.log(today);
+
+  TraitGuessChampion.findAll({ raw: true }).then((c) => console.log(c));
+
   const traitGuessChampion: any = await TraitGuessChampion.findAll({
     where: {
       created: today,

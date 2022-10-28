@@ -15,6 +15,8 @@ const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
     const today = (0, util_1.changeTimeZone)(new Date(), "Europe/Berlin").toLocaleDateString();
+    console.log(today);
+    models_1.TraitGuessChampion.findAll({ raw: true }).then((c) => console.log(c));
     const traitGuessChampion = yield models_1.TraitGuessChampion.findAll({
         where: {
             created: today,
