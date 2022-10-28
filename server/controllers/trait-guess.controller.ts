@@ -17,18 +17,20 @@ const getTraitGuessChampion = async () => {
     "Europe/Berlin"
   ).toLocaleDateString();
 
-  const traitGuessChampion: any = await TraitGuessChampion.findOne({
+  const traitGuessChampion: any = await TraitGuessChampion.findAll({
     where: {
       created: today,
     },
     raw: true,
   });
 
+  console.log(traitGuessChampion);
+
   const champion: any = await Champion.findOne({
     raw: true,
     where: {
-      name: traitGuessChampion.name,
-      set: traitGuessChampion.set,
+      name: traitGuessChampion[0].name,
+      set: traitGuessChampion[0].set,
     },
   });
 
