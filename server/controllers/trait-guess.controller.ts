@@ -5,25 +5,16 @@ import {
 } from "./../database/models/models";
 import { Request, Response } from "express";
 import {
+  berlinDateString,
   championWithImagePath,
-  changeTimeZone,
   traitWithImagePath,
 } from "../util/util";
 import { Op } from "sequelize";
 
 const getTraitGuessChampion = async () => {
-  const today = changeTimeZone(
-    new Date(),
-    "Europe/Berlin"
-  ).toLocaleDateString();
-
-  console.log(today);
-
-  TraitGuessChampion.findAll({ raw: true }).then((c) => console.log(c));
-
-  const traitGuessChampion: any = await TraitGuessChampion.findAll({
+  const traitGuessChampion: any = await TraitGuessChampion.findOne({
     where: {
-      created: today,
+      created: berlinDateString(),
     },
     raw: true,
   });
@@ -33,8 +24,8 @@ const getTraitGuessChampion = async () => {
   const champion: any = await Champion.findOne({
     raw: true,
     where: {
-      name: traitGuessChampion[0].name,
-      set: traitGuessChampion[0].set,
+      name: traitGuessChampion.name,
+      set: traitGuessChampion.set,
     },
   });
 

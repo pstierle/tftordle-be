@@ -2,18 +2,8 @@ import { championGuessRouter } from "./routes/champion-guess.router";
 import { frontendFolder, publicFolder } from "./consts";
 import { traitGuessRouter } from "./routes/trait-guess.router";
 import { database } from "./database/connection";
-import {
-  Champion,
-  Trait,
-  ChampionGuessChampion,
-  TraitGuessChampion,
-} from "./database/models/models";
-import {
-  changeTimeZone,
-  importData,
-  nextDays,
-  secondsUntilMidnight,
-} from "./util/util";
+import { Champion, Trait } from "./database/models/models";
+import { importData, secondsUntilMidnight } from "./util/util";
 
 import express from "express";
 import cors from "cors";

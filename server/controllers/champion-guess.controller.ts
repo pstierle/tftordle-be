@@ -4,20 +4,15 @@ import {
   Trait,
 } from "./../database/models/models";
 import { Request, Response } from "express";
-import { championWithImagePath, changeTimeZone } from "../util/util";
+import { berlinDateString, championWithImagePath } from "../util/util";
 import { Op } from "sequelize";
 
 type Match = "exact" | "higher" | "lower" | "wrong" | "some";
 
 const getGuessChampion = async () => {
-  const today = changeTimeZone(
-    new Date(),
-    "Europe/Berlin"
-  ).toLocaleDateString();
-
   const guessChampion: any = await ChampionGuessChampion.findOne({
     where: {
-      created: today,
+      created: berlinDateString(),
     },
     raw: true,
   });

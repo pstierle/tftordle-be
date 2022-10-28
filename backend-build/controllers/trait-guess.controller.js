@@ -14,12 +14,9 @@ const models_1 = require("./../database/models/models");
 const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
-    const today = (0, util_1.changeTimeZone)(new Date(), "Europe/Berlin").toLocaleDateString();
-    console.log(today);
-    models_1.TraitGuessChampion.findAll({ raw: true }).then((c) => console.log(c));
-    const traitGuessChampion = yield models_1.TraitGuessChampion.findAll({
+    const traitGuessChampion = yield models_1.TraitGuessChampion.findOne({
         where: {
-            created: today,
+            created: (0, util_1.berlinDateString)(),
         },
         raw: true,
     });
@@ -27,8 +24,8 @@ const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* 
     const champion = yield models_1.Champion.findOne({
         raw: true,
         where: {
-            name: traitGuessChampion[0].name,
-            set: traitGuessChampion[0].set,
+            name: traitGuessChampion.name,
+            set: traitGuessChampion.set,
         },
     });
     console.log("Traitguess Champion: ", champion);

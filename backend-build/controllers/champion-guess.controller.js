@@ -14,10 +14,9 @@ const models_1 = require("./../database/models/models");
 const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
-    const today = (0, util_1.changeTimeZone)(new Date(), "Europe/Berlin").toLocaleDateString();
     const guessChampion = yield models_1.ChampionGuessChampion.findOne({
         where: {
-            created: today,
+            created: (0, util_1.berlinDateString)(),
         },
         raw: true,
     });

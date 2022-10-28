@@ -10,6 +10,16 @@ import { devUrl, prodUrl, sets, publicFolder } from "../consts";
 
 import fs from "fs/promises";
 
+export const berlinDateString = () => {
+  const today = changeTimeZone(new Date(), "Europe/Berlin");
+
+  let parsed = `${today.getDate()}/${
+    today.getMonth() + 1
+  }/${today.getFullYear()}`;
+
+  return parsed;
+};
+
 export const changeTimeZone = (date: any, timeZone: any) => {
   if (typeof date === "string") {
     return new Date(
