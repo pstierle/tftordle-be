@@ -12,3 +12,5 @@ championGuessRouter.get(
   "/check-guess-attr/:id",
   championGuessController.checkGuessAttr
 );
+
+championGuessRouter.get("/last", championGuessController.lastChampion);

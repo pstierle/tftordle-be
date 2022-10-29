@@ -32,4 +32,5 @@ exports.traitGuessRouter.get("/stat-clue", traitGuessController.getStatClue);
 exports.traitGuessRouter.get("/same-trait-clue", traitGuessController.getSameTraitClue);
 exports.traitGuessRouter.get("/query-traits/:query", traitGuessController.queryTraits);
 exports.traitGuessRouter.get("/check-guess/:guess", traitGuessController.checkGuess);
+exports.traitGuessRouter.get("/last", traitGuessController.lastChampion);
 //# sourceMappingURL=trait-guess.router.js.map

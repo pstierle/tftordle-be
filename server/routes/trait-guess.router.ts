@@ -8,3 +8,4 @@ traitGuessRouter.get("/stat-clue", traitGuessController.getStatClue);
 traitGuessRouter.get("/same-trait-clue", traitGuessController.getSameTraitClue);
 traitGuessRouter.get("/query-traits/:query", traitGuessController.queryTraits);
 traitGuessRouter.get("/check-guess/:guess", traitGuessController.checkGuess);
+traitGuessRouter.get("/last", traitGuessController.lastChampion);

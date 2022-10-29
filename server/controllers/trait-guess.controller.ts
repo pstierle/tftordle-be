@@ -5,7 +5,8 @@ import {
 } from "./../database/models/models";
 import { Request, Response } from "express";
 import {
-  berlinDateString,
+  berlinTodayDateString,
+  berlinYesterdayDateString,
   championWithImagePath,
   traitWithImagePath,
 } from "../util/util";
@@ -14,7 +15,7 @@ import { Op } from "sequelize";
 const getTraitGuessChampion = async () => {
   const traitGuessChampion: any = await TraitGuessChampion.findOne({
     where: {
-      created: berlinDateString(),
+      created: berlinTodayDateString(),
     },
     raw: true,
   });
@@ -206,4 +207,21 @@ export const getSameTraitClue = async (
   );
 
   res.json(championNames.filter((name) => name !== traitGuessChampion.name));
+};
+
+export const lastChampion = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  const traitGuessChampion: any = await TraitGuessChampion.findOne({
+    where: {
+      created: berlinYesterdayDateString(),
+    },
+    raw: true,
+  });
+  res.json({
+    number: traitGuessChampion.id,
+    name: traitGuessChampion.name,
+    set: traitGuessChampion.set,
+  });
 };

@@ -4,7 +4,11 @@ import {
   Trait,
 } from "./../database/models/models";
 import { Request, Response } from "express";
-import { berlinDateString, championWithImagePath } from "../util/util";
+import {
+  berlinTodayDateString,
+  berlinYesterdayDateString,
+  championWithImagePath,
+} from "../util/util";
 import { Op } from "sequelize";
 
 type Match = "exact" | "higher" | "lower" | "wrong" | "some";
@@ -12,7 +16,7 @@ type Match = "exact" | "higher" | "lower" | "wrong" | "some";
 const getGuessChampion = async () => {
   const guessChampion: any = await ChampionGuessChampion.findOne({
     where: {
-      created: berlinDateString(),
+      created: berlinTodayDateString(),
     },
     raw: true,
   });
@@ -150,4 +154,21 @@ export const checkGuessAttr = async (
   );
 
   res.json(results);
+};
+
+export const lastChampion = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  const guessChampion: any = await ChampionGuessChampion.findOne({
+    where: {
+      created: berlinYesterdayDateString(),
+    },
+    raw: true,
+  });
+  res.json({
+    number: guessChampion.id,
+    name: guessChampion.name,
+    set: guessChampion.set,
+  });
 };

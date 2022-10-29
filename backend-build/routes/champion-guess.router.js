@@ -29,4 +29,5 @@ const championGuessController = __importStar(require("../controllers/champion-gu
 exports.championGuessRouter = (0, express_1.Router)();
 exports.championGuessRouter.get("/query-champions/:query", championGuessController.queryChampions);
 exports.championGuessRouter.get("/check-guess-attr/:id", championGuessController.checkGuessAttr);
+exports.championGuessRouter.get("/last", championGuessController.lastChampion);
 //# sourceMappingURL=champion-guess.router.js.map

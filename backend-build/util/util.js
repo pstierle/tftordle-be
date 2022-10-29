@@ -12,18 +12,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.nextDays = exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.isDevelopment = exports.secondsUntilMidnight = exports.changeTimeZone = exports.berlinDateString = void 0;
+exports.nextDays = exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.isDevelopment = exports.secondsUntilMidnight = exports.changeTimeZone = exports.berlinYesterdayDateString = exports.berlinTodayDateString = void 0;
 const sequelize_1 = require("sequelize");
 const models_1 = require("../database/models/models");
 const connection_1 = require("../database/connection");
 const consts_1 = require("../consts");
 const promises_1 = __importDefault(require("fs/promises"));
-const berlinDateString = () => {
+const berlinTodayDateString = () => {
     const today = (0, exports.changeTimeZone)(new Date(), "Europe/Berlin");
     let parsed = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
     return parsed;
 };
-exports.berlinDateString = berlinDateString;
+exports.berlinTodayDateString = berlinTodayDateString;
+const berlinYesterdayDateString = () => {
+    const today = (0, exports.changeTimeZone)(new Date(Date.now() - 86400000), "Europe/Berlin");
+    let parsed = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+    return parsed;
+};
+exports.berlinYesterdayDateString = berlinYesterdayDateString;
 const changeTimeZone = (date, timeZone) => {
     if (typeof date === "string") {
         return new Date(new Date(date).toLocaleString("en-US", {

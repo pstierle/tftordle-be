@@ -9,14 +9,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getSameTraitClue = exports.queryTraits = exports.getStatClue = exports.checkGuess = exports.getChampion = void 0;
+exports.lastChampion = exports.getSameTraitClue = exports.queryTraits = exports.getStatClue = exports.checkGuess = exports.getChampion = void 0;
 const models_1 = require("./../database/models/models");
 const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
     const traitGuessChampion = yield models_1.TraitGuessChampion.findOne({
         where: {
-            created: (0, util_1.berlinDateString)(),
+            created: (0, util_1.berlinTodayDateString)(),
         },
         raw: true,
     });
@@ -155,4 +155,18 @@ const getSameTraitClue = (req, res) => __awaiter(void 0, void 0, void 0, functio
     res.json(championNames.filter((name) => name !== traitGuessChampion.name));
 });
 exports.getSameTraitClue = getSameTraitClue;
+const lastChampion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const traitGuessChampion = yield models_1.TraitGuessChampion.findOne({
+        where: {
+            created: (0, util_1.berlinYesterdayDateString)(),
+        },
+        raw: true,
+    });
+    res.json({
+        number: traitGuessChampion.id,
+        name: traitGuessChampion.name,
+        set: traitGuessChampion.set,
+    });
+});
+exports.lastChampion = lastChampion;
 //# sourceMappingURL=trait-guess.controller.js.map

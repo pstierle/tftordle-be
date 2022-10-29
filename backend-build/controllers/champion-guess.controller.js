@@ -9,14 +9,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkGuessAttr = exports.queryChampions = void 0;
+exports.lastChampion = exports.checkGuessAttr = exports.queryChampions = void 0;
 const models_1 = require("./../database/models/models");
 const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
     const guessChampion = yield models_1.ChampionGuessChampion.findOne({
         where: {
-            created: (0, util_1.berlinDateString)(),
+            created: (0, util_1.berlinTodayDateString)(),
         },
         raw: true,
     });
@@ -118,4 +118,18 @@ const checkGuessAttr = (req, res) => __awaiter(void 0, void 0, void 0, function*
     res.json(results);
 });
 exports.checkGuessAttr = checkGuessAttr;
+const lastChampion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const guessChampion = yield models_1.ChampionGuessChampion.findOne({
+        where: {
+            created: (0, util_1.berlinYesterdayDateString)(),
+        },
+        raw: true,
+    });
+    res.json({
+        number: guessChampion.id,
+        name: guessChampion.name,
+        set: guessChampion.set,
+    });
+});
+exports.lastChampion = lastChampion;
 //# sourceMappingURL=champion-guess.controller.js.map

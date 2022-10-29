@@ -10,8 +10,21 @@ import { devUrl, prodUrl, sets, publicFolder } from "../consts";
 
 import fs from "fs/promises";
 
-export const berlinDateString = () => {
+export const berlinTodayDateString = () => {
   const today = changeTimeZone(new Date(), "Europe/Berlin");
+
+  let parsed = `${today.getDate()}/${
+    today.getMonth() + 1
+  }/${today.getFullYear()}`;
+
+  return parsed;
+};
+
+export const berlinYesterdayDateString = () => {
+  const today = changeTimeZone(
+    new Date(Date.now() - 86400000),
+    "Europe/Berlin"
+  );
 
   let parsed = `${today.getDate()}/${
     today.getMonth() + 1
