@@ -12,10 +12,12 @@ import fs from "fs/promises";
 
 export const berlinTodayDateString = () => {
   const today = changeTimeZone(new Date(), "Europe/Berlin");
+  const day = today.getDate();
+  const month = today.getMonth() + 1;
 
-  let parsed = `${today.getDate()}/${
-    today.getMonth() + 1
-  }/${today.getFullYear()}`;
+  let parsed = `${day < 10 ? "0" : ""}${day}/${
+    month < 10 ? "0" : ""
+  }${month}/${today.getFullYear()}`;
 
   return parsed;
 };
@@ -25,11 +27,12 @@ export const berlinYesterdayDateString = () => {
     new Date(Date.now() - 86400000),
     "Europe/Berlin"
   );
+  const day = today.getDate();
+  const month = today.getMonth() + 1;
 
-  let parsed = `${today.getDate()}/${
-    today.getMonth() + 1
-  }/${today.getFullYear()}`;
-
+  let parsed = `${day < 10 ? "0" : ""}${day}/${
+    month < 10 ? "0" : ""
+  }${month}/${today.getFullYear()}`;
   return parsed;
 };
 

@@ -20,13 +20,17 @@ const consts_1 = require("../consts");
 const promises_1 = __importDefault(require("fs/promises"));
 const berlinTodayDateString = () => {
     const today = (0, exports.changeTimeZone)(new Date(), "Europe/Berlin");
-    let parsed = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+    const day = today.getDate();
+    const month = today.getMonth() + 1;
+    let parsed = `${day < 10 ? "0" : ""}${day}/${month < 10 ? "0" : ""}${month}/${today.getFullYear()}`;
     return parsed;
 };
 exports.berlinTodayDateString = berlinTodayDateString;
 const berlinYesterdayDateString = () => {
     const today = (0, exports.changeTimeZone)(new Date(Date.now() - 86400000), "Europe/Berlin");
-    let parsed = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+    const day = today.getDate();
+    const month = today.getMonth() + 1;
+    let parsed = `${day < 10 ? "0" : ""}${day}/${month < 10 ? "0" : ""}${month}/${today.getFullYear()}`;
     return parsed;
 };
 exports.berlinYesterdayDateString = berlinYesterdayDateString;
