@@ -2,6 +2,8 @@ import { QueryTypes } from "sequelize";
 import {
   Champion,
   ChampionGuessChampion,
+  IChampion,
+  ITrait,
   Trait,
   TraitGuessChampion,
 } from "../database/models/models";
@@ -36,7 +38,7 @@ export const berlinYesterdayDateString = () => {
   return parsed;
 };
 
-export const changeTimeZone = (date: any, timeZone: any) => {
+export const changeTimeZone = (date: any, timeZone: string) => {
   if (typeof date === "string") {
     return new Date(
       new Date(date).toLocaleString("en-US", {
@@ -63,7 +65,7 @@ export const isDevelopment = () => {
   return process.env.NODE_ENV === "DEV";
 };
 
-const getChampionImagePath = (name: string, set: number) => {
+const getChampionImagePath = (name: string, set: string) => {
   const isDevelopment = process.env.NODE_ENV === "DEV";
   const hostUrl = isDevelopment ? devUrl : prodUrl;
 
@@ -84,19 +86,19 @@ const getTraitImagePath = (label: string) => {
     .replace(" ", "")}.png`;
 };
 
-export const traitWithImagePath = (trait: any) => {
+export const traitWithImagePath = (trait: ITrait) => {
   return {
     ...trait,
     imagePath: getTraitImagePath(trait.label),
   };
 };
 
-export const championWithImagePath = (champion: any) => {
+export const championWithImagePath = (champion: IChampion) => {
   return {
     ...champion,
     imagePath: getChampionImagePath(
       champion.name,
-      champion.set.toString().charAt(0)
+      String(champion.set).charAt(0)
     ),
   };
 };

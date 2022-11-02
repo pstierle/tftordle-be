@@ -1,6 +1,30 @@
 import { DataTypes } from "sequelize";
 import { database } from "../connection";
 
+export interface IGuessChampion {
+  id: Number;
+  name: string;
+  set: Number;
+  created: string;
+}
+
+export interface IChampion {
+  id: Number;
+  name: string;
+  cost: Number;
+  set: Number;
+  range: Number;
+  imagePath?: string;
+}
+
+export interface ITrait {
+  id: Number;
+  label: string;
+  set: Number;
+  champion_id: Number;
+  imagePath?: string;
+}
+
 export const Champion = database.define(
   "Champion",
   {

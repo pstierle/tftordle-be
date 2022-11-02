@@ -2,6 +2,9 @@ import {
   ChampionGuessChampion,
   Champion,
   Trait,
+  IGuessChampion,
+  IChampion,
+  ITrait,
 } from "./../database/models/models";
 import { Request, Response } from "express";
 import {
@@ -13,24 +16,24 @@ import { Op } from "sequelize";
 
 type Match = "exact" | "higher" | "lower" | "wrong" | "some";
 
-const getGuessChampion = async () => {
-  const guessChampion: any = await ChampionGuessChampion.findOne({
+const getGuessChampion = async (): Promise<IChampion> => {
+  const guessChampion = (await ChampionGuessChampion.findOne({
     where: {
       created: berlinTodayDateString(),
     },
     raw: true,
-  });
+  })) as unknown as IGuessChampion;
 
-  const champion: any = await Champion.findOne({
+  const champion = (await Champion.findOne({
     raw: true,
     where: {
       name: guessChampion.name,
       set: guessChampion.set,
     },
-  });
+  })) as unknown as IChampion;
 
-  console.log("Championguess Champion: ", champion);
-
+  console.log("\x1b[36m%s\x1b[0m", "Championguess Champion: ");
+  console.log("\x1b[36m%s\x1b[0m", champion);
   return champion;
 };
 
@@ -38,22 +41,22 @@ export const queryChampions = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const champions: any = await Champion.findAll({
+  const champions: IChampion[] = (await Champion.findAll({
     raw: true,
     where: { name: { [Op.like]: `%${req.params.query}%` } },
     order: [["name", "ASC"]],
-  });
+  })) as unknown as IChampion[];
 
   const results = champions
     .filter(
-      (champion: any) =>
+      (champion: IChampion) =>
         champion.name.toLowerCase()[0] === req.params.query.toLowerCase()[0]
     )
     .slice(0, 10);
 
   res.json(
     results
-      .map((champion: any) => {
+      .map((champion: IChampion) => {
         const withImagePath = championWithImagePath(champion);
         return {
           id: withImagePath.id,
@@ -62,9 +65,9 @@ export const queryChampions = async (
           cost: withImagePath.cost,
           imagePath: withImagePath.imagePath,
           range: withImagePath.range,
-        };
+        } as IChampion;
       })
-      .sort((a: any, b: any) => {
+      .sort((a: IChampion, b: IChampion) => {
         if (a.set < b.set) {
           return -1;
         }
@@ -89,10 +92,10 @@ export const checkGuessAttr = async (
   const attrs = ["set", "cost", "range", "traits"];
   let results: Result[] = [];
 
-  const guessChampion: any = await getGuessChampion();
-  const userGuessChampion: any = await Champion.findByPk(req.params.id, {
+  const guessChampion = await getGuessChampion();
+  const userGuessChampion = (await Champion.findByPk(req.params.id, {
     raw: true,
-  });
+  })) as unknown as IChampion;
 
   await Promise.all(
     attrs.map(async (attr) => {
@@ -106,25 +109,27 @@ export const checkGuessAttr = async (
       };
 
       if (attr === "traits") {
-        const guessChampionTraits = await Trait.findAll({
+        const guessChampionTraits = (await Trait.findAll({
           raw: true,
           where: {
             champion_id: guessChampion.id,
           },
-        });
+        })) as unknown as ITrait[];
 
-        const userGuessChampionTraits = await Trait.findAll({
+        const userGuessChampionTraits = (await Trait.findAll({
           raw: true,
           where: {
             champion_id: userGuessChampion.id,
           },
-        });
+        })) as unknown as ITrait[];
 
         guessChampionTraits
-          .map((t: any) => t.label)
-          .forEach((trait: any) => {
+          .map((t: ITrait) => t.label)
+          .forEach((trait: string) => {
             if (
-              userGuessChampionTraits.map((t: any) => t.label).includes(trait)
+              userGuessChampionTraits
+                .map((t: ITrait) => t.label)
+                .includes(trait)
             )
               result.matchState = "some";
           });
@@ -135,7 +140,7 @@ export const checkGuessAttr = async (
           result.matchState = "exact";
         }
         result.userGuessValue = userGuessChampionTraits.map(
-          (t: any) => t.label
+          (t: ITrait) => t.label
         );
       } else {
         if (userGuessValue === searchValue) {
@@ -160,12 +165,12 @@ export const lastChampion = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const guessChampion: any = await ChampionGuessChampion.findOne({
+  const guessChampion: any = (await ChampionGuessChampion.findOne({
     where: {
       created: berlinYesterdayDateString(),
     },
     raw: true,
-  });
+  })) as unknown as IGuessChampion;
   res.json({
     number: guessChampion.id,
     name: guessChampion.name,

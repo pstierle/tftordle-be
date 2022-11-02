@@ -2,6 +2,9 @@ import {
   TraitGuessChampion,
   Trait,
   Champion,
+  IGuessChampion,
+  IChampion,
+  ITrait,
 } from "./../database/models/models";
 import { Request, Response } from "express";
 import {
@@ -12,26 +15,26 @@ import {
 } from "../util/util";
 import { Op } from "sequelize";
 
-const getTraitGuessChampion = async () => {
-  const traitGuessChampion: any = await TraitGuessChampion.findOne({
+const getTraitGuessChampion = async (): Promise<IChampion> => {
+  const traitGuessChampion = (await TraitGuessChampion.findOne({
     where: {
       created: berlinTodayDateString(),
     },
     raw: true,
-  });
+  })) as unknown as IGuessChampion;
 
   console.log(traitGuessChampion);
 
-  const champion: any = await Champion.findOne({
+  const champion = (await Champion.findOne({
     raw: true,
     where: {
       name: traitGuessChampion.name,
       set: traitGuessChampion.set,
     },
-  });
+  })) as unknown as IChampion;
 
-  console.log("Traitguess Champion: ", champion);
-
+  console.log("\x1b[36m%s\x1b[0m", "Traitguess Champion: ");
+  console.log("\x1b[36m%s\x1b[0m", champion);
   return champion;
 };
 
@@ -39,7 +42,7 @@ export const getChampion = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const traitGuessChampion: any = await getTraitGuessChampion();
+  const traitGuessChampion = await getTraitGuessChampion();
 
   const withImagePath = championWithImagePath(traitGuessChampion);
 
@@ -54,25 +57,25 @@ export const checkGuess = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const traitGuessChampion: any = await getTraitGuessChampion();
+  const traitGuessChampion = await getTraitGuessChampion();
 
-  const guess: any = await Trait.findOne({
+  const guess = (await Trait.findOne({
     raw: true,
     where: {
       label: req.params.guess,
     },
-  });
+  })) as unknown as ITrait;
 
-  const traits: any = await Trait.findAll({
+  const traits = (await Trait.findAll({
     raw: true,
     where: {
       champion_id: traitGuessChampion.id,
     },
-  });
+  })) as unknown as ITrait[];
 
   if (
     traits.find(
-      (trait: any) =>
+      (trait: ITrait) =>
         trait.label.toLowerCase() === req.params.guess.toLowerCase()
     )
   ) {
@@ -93,14 +96,14 @@ export const getStatClue = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const traitGuessChampion: any = await getTraitGuessChampion();
+  const traitGuessChampion = await getTraitGuessChampion();
 
-  const traits: any = await Trait.findAll({
+  const traits = (await Trait.findAll({
     raw: true,
     where: {
       champion_id: traitGuessChampion.id,
     },
-  });
+  })) as unknown as ITrait[];
 
   res.json({
     cost: traitGuessChampion.cost,
@@ -114,42 +117,44 @@ export const queryTraits = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const traits: any = await Trait.findAll({
+  const traits = (await Trait.findAll({
     raw: true,
     where: { label: { [Op.like]: `%${req.params.query}%` } },
     order: [["label", "ASC"]],
-  });
+  })) as unknown as ITrait[];
 
-  let unique: any = [];
+  let unique: ITrait[] = [];
 
-  traits.forEach((trait: any) => {
-    if (!unique.map((u: any) => u.label).find((t: any) => t === trait.label)) {
+  traits.forEach((trait: ITrait) => {
+    if (
+      !unique.map((u: ITrait) => u.label).find((t: string) => t === trait.label)
+    ) {
       unique.push(trait);
     }
   });
 
   const startsWith = unique.filter(
-    (trait: any) =>
+    (trait: ITrait) =>
       trait.label.toLowerCase()[0] === req.params.query.toLowerCase()[0]
   );
 
   const results = startsWith
-    .filter((trait: any) =>
+    .filter((trait: ITrait) =>
       trait.label.toLowerCase().includes(req.params.query.toLowerCase())
     )
     .slice(0, 10);
 
   res.json(
     results
-      .map((trait: any) => {
+      .map((trait: ITrait) => {
         const withImagePath = traitWithImagePath(trait);
 
         return {
           label: withImagePath.label,
           imagePath: withImagePath.imagePath,
-        };
+        } as ITrait;
       })
-      .sort((a: any, b: any) => {
+      .sort((a: ITrait, b: ITrait) => {
         if (a.label < b.label) {
           return -1;
         }
@@ -165,39 +170,39 @@ export const getSameTraitClue = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const traitGuessChampion: any = await getTraitGuessChampion();
+  const traitGuessChampion = await getTraitGuessChampion();
 
-  const traitGuessChampionTraits: any = await Trait.findAll({
+  const traitGuessChampionTraits = (await Trait.findAll({
     raw: true,
     where: {
       champion_id: traitGuessChampion.id,
     },
-  });
+  })) as unknown as ITrait[];
 
-  const withInSet = await Champion.findAll({
+  const withInSet = (await Champion.findAll({
     raw: true,
     where: {
       set: traitGuessChampion.set,
     },
-  });
+  })) as unknown as IChampion[];
 
   let championNames: string[] = [];
 
   await Promise.all(
-    withInSet.map(async (c: any) => {
-      const traits: any = await Trait.findAll({
+    withInSet.map(async (c: IChampion) => {
+      const traits = (await Trait.findAll({
         raw: true,
         where: {
           champion_id: c.id,
         },
-      });
+      })) as unknown as ITrait[];
 
       if (
         traits
-          .map((t: any) => t.label)
+          .map((t: ITrait) => t.label)
           .some((traitLabel: string) => {
             return traitGuessChampionTraits
-              .map((t: any) => t.label)
+              .map((t: ITrait) => t.label)
               .includes(traitLabel);
           })
       ) {
@@ -213,12 +218,12 @@ export const lastChampion = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const traitGuessChampion: any = await TraitGuessChampion.findOne({
+  const traitGuessChampion = (await TraitGuessChampion.findOne({
     where: {
       created: berlinYesterdayDateString(),
     },
     raw: true,
-  });
+  })) as unknown as IGuessChampion;
   res.json({
     number: traitGuessChampion.id,
     name: traitGuessChampion.name,

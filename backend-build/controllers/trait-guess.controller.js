@@ -14,21 +14,22 @@ const models_1 = require("./../database/models/models");
 const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getTraitGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
-    const traitGuessChampion = yield models_1.TraitGuessChampion.findOne({
+    const traitGuessChampion = (yield models_1.TraitGuessChampion.findOne({
         where: {
             created: (0, util_1.berlinTodayDateString)(),
         },
         raw: true,
-    });
+    }));
     console.log(traitGuessChampion);
-    const champion = yield models_1.Champion.findOne({
+    const champion = (yield models_1.Champion.findOne({
         raw: true,
         where: {
             name: traitGuessChampion.name,
             set: traitGuessChampion.set,
         },
-    });
-    console.log("Traitguess Champion: ", champion);
+    }));
+    console.log("\x1b[36m%s\x1b[0m", "Traitguess Champion: ");
+    console.log("\x1b[36m%s\x1b[0m", champion);
     return champion;
 });
 const getChampion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -43,18 +44,18 @@ const getChampion = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 exports.getChampion = getChampion;
 const checkGuess = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const traitGuessChampion = yield getTraitGuessChampion();
-    const guess = yield models_1.Trait.findOne({
+    const guess = (yield models_1.Trait.findOne({
         raw: true,
         where: {
             label: req.params.guess,
         },
-    });
-    const traits = yield models_1.Trait.findAll({
+    }));
+    const traits = (yield models_1.Trait.findAll({
         raw: true,
         where: {
             champion_id: traitGuessChampion.id,
         },
-    });
+    }));
     if (traits.find((trait) => trait.label.toLowerCase() === req.params.guess.toLowerCase())) {
         res.json({
             correct: true,
@@ -72,12 +73,12 @@ const checkGuess = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
 exports.checkGuess = checkGuess;
 const getStatClue = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const traitGuessChampion = yield getTraitGuessChampion();
-    const traits = yield models_1.Trait.findAll({
+    const traits = (yield models_1.Trait.findAll({
         raw: true,
         where: {
             champion_id: traitGuessChampion.id,
         },
-    });
+    }));
     res.json({
         cost: traitGuessChampion.cost,
         oneTraitStartsWith: traits[Math.floor(Math.random() * traits.length)].label.charAt(0),
@@ -86,11 +87,11 @@ const getStatClue = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 });
 exports.getStatClue = getStatClue;
 const queryTraits = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const traits = yield models_1.Trait.findAll({
+    const traits = (yield models_1.Trait.findAll({
         raw: true,
         where: { label: { [sequelize_1.Op.like]: `%${req.params.query}%` } },
         order: [["label", "ASC"]],
-    });
+    }));
     let unique = [];
     traits.forEach((trait) => {
         if (!unique.map((u) => u.label).find((t) => t === trait.label)) {
@@ -122,26 +123,26 @@ const queryTraits = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 exports.queryTraits = queryTraits;
 const getSameTraitClue = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const traitGuessChampion = yield getTraitGuessChampion();
-    const traitGuessChampionTraits = yield models_1.Trait.findAll({
+    const traitGuessChampionTraits = (yield models_1.Trait.findAll({
         raw: true,
         where: {
             champion_id: traitGuessChampion.id,
         },
-    });
-    const withInSet = yield models_1.Champion.findAll({
+    }));
+    const withInSet = (yield models_1.Champion.findAll({
         raw: true,
         where: {
             set: traitGuessChampion.set,
         },
-    });
+    }));
     let championNames = [];
     yield Promise.all(withInSet.map((c) => __awaiter(void 0, void 0, void 0, function* () {
-        const traits = yield models_1.Trait.findAll({
+        const traits = (yield models_1.Trait.findAll({
             raw: true,
             where: {
                 champion_id: c.id,
             },
-        });
+        }));
         if (traits
             .map((t) => t.label)
             .some((traitLabel) => {
@@ -156,12 +157,12 @@ const getSameTraitClue = (req, res) => __awaiter(void 0, void 0, void 0, functio
 });
 exports.getSameTraitClue = getSameTraitClue;
 const lastChampion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const traitGuessChampion = yield models_1.TraitGuessChampion.findOne({
+    const traitGuessChampion = (yield models_1.TraitGuessChampion.findOne({
         where: {
             created: (0, util_1.berlinYesterdayDateString)(),
         },
         raw: true,
-    });
+    }));
     res.json({
         number: traitGuessChampion.id,
         name: traitGuessChampion.name,

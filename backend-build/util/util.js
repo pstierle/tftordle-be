@@ -79,7 +79,7 @@ const traitWithImagePath = (trait) => {
 };
 exports.traitWithImagePath = traitWithImagePath;
 const championWithImagePath = (champion) => {
-    return Object.assign(Object.assign({}, champion), { imagePath: getChampionImagePath(champion.name, champion.set.toString().charAt(0)) });
+    return Object.assign(Object.assign({}, champion), { imagePath: getChampionImagePath(champion.name, String(champion.set).charAt(0)) });
 };
 exports.championWithImagePath = championWithImagePath;
 const importData = () => __awaiter(void 0, void 0, void 0, function* () {

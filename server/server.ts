@@ -12,8 +12,6 @@ import dotenv from "dotenv";
 const app = express();
 const port = 8080;
 
-let clients: any = [];
-
 dotenv.config();
 
 app.use(
@@ -28,7 +26,7 @@ app.use(express.static(frontendFolder));
 app.use("/trait-guess", traitGuessRouter);
 app.use("/champion-guess", championGuessRouter);
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(frontendFolder + "/index.html");
 });
 

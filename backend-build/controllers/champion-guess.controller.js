@@ -14,28 +14,29 @@ const models_1 = require("./../database/models/models");
 const util_1 = require("../util/util");
 const sequelize_1 = require("sequelize");
 const getGuessChampion = () => __awaiter(void 0, void 0, void 0, function* () {
-    const guessChampion = yield models_1.ChampionGuessChampion.findOne({
+    const guessChampion = (yield models_1.ChampionGuessChampion.findOne({
         where: {
             created: (0, util_1.berlinTodayDateString)(),
         },
         raw: true,
-    });
-    const champion = yield models_1.Champion.findOne({
+    }));
+    const champion = (yield models_1.Champion.findOne({
         raw: true,
         where: {
             name: guessChampion.name,
             set: guessChampion.set,
         },
-    });
-    console.log("Championguess Champion: ", champion);
+    }));
+    console.log("\x1b[36m%s\x1b[0m", "Championguess Champion: ");
+    console.log("\x1b[36m%s\x1b[0m", champion);
     return champion;
 });
 const queryChampions = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const champions = yield models_1.Champion.findAll({
+    const champions = (yield models_1.Champion.findAll({
         raw: true,
         where: { name: { [sequelize_1.Op.like]: `%${req.params.query}%` } },
         order: [["name", "ASC"]],
-    });
+    }));
     const results = champions
         .filter((champion) => champion.name.toLowerCase()[0] === req.params.query.toLowerCase()[0])
         .slice(0, 10);
@@ -66,9 +67,9 @@ const checkGuessAttr = (req, res) => __awaiter(void 0, void 0, void 0, function*
     const attrs = ["set", "cost", "range", "traits"];
     let results = [];
     const guessChampion = yield getGuessChampion();
-    const userGuessChampion = yield models_1.Champion.findByPk(req.params.id, {
+    const userGuessChampion = (yield models_1.Champion.findByPk(req.params.id, {
         raw: true,
-    });
+    }));
     yield Promise.all(attrs.map((attr) => __awaiter(void 0, void 0, void 0, function* () {
         const searchValue = guessChampion[attr];
         let userGuessValue = userGuessChampion[attr];
@@ -78,22 +79,24 @@ const checkGuessAttr = (req, res) => __awaiter(void 0, void 0, void 0, function*
             userGuessValue: userGuessValue,
         };
         if (attr === "traits") {
-            const guessChampionTraits = yield models_1.Trait.findAll({
+            const guessChampionTraits = (yield models_1.Trait.findAll({
                 raw: true,
                 where: {
                     champion_id: guessChampion.id,
                 },
-            });
-            const userGuessChampionTraits = yield models_1.Trait.findAll({
+            }));
+            const userGuessChampionTraits = (yield models_1.Trait.findAll({
                 raw: true,
                 where: {
                     champion_id: userGuessChampion.id,
                 },
-            });
+            }));
             guessChampionTraits
                 .map((t) => t.label)
                 .forEach((trait) => {
-                if (userGuessChampionTraits.map((t) => t.label).includes(trait))
+                if (userGuessChampionTraits
+                    .map((t) => t.label)
+                    .includes(trait))
                     result.matchState = "some";
             });
             if (JSON.stringify(guessChampionTraits) ===
@@ -119,12 +122,12 @@ const checkGuessAttr = (req, res) => __awaiter(void 0, void 0, void 0, function*
 });
 exports.checkGuessAttr = checkGuessAttr;
 const lastChampion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const guessChampion = yield models_1.ChampionGuessChampion.findOne({
+    const guessChampion = (yield models_1.ChampionGuessChampion.findOne({
         where: {
             created: (0, util_1.berlinYesterdayDateString)(),
         },
         raw: true,
-    });
+    }));
     res.json({
         number: guessChampion.id,
         name: guessChampion.name,
