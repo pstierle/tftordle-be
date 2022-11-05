@@ -161,6 +161,17 @@ export const checkGuessAttr = async (
   res.json(results);
 };
 
+export const getTraitClue = async (req: Request, res: Response) => {
+  const guessChampion = await getGuessChampion();
+  const traits = (await Trait.findAll({
+    raw: true,
+    where: {
+      champion_id: guessChampion.id,
+    },
+  })) as unknown as ITrait[];
+  res.json(traits.map((t) => t.label).sort());
+};
+
 export const lastChampion = async (
   req: Request,
   res: Response

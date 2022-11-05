@@ -13,4 +13,6 @@ championGuessRouter.get(
   championGuessController.checkGuessAttr
 );
 
+championGuessRouter.get("/trait-clue", championGuessController.getTraitClue);
+
 championGuessRouter.get("/last", championGuessController.lastChampion);
