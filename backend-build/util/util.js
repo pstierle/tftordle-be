@@ -130,7 +130,6 @@ const nextDays = () => __awaiter(void 0, void 0, void 0, function* () {
     });
     let takenIndecies = [];
     dates.forEach((date, i) => {
-        console.log(date);
         let randomIndex = Math.floor(Math.random() * randomChampions.length);
         while (takenIndecies.includes(randomIndex)) {
             randomIndex = Math.floor(Math.random() * randomChampions.length);

@@ -181,8 +181,6 @@ export const nextDays = async () => {
   let takenIndecies: number[] = [];
 
   dates.forEach((date, i) => {
-    console.log(date);
-
     let randomIndex = Math.floor(Math.random() * randomChampions.length);
 
     while (takenIndecies.includes(randomIndex)) {
