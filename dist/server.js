@@ -28,12 +28,8 @@ app.use((0, cors_1.default)({
     origin: "*",
 }));
 app.use(express_1.default.static(consts_1.publicFolder));
-app.use(express_1.default.static(consts_1.frontendFolder));
 app.use("/trait-guess", trait_guess_router_1.traitGuessRouter);
 app.use("/champion-guess", champion_guess_router_1.championGuessRouter);
-app.get("*", (req, res) => {
-    res.sendFile(consts_1.frontendFolder + "/index.html");
-});
 try {
     const doImportData = process.env.IMPORT_DATA === "TRUE";
     connection_1.database.authenticate();

@@ -1,5 +1,5 @@
 import { championGuessRouter } from "./routes/champion-guess.router";
-import { frontendFolder, publicFolder } from "./consts";
+import { publicFolder } from "./consts";
 import { traitGuessRouter } from "./routes/trait-guess.router";
 import { database } from "./database/connection";
 import { Champion, Trait } from "./database/models/models";
@@ -21,14 +21,9 @@ app.use(
 );
 
 app.use(express.static(publicFolder));
-app.use(express.static(frontendFolder));
 
 app.use("/trait-guess", traitGuessRouter);
 app.use("/champion-guess", championGuessRouter);
-
-app.get("*", (req, res) => {
-  res.sendFile(frontendFolder + "/index.html");
-});
 
 try {
   const doImportData = process.env.IMPORT_DATA === "TRUE";
