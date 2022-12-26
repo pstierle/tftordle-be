@@ -80,9 +80,9 @@ export const queryChampions = async (
 };
 
 type Result = {
-  attrLabel: string;
-  matchState: Match;
-  userGuessValue: any;
+  attribute: string;
+  match: Match;
+  value: any;
 };
 
 export const checkGuessAttr = async (
@@ -103,9 +103,9 @@ export const checkGuessAttr = async (
       let userGuessValue = (userGuessChampion as any)[attr];
 
       let result: Result = {
-        attrLabel: attr,
-        matchState: "wrong",
-        userGuessValue: userGuessValue,
+        attribute: attr,
+        match: "wrong",
+        value: userGuessValue,
       };
 
       if (attr === "traits") {
@@ -131,26 +131,24 @@ export const checkGuessAttr = async (
                 .map((t: ITrait) => t.label)
                 .includes(trait)
             )
-              result.matchState = "some";
+              result.match = "some";
           });
         if (
           JSON.stringify(guessChampionTraits) ===
           JSON.stringify(userGuessChampionTraits)
         ) {
-          result.matchState = "exact";
+          result.match = "exact";
         }
-        result.userGuessValue = userGuessChampionTraits.map(
-          (t: ITrait) => t.label
-        );
+        result.value = userGuessChampionTraits.map((t: ITrait) => t.label);
       } else {
         if (userGuessValue === searchValue) {
-          result.matchState = "exact";
+          result.match = "exact";
         }
         if (userGuessValue > searchValue) {
-          result.matchState = "lower";
+          result.match = "lower";
         }
         if (userGuessValue < searchValue) {
-          result.matchState = "higher";
+          result.match = "higher";
         }
       }
 
@@ -176,15 +174,20 @@ export const lastChampion = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const guessChampion: any = (await ChampionGuessChampion.findOne({
+  const lastChampion: any = (await ChampionGuessChampion.findOne({
     where: {
       created: berlinYesterdayDateString(),
     },
     raw: true,
   })) as unknown as IGuessChampion;
-  res.json({
-    number: guessChampion.id,
-    name: guessChampion.name,
-    set: guessChampion.set,
-  });
+
+  if (lastChampion) {
+    res.json({
+      number: lastChampion.id,
+      name: lastChampion.name,
+      set: lastChampion.set,
+    });
+  } else {
+    res.json(undefined);
+  }
 };

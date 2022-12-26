@@ -74,9 +74,9 @@ const checkGuessAttr = (req, res) => __awaiter(void 0, void 0, void 0, function*
         const searchValue = guessChampion[attr];
         let userGuessValue = userGuessChampion[attr];
         let result = {
-            attrLabel: attr,
-            matchState: "wrong",
-            userGuessValue: userGuessValue,
+            attribute: attr,
+            match: "wrong",
+            value: userGuessValue,
         };
         if (attr === "traits") {
             const guessChampionTraits = (yield models_1.Trait.findAll({
@@ -97,23 +97,23 @@ const checkGuessAttr = (req, res) => __awaiter(void 0, void 0, void 0, function*
                 if (userGuessChampionTraits
                     .map((t) => t.label)
                     .includes(trait))
-                    result.matchState = "some";
+                    result.match = "some";
             });
             if (JSON.stringify(guessChampionTraits) ===
                 JSON.stringify(userGuessChampionTraits)) {
-                result.matchState = "exact";
+                result.match = "exact";
             }
-            result.userGuessValue = userGuessChampionTraits.map((t) => t.label);
+            result.value = userGuessChampionTraits.map((t) => t.label);
         }
         else {
             if (userGuessValue === searchValue) {
-                result.matchState = "exact";
+                result.match = "exact";
             }
             if (userGuessValue > searchValue) {
-                result.matchState = "lower";
+                result.match = "lower";
             }
             if (userGuessValue < searchValue) {
-                result.matchState = "higher";
+                result.match = "higher";
             }
         }
         results.push(result);
@@ -133,17 +133,22 @@ const getTraitClue = (req, res) => __awaiter(void 0, void 0, void 0, function* (
 });
 exports.getTraitClue = getTraitClue;
 const lastChampion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const guessChampion = (yield models_1.ChampionGuessChampion.findOne({
+    const lastChampion = (yield models_1.ChampionGuessChampion.findOne({
         where: {
             created: (0, util_1.berlinYesterdayDateString)(),
         },
         raw: true,
     }));
-    res.json({
-        number: guessChampion.id,
-        name: guessChampion.name,
-        set: guessChampion.set,
-    });
+    if (lastChampion) {
+        res.json({
+            number: lastChampion.id,
+            name: lastChampion.name,
+            set: lastChampion.set,
+        });
+    }
+    else {
+        res.json(undefined);
+    }
 });
 exports.lastChampion = lastChampion;
 //# sourceMappingURL=champion-guess.controller.js.map

@@ -9,7 +9,7 @@ championGuessRouter.get(
 );
 
 championGuessRouter.get(
-  "/check-guess-attr/:id",
+  "/check-guess/:id",
   championGuessController.checkGuessAttr
 );
 

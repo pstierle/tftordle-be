@@ -158,7 +158,7 @@ export const importData = async () => {
 export const nextDays = async () => {
   let dates = [];
 
-  for (let i = 1; i < 64; i++) {
+  for (let i = 0; i < 10; i++) {
     let today = new Date();
     today.setDate(today.getDate() + i);
     dates.push(today.toLocaleDateString());

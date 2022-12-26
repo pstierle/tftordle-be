@@ -114,7 +114,7 @@ const importData = () => __awaiter(void 0, void 0, void 0, function* () {
 exports.importData = importData;
 const nextDays = () => __awaiter(void 0, void 0, void 0, function* () {
     let dates = [];
-    for (let i = 1; i < 64; i++) {
+    for (let i = 0; i < 10; i++) {
         let today = new Date();
         today.setDate(today.getDate() + i);
         dates.push(today.toLocaleDateString());

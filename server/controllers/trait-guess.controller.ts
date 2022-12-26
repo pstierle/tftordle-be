@@ -16,14 +16,14 @@ import {
 import { Op } from "sequelize";
 
 const getTraitGuessChampion = async (): Promise<IChampion> => {
+  await TraitGuessChampion.findAll({ raw: true }).then((c) => console.log(c));
+  console.log(berlinTodayDateString());
   const traitGuessChampion = (await TraitGuessChampion.findOne({
     where: {
       created: berlinTodayDateString(),
     },
     raw: true,
   })) as unknown as IGuessChampion;
-
-  console.log(traitGuessChampion);
 
   const champion = (await Champion.findOne({
     raw: true,
@@ -218,15 +218,20 @@ export const lastChampion = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const traitGuessChampion = (await TraitGuessChampion.findOne({
+  const lastChampion = (await TraitGuessChampion.findOne({
     where: {
       created: berlinYesterdayDateString(),
     },
     raw: true,
   })) as unknown as IGuessChampion;
-  res.json({
-    number: traitGuessChampion.id,
-    name: traitGuessChampion.name,
-    set: traitGuessChampion.set,
-  });
+
+  if (lastChampion) {
+    res.json({
+      number: lastChampion.id,
+      name: lastChampion.name,
+      set: lastChampion.set,
+    });
+  } else {
+    res.json(undefined);
+  }
 };
