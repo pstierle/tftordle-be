@@ -4,7 +4,7 @@ export const devUrl = "http://localhost:8080";
 export const publicFolder = path.join(__dirname, "..", "public");
 export const setsFolder = path.join(publicFolder, "sets");
 export const databaseRoute = path.join(publicFolder, "index.sqlite");
-export const prodUrl = "https://oyster-app-jqjom.ondigitalocean.app";
+export const prodUrl = "https://tftordle-be-43wsq.ondigitalocean.app";
 export const sets = [
   "1",
   "2",

@@ -9,7 +9,7 @@ exports.devUrl = "http://localhost:8080";
 exports.publicFolder = path_1.default.join(__dirname, "..", "public");
 exports.setsFolder = path_1.default.join(exports.publicFolder, "sets");
 exports.databaseRoute = path_1.default.join(exports.publicFolder, "index.sqlite");
-exports.prodUrl = "https://oyster-app-jqjom.ondigitalocean.app";
+exports.prodUrl = "https://tftordle-be-43wsq.ondigitalocean.app";
 exports.sets = [
     "1",
     "2",
