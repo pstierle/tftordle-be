@@ -25,7 +25,7 @@ const app = (0, express_1.default)();
 const port = 8080;
 dotenv_1.default.config();
 app.use((0, cors_1.default)({
-    origin: "*",
+    origin: process.env.NODE_ENV === "DEV" ? consts_1.frontendDevUrl : consts_1.frontendProdUrl,
 }));
 app.use(express_1.default.static(consts_1.publicFolder));
 app.use("/trait-guess", trait_guess_router_1.traitGuessRouter);

@@ -1,14 +1,9 @@
 import { championGuessRouter } from "./routes/champion-guess.router";
-import { publicFolder } from "./consts";
+import { publicFolder, frontendDevUrl, frontendProdUrl } from "./consts";
 import { traitGuessRouter } from "./routes/trait-guess.router";
 import { database } from "./database/connection";
-import {
-  Champion,
-  ChampionGuessChampion,
-  Trait,
-  TraitGuessChampion,
-} from "./database/models/models";
-import { importData, nextDays, secondsUntilMidnight } from "./util/util";
+import { Champion, Trait } from "./database/models/models";
+import { importData, secondsUntilMidnight } from "./util/util";
 
 import express from "express";
 import cors from "cors";
@@ -21,10 +16,9 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "*",
+    origin: process.env.NODE_ENV === "DEV" ? frontendDevUrl : frontendProdUrl,
   })
 );
-
 app.use(express.static(publicFolder));
 
 app.use("/trait-guess", traitGuessRouter);
