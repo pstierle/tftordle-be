@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.nextDays = exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.isDevelopment = exports.secondsUntilMidnight = exports.changeTimeZone = exports.berlinYesterdayDateString = exports.berlinTodayDateString = void 0;
+exports.generateGuessChampions = exports.importData = exports.championWithImagePath = exports.traitWithImagePath = exports.isDevelopment = exports.secondsUntilMidnight = exports.changeTimeZone = exports.berlinYesterdayDateString = exports.berlinTodayDateString = void 0;
 const sequelize_1 = require("sequelize");
 const models_1 = require("../database/models/models");
 const connection_1 = require("../database/connection");
@@ -112,13 +112,19 @@ const importData = () => __awaiter(void 0, void 0, void 0, function* () {
     })));
 });
 exports.importData = importData;
-const nextDays = () => __awaiter(void 0, void 0, void 0, function* () {
+const generateGuessChampions = (days) => __awaiter(void 0, void 0, void 0, function* () {
     let dates = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < days; i++) {
         let today = new Date();
         today.setDate(today.getDate() + i);
         dates.push(today.toLocaleDateString());
     }
+    const allTaitGuessChampions = (yield models_1.TraitGuessChampion.findAll({ raw: true }));
+    const allChampionGuessChampions = (yield models_1.ChampionGuessChampion.findAll({ raw: true }));
+    const takenTraitGuessDates = allTaitGuessChampions.map((c) => c.created);
+    const takenChampionGuessDates = allChampionGuessChampions.map((c) => c.created);
+    dates = dates.filter((date) => !takenChampionGuessDates.includes(date) ||
+        !takenTraitGuessDates.includes(date));
     let randomChampions = [];
     yield connection_1.database
         .query("SELECT * FROM `Champions` ORDER BY random() LIMIT " + dates.length * 2, {
@@ -151,5 +157,5 @@ const nextDays = () => __awaiter(void 0, void 0, void 0, function* () {
         });
     });
 });
-exports.nextDays = nextDays;
+exports.generateGuessChampions = generateGuessChampions;
 //# sourceMappingURL=util.js.map

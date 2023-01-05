@@ -2,8 +2,17 @@ import { championGuessRouter } from "./routes/champion-guess.router";
 import { publicFolder, frontendDevUrl, frontendProdUrl } from "./consts";
 import { traitGuessRouter } from "./routes/trait-guess.router";
 import { database } from "./database/connection";
-import { Champion, Trait } from "./database/models/models";
-import { importData, secondsUntilMidnight } from "./util/util";
+import {
+  Champion,
+  ChampionGuessChampion,
+  Trait,
+  TraitGuessChampion,
+} from "./database/models/models";
+import {
+  generateGuessChampions,
+  importData,
+  secondsUntilMidnight,
+} from "./util/util";
 
 import express from "express";
 import cors from "cors";
@@ -28,14 +37,6 @@ try {
   const doImportData = process.env.IMPORT_DATA === "TRUE";
 
   database.authenticate();
-
-  // ChampionGuessChampion.sync({
-  //   force: true,
-  // });
-
-  // TraitGuessChampion.sync({
-  //   force: true,
-  // });
 
   Trait.sync({
     force: doImportData,

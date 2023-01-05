@@ -3,6 +3,7 @@ import {
   Champion,
   ChampionGuessChampion,
   IChampion,
+  IGuessChampion,
   ITrait,
   Trait,
   TraitGuessChampion,
@@ -155,14 +156,32 @@ export const importData = async () => {
   );
 };
 
-export const nextDays = async () => {
+export const generateGuessChampions = async (days: number) => {
   let dates = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < days; i++) {
     let today = new Date();
     today.setDate(today.getDate() + i);
     dates.push(today.toLocaleDateString());
   }
+
+  const allTaitGuessChampions: IGuessChampion[] =
+    (await TraitGuessChampion.findAll({ raw: true })) as any;
+  const allChampionGuessChampions: IGuessChampion[] =
+    (await ChampionGuessChampion.findAll({ raw: true })) as any;
+
+  const takenTraitGuessDates: string[] = allTaitGuessChampions.map(
+    (c) => c.created
+  );
+  const takenChampionGuessDates: string[] = allChampionGuessChampions.map(
+    (c) => c.created
+  );
+
+  dates = dates.filter(
+    (date) =>
+      !takenChampionGuessDates.includes(date) ||
+      !takenTraitGuessDates.includes(date)
+  );
 
   let randomChampions: any = [];
 

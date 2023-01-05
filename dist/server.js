@@ -33,12 +33,6 @@ app.use("/champion-guess", champion_guess_router_1.championGuessRouter);
 try {
     const doImportData = process.env.IMPORT_DATA === "TRUE";
     connection_1.database.authenticate();
-    // ChampionGuessChampion.sync({
-    //   force: true,
-    // });
-    // TraitGuessChampion.sync({
-    //   force: true,
-    // });
     models_1.Trait.sync({
         force: doImportData,
     });
