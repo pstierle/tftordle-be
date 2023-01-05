@@ -84,7 +84,10 @@ const getTraitImagePath = (label: string) => {
   return `${hostUrl}/sets/traits/${label
     .toLowerCase()
     .replace("-", "")
-    .replace(" ", "")}.png`;
+    .replace(":", "")
+    .split(".")
+    .join("")
+    .replace(/ /g, "")}.png`;
 };
 
 export const traitWithImagePath = (trait: ITrait) => {

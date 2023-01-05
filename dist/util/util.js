@@ -72,7 +72,10 @@ const getTraitImagePath = (label) => {
     return `${hostUrl}/sets/traits/${label
         .toLowerCase()
         .replace("-", "")
-        .replace(" ", "")}.png`;
+        .replace(":", "")
+        .split(".")
+        .join("")
+        .replace(/ /g, "")}.png`;
 };
 const traitWithImagePath = (trait) => {
     return Object.assign(Object.assign({}, trait), { imagePath: getTraitImagePath(trait.label) });

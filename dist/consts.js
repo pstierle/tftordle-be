@@ -25,5 +25,6 @@ exports.sets = [
     "6.5",
     "7",
     "7.5",
+    "8"
 ];
 //# sourceMappingURL=consts.js.map

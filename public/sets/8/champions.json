@@ -1,0 +1,379 @@
+[
+  {
+    "name": "Alistar",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Ox Force", "Aegis", "Mascot"]
+  },
+  {
+    "name": "Annie",
+    "set": 8,
+    "cost": 2,
+    "range": 2,
+    "traits": ["Gadgeteen", "Ox Force", "Spellslinger"]
+  },
+  {
+    "name": "Aphelios",
+    "set": 8,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Arsenal", "Ox Force", "Sureshot"]
+  },
+  {
+    "name": "Ashe",
+    "set": 8,
+    "cost": 1,
+    "range": 4,
+    "traits": ["LaserCorps", "Recon"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 8,
+    "cost": 4,
+    "range": 4,
+    "traits": ["Threat"]
+  },
+  { "name": "BelVeth", "set": 8, "cost": 4, "range": 2, "traits": ["Threat"] },
+  {
+    "name": "Blitzcrank",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["A.D.M.I.N.", "Brawler"]
+  },
+  {
+    "name": "Camille",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "traits": ["A.D.M.I.N.", "Renegade"]
+  },
+  { "name": "Cho'Gath", "set": 8, "cost": 3, "range": 1, "traits": ["Threat"] },
+  {
+    "name": "Draven",
+    "set": 8,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Mecha: PRIME", "Ace"]
+  },
+  {
+    "name": "Ekko",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Star Guardian", "Aegis", "Prankster"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 8,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Underground", "Recon"]
+  },
+  {
+    "name": "Fiddlesticks",
+    "set": 8,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Threat", "Corrupted"]
+  },
+  {
+    "name": "Fiora",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Ox Force", "Duelist"]
+  },
+  {
+    "name": "Galio",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Civilian", "Mascot"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Supers", "Duelist"]
+  },
+  {
+    "name": "Janna",
+    "set": 8,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Civilian", "Forecaster", "Spellslinger"]
+  },
+  {
+    "name": "Jax",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Mecha: PRIME", "Brawler"]
+  },
+  {
+    "name": "Jinx",
+    "set": 8,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Anima Squad", "Prankster"]
+  },
+  {
+    "name": "Kai'Sa",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "traits": ["Star Guardian", "Recon"]
+  },
+  {
+    "name": "Kayle",
+    "set": 8,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Underground", "Duelist"]
+  },
+  {
+    "name": "LeBlanc",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "traits": ["A.D.M.I.N.", "Hacker", "Spellslinger"]
+  },
+  {
+    "name": "Lee Sin",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Supers", "Brawler", "Heart"]
+  },
+  {
+    "name": "Leona",
+    "set": 8,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Mecha: PRIME", "Aegis", "Renegade"]
+  },
+  {
+    "name": "Lulu",
+    "set": 8,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Gadgeteen", "Heart"]
+  },
+  {
+    "name": "Lux",
+    "set": 8,
+    "cost": 1,
+    "range": 4,
+    "traits": ["Star Guardian", "Spellslinger"]
+  },
+  {
+    "name": "Malphite",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Supers", "Mascot"]
+  },
+  {
+    "name": "MissFortune",
+    "set": 8,
+    "cost": 4,
+    "range": 4,
+    "traits": ["Anima Squad", "Ace"]
+  },
+  {
+    "name": "Mordekaiser",
+    "set": 8,
+    "cost": 5,
+    "range": 1,
+    "traits": ["LaserCorps", "Ace"]
+  },
+  {
+    "name": "Nasus",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Anima Squad", "Mascot"]
+  },
+  {
+    "name": "Nilah",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Star Guardian", "Duelist"]
+  },
+  {
+    "name": "Nunu",
+    "set": 8,
+    "cost": 5,
+    "range": 1,
+    "traits": ["Gadgeteen", "Mascot"]
+  },
+  {
+    "name": "Poppy",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Gadgeteen", "Defender"]
+  },
+  { "name": "Rammus", "set": 8, "cost": 3, "range": 1, "traits": ["Threat"] },
+  {
+    "name": "Rell",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Star Guardian", "Defender"]
+  },
+  {
+    "name": "Renekton",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["LaserCorps", "Brawler"]
+  },
+  {
+    "name": "Riven",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "traits": ["Anima Squad", "Brawler", "Defender"]
+  },
+  {
+    "name": "Samira",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Underground", "Ace", "Sureshot"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "traits": ["LaserCorps", "Brawler"]
+  },
+  {
+    "name": "Senna",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "traits": ["LaserCorps", "Sureshot"]
+  },
+  {
+    "name": "Sett",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Mecha: PRIME", "Defender"]
+  },
+  {
+    "name": "Sivir",
+    "set": 8,
+    "cost": 2,
+    "range": 4,
+    "traits": ["Civilian", "Sureshot"]
+  },
+  {
+    "name": "Sona",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "traits": ["Underground", "Heart", "Spellslinger"]
+  },
+  {
+    "name": "Soraka",
+    "set": 8,
+    "cost": 4,
+    "range": 4,
+    "traits": ["A.D.M.I.N.", "Heart"]
+  },
+  {
+    "name": "Sylas",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Anima Squad", "Renegade"]
+  },
+  {
+    "name": "Syndra",
+    "set": 8,
+    "cost": 5,
+    "range": 4,
+    "traits": ["Star Guardian", "Heart"]
+  },
+  {
+    "name": "Taliyah",
+    "set": 8,
+    "cost": 4,
+    "range": 4,
+    "traits": ["Star Guardian", "Spellslinger"]
+  },
+  {
+    "name": "Talon",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Ox Force", "Renegade"]
+  },
+  { "name": "Urgot", "set": 8, "cost": 5, "range": 3, "traits": ["Threat"] },
+  {
+    "name": "Vayne",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "traits": ["Anima Squad", "Duelist", "Recon"]
+  },
+  { "name": "Velkoz", "set": 8, "cost": 3, "range": 4, "traits": ["Threat"] },
+  {
+    "name": "Vi",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "traits": ["Underground", "Aegis", "Brawler"]
+  },
+  {
+    "name": "Viego",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "traits": ["Ox Force", "Renegade"]
+  },
+  {
+    "name": "Wukong",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "traits": ["Mecha: PRIME", "Defender"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "traits": ["LaserCorps", "Duelist"]
+  },
+  {
+    "name": "Yuumi",
+    "set": 8,
+    "cost": 2,
+    "range": 5,
+    "traits": ["Star Guardian", "Heart", "Mascot"]
+  },
+  { "name": "Zac", "set": 8, "cost": 4, "range": 1, "traits": ["Threat"] },
+  {
+    "name": "Zed",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "traits": ["LaserCorps", "Duelist", "Hacker"]
+  },
+  {
+    "name": "Zoe",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "traits": ["Gadgeteen", "Hacker", "Prankster"]
+  }
+]
