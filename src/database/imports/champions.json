@@ -1,0 +1,6943 @@
+[
+  {
+    "name": "Aatrox",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Demon", "Blademaster"]
+  },
+  {
+    "name": "Ahri",
+    "set": 1,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Wild", "Sorcerer"]
+  },
+  {
+    "name": "Akali",
+    "set": 1,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ninja", "Assassin"]
+  },
+  {
+    "name": "Anivia",
+    "set": 1,
+    "cost": 5,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Glacial", "Elementalist"]
+  },
+  {
+    "name": "Ashe",
+    "set": 1,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Glacial", "Ranger"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Dragon", "Sorcerer"]
+  },
+  {
+    "name": "Blitzcrank",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["Robot", "Brawler"]
+  },
+  {
+    "name": "Brand",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Demon", "Elementalist"]
+  },
+  {
+    "name": "Braum",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Glacial", "Guardian"]
+  },
+  {
+    "name": "Camille",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Hextech", "Blademaster"]
+  },
+  {
+    "name": "Cho`Gath",
+    "set": 1,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Void", "Brawler"]
+  },
+  {
+    "name": "Darius",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Imperial", "Knight"]
+  },
+  {
+    "name": "Draven",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Imperial", "Blademaster"]
+  },
+  {
+    "name": "Elise",
+    "set": 1,
+    "cost": 1,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Demon", "Shapeshifter"]
+  },
+  {
+    "name": "Evelynn",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Demon", "Assassin"]
+  },
+  {
+    "name": "Fiora",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Noble", "Blademaster"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Pirate", "Blademaster", "Gunslinger"]
+  },
+  {
+    "name": "Garen",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Noble", "Knight"]
+  },
+  {
+    "name": "Gnar",
+    "set": 1,
+    "cost": 4,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Wild", "Yordle", "Shapeshifter"]
+  },
+  {
+    "name": "Graves",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Pirate", "Gunslinger"]
+  },
+  {
+    "name": "Jayce",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Hextech", "Shapeshifter"]
+  },
+  {
+    "name": "Jinx",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Hextech", "Gunslinger"]
+  },
+  {
+    "name": "Kai`Sa",
+    "set": 1,
+    "cost": 5,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Void", "Assassin", "Ranger"]
+  },
+  {
+    "name": "Karthus",
+    "set": 1,
+    "cost": 5,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Phantom", "Sorcerer"]
+  },
+  {
+    "name": "Kassadin",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Void", "Sorcerer"]
+  },
+  {
+    "name": "Katarina",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Imperial", "Assassin"]
+  },
+  {
+    "name": "Kayle",
+    "set": 1,
+    "cost": 5,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Noble", "Knight"]
+  },
+  {
+    "name": "Kennen",
+    "set": 1,
+    "cost": 3,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Ninja", "Yordle", "Elementalist"]
+  },
+  {
+    "name": "Kha`Zix",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Void", "Assassin"]
+  },
+  {
+    "name": "Kindred",
+    "set": 1,
+    "cost": 4,
+    "range": 3,
+    "gender": "Other",
+    "traits": ["Phantom", "Ranger"]
+  },
+  {
+    "name": "Leona",
+    "set": 1,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Noble", "Guardian"]
+  },
+  {
+    "name": "Lissandra",
+    "set": 1,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Glacial", "Elementalist"]
+  },
+  {
+    "name": "Lucian",
+    "set": 1,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Noble", "Gunslinger"]
+  },
+  {
+    "name": "Lulu",
+    "set": 1,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Yordle", "Sorcerer"]
+  },
+  {
+    "name": "Miss Fortune",
+    "set": 1,
+    "cost": 5,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Pirate", "Gunslinger"]
+  },
+  {
+    "name": "Mordekaiser",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Phantom", "Knight"]
+  },
+  {
+    "name": "Morgana",
+    "set": 1,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Demon", "Sorcerer"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 1,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Wild", "Shapeshifter"]
+  },
+  {
+    "name": "Pantheon",
+    "set": 1,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dragon", "Guardian"]
+  },
+  {
+    "name": "Poppy",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Yordle", "Knight"]
+  },
+  {
+    "name": "Pyke",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Pirate", "Assassin"]
+  },
+  {
+    "name": "Rek`Sai",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Void", "Brawler"]
+  },
+  {
+    "name": "Rengar",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Wild", "Assassin"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 1,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Glacial", "Knight"]
+  },
+  {
+    "name": "Shen",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ninja", "Blademaster"]
+  },
+  {
+    "name": "Shyvana",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Dragon", "Shapeshifter"]
+  },
+  {
+    "name": "Swain",
+    "set": 1,
+    "cost": 5,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Demon", "Imperial", "Shapeshifter"]
+  },
+  {
+    "name": "Tristana",
+    "set": 1,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Yordle", "Gunslinger"]
+  },
+  {
+    "name": "Twisted Fate",
+    "set": 1,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Pirate", "Sorcerer"]
+  },
+  {
+    "name": "Varus",
+    "set": 1,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Demon", "Ranger"]
+  },
+  {
+    "name": "Vayne",
+    "set": 1,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Noble", "Ranger"]
+  },
+  {
+    "name": "Veigar",
+    "set": 1,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Yordle", "Sorcerer"]
+  },
+  {
+    "name": "Vi",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Hextech", "Brawler"]
+  },
+  {
+    "name": "Volibear",
+    "set": 1,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Glacial", "Brawler"]
+  },
+  {
+    "name": "Warwick",
+    "set": 1,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Wild", "Brawler"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 1,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Exile", "Blademaster"]
+  },
+  {
+    "name": "Zed",
+    "set": 1,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ninja", "Assassin"]
+  },
+  {
+    "name": "Aatrox",
+    "set": 2,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Light", "Blademaster"]
+  },
+  {
+    "name": "Amumu",
+    "set": 2,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Inferno", "Warden"]
+  },
+  {
+    "name": "Annie",
+    "set": 2,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Inferno", "Summoner"]
+  },
+  {
+    "name": "Ashe",
+    "set": 2,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Crystal", "Ranger"]
+  },
+  {
+    "name": "Azir",
+    "set": 2,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Desert", "Summoner"]
+  },
+  {
+    "name": "Brand",
+    "set": 2,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Inferno", "Mage"]
+  },
+  {
+    "name": "Braum",
+    "set": 2,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Glacial", "Warden"]
+  },
+  {
+    "name": "Diana",
+    "set": 2,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Inferno", "Assassin"]
+  },
+  {
+    "name": "Dr. Mundo",
+    "set": 2,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Poison", "Berserker"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 2,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Glacial", "Ranger"]
+  },
+  {
+    "name": "Ivern",
+    "set": 2,
+    "cost": 1,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Woodland", "Druid"]
+  },
+  {
+    "name": "Janna",
+    "set": 2,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Wind", "Mystic"]
+  },
+  {
+    "name": "Jax",
+    "set": 2,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Light", "Berserker"]
+  },
+  {
+    "name": "Karma",
+    "set": 2,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Lunar", "Mystic"]
+  },
+  {
+    "name": "Khazix",
+    "set": 2,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Desert", "Assassin"]
+  },
+  {
+    "name": "Kindred",
+    "set": 2,
+    "cost": 3,
+    "range": 3,
+    "gender": "Other",
+    "traits": ["Inferno", "Shadow", "Ranger"]
+  },
+  {
+    "name": "Kog`Maw",
+    "set": 2,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Poison", "Predator"]
+  },
+  {
+    "name": "LeBlanc",
+    "set": 2,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Woodland", "Assassin", "Mage"]
+  },
+  {
+    "name": "Leona",
+    "set": 2,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Lunar", "Warden"]
+  },
+  {
+    "name": "Lucian",
+    "set": 2,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Light", "Soulbound"]
+  },
+  {
+    "name": "Lux",
+    "set": 2,
+    "cost": 7,
+    "range": 4,
+    "gender": "Female",
+    "traits": [
+      "Crystal",
+      "Electric",
+      "Glacial",
+      "Inferno",
+      "Light",
+      "Ocean",
+      "Shadow",
+      "Steel",
+      "Wind",
+      "Woodland",
+      "Avatar"
+    ]
+  },
+  {
+    "name": "Malphite",
+    "set": 2,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mountain", "Warden"]
+  },
+  {
+    "name": "Malzahar",
+    "set": 2,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Shadow", "Summoner"]
+  },
+  {
+    "name": "Maokai",
+    "set": 2,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Woodland", "Druid"]
+  },
+  {
+    "name": "Master Yi",
+    "set": 2,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shadow", "Blademaster", "Mystic"]
+  },
+  {
+    "name": "Nami",
+    "set": 2,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Ocean", "Mystic"]
+  },
+  {
+    "name": "Nasus",
+    "set": 2,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Light", "Warden"]
+  },
+  {
+    "name": "Nautilus",
+    "set": 2,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ocean", "Warden"]
+  },
+  {
+    "name": "Neeko",
+    "set": 2,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Woodland", "Druid"]
+  },
+  {
+    "name": "Nocturne",
+    "set": 2,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Steel", "Assassin"]
+  },
+  {
+    "name": "Olaf",
+    "set": 2,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Glacial", "Berserker"]
+  },
+  {
+    "name": "Ornn",
+    "set": 2,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Electric", "Warden"]
+  },
+  {
+    "name": "Qiyana",
+    "set": 2,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Inferno", "Mountain", "Ocean", "Wind", "Assassin"]
+  },
+  {
+    "name": "Rek`Sai",
+    "set": 2,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Steel", "Predator"]
+  },
+  {
+    "name": "Renekton",
+    "set": 2,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Desert", "Berserker"]
+  },
+  {
+    "name": "Senna",
+    "set": 2,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Shadow", "Soulbound"]
+  },
+  {
+    "name": "Singed",
+    "set": 2,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Poison", "Alchemist"]
+  },
+  {
+    "name": "Sion",
+    "set": 2,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shadow", "Berserker"]
+  },
+  {
+    "name": "Sivir",
+    "set": 2,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Desert", "Blademaster"]
+  },
+  {
+    "name": "Skarner",
+    "set": 2,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Crystal", "Predator"]
+  },
+  {
+    "name": "Soraka",
+    "set": 2,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Light", "Mystic"]
+  },
+  {
+    "name": "Syndra",
+    "set": 2,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Ocean", "Mage"]
+  },
+  {
+    "name": "Taliyah",
+    "set": 2,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Mountain", "Mage"]
+  },
+  {
+    "name": "Taric",
+    "set": 2,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Crystal", "Warden"]
+  },
+  {
+    "name": "Thresh",
+    "set": 2,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Ocean", "Warden"]
+  },
+  {
+    "name": "Twitch",
+    "set": 2,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Poison", "Ranger"]
+  },
+  {
+    "name": "Varus",
+    "set": 2,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Inferno", "Ranger"]
+  },
+  {
+    "name": "Vayne",
+    "set": 2,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Light", "Ranger"]
+  },
+  {
+    "name": "Veigar",
+    "set": 2,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Shadow", "Mage"]
+  },
+  {
+    "name": "Vladimir",
+    "set": 2,
+    "cost": 1,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Ocean", "Mage"]
+  },
+  {
+    "name": "Volibear",
+    "set": 2,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Electric", "Glacial", "Berserker"]
+  },
+  {
+    "name": "Warwick",
+    "set": 2,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Glacial", "Predator"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 2,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Wind", "Blademaster"]
+  },
+  {
+    "name": "Yorick",
+    "set": 2,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Light", "Summoner"]
+  },
+  {
+    "name": "Zed",
+    "set": 2,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Electric", "Assassin", "Summoner"]
+  },
+  {
+    "name": "Zyra",
+    "set": 2,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Inferno", "Summoner"]
+  },
+  {
+    "name": "Ahri",
+    "set": 3,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Sorcerer"]
+  },
+  {
+    "name": "Annie",
+    "set": 3,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Mech-Pilot", "Sorcerer"]
+  },
+  {
+    "name": "Ashe",
+    "set": 3,
+    "cost": 3,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Celestial", "Sniper"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 3,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Starship"]
+  },
+  {
+    "name": "Blitzcrank",
+    "set": 3,
+    "cost": 2,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["Chrono", "Brawler"]
+  },
+  {
+    "name": "Caitlyn",
+    "set": 3,
+    "cost": 1,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Chrono", "Sniper"]
+  },
+  {
+    "name": "Cho`Gath",
+    "set": 3,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Void", "Brawler"]
+  },
+  {
+    "name": "Darius",
+    "set": 3,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Space Pirate", "Mana-Reaver"]
+  },
+  {
+    "name": "Ekko",
+    "set": 3,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Cybernetic", "Infiltrator"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 3,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Chrono", "Blaster"]
+  },
+  {
+    "name": "Fiora",
+    "set": 3,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Blademaster"]
+  },
+  {
+    "name": "Fizz",
+    "set": 3,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mech-Pilot", "Infiltrator"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 3,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Space Pirate", "Demolitionist", "Mercenary"]
+  },
+  {
+    "name": "Graves",
+    "set": 3,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Space Pirate", "Blaster"]
+  },
+  {
+    "name": "Irelia",
+    "set": 3,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Blademaster", "Mana-Reaver"]
+  },
+  {
+    "name": "Jarvan IV",
+    "set": 3,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dark Star", "Protector"]
+  },
+  {
+    "name": "Jayce",
+    "set": 3,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Space Pirate", "Vanguard"]
+  },
+  {
+    "name": "Jhin",
+    "set": 3,
+    "cost": 4,
+    "range": 5,
+    "gender": "Male",
+    "traits": ["Dark Star", "Sniper"]
+  },
+  {
+    "name": "Jinx",
+    "set": 3,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Rebel", "Blaster"]
+  },
+  {
+    "name": "Kai`Sa",
+    "set": 3,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Valkyrie", "Infiltrator"]
+  },
+  {
+    "name": "Karma",
+    "set": 3,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Dark Star", "Mystic"]
+  },
+  {
+    "name": "Kassadin",
+    "set": 3,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Celestial", "Mana-Reaver"]
+  },
+  {
+    "name": "Kayle",
+    "set": 3,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Valkyrie", "Blademaster"]
+  },
+  {
+    "name": "Kha`Zix",
+    "set": 3,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Void", "Infiltrator"]
+  },
+  {
+    "name": "Leona",
+    "set": 3,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Vanguard"]
+  },
+  {
+    "name": "Lucian",
+    "set": 3,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Cybernetic", "Blaster"]
+  },
+  {
+    "name": "Lulu",
+    "set": 3,
+    "cost": 5,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Celestial", "Mystic"]
+  },
+  {
+    "name": "Lux",
+    "set": 3,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Dark Star", "Sorcerer"]
+  },
+  {
+    "name": "Malphite",
+    "set": 3,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Brawler"]
+  },
+  {
+    "name": "Master Yi",
+    "set": 3,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Blademaster"]
+  },
+  {
+    "name": "Miss Fortune",
+    "set": 3,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Valkyrie", "Blaster", "Mercenary"]
+  },
+  {
+    "name": "Mordekaiser",
+    "set": 3,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dark Star", "Vanguard"]
+  },
+  {
+    "name": "Neeko",
+    "set": 3,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Protector"]
+  },
+  {
+    "name": "Poppy",
+    "set": 3,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Vanguard"]
+  },
+  {
+    "name": "Rakan",
+    "set": 3,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Celestial", "Protector"]
+  },
+  {
+    "name": "Rumble",
+    "set": 3,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mech-Pilot", "Demolitionist"]
+  },
+  {
+    "name": "Shaco",
+    "set": 3,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dark Star", "Infiltrator"]
+  },
+  {
+    "name": "Shen",
+    "set": 3,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chrono", "Blademaster"]
+  },
+  {
+    "name": "Sona",
+    "set": 3,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Rebel", "Mystic"]
+  },
+  {
+    "name": "Soraka",
+    "set": 3,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Mystic"]
+  },
+  {
+    "name": "Syndra",
+    "set": 3,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Sorcerer"]
+  },
+  {
+    "name": "Thresh",
+    "set": 3,
+    "cost": 5,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Chrono", "Mana-Reaver"]
+  },
+  {
+    "name": "Twisted Fate",
+    "set": 3,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Chrono", "Sorcerer"]
+  },
+  {
+    "name": "Vel`Koz",
+    "set": 3,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Void", "Sorcerer"]
+  },
+  {
+    "name": "Vi",
+    "set": 3,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Brawler"]
+  },
+  {
+    "name": "Wukong",
+    "set": 3,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chrono", "Vanguard"]
+  },
+  {
+    "name": "Xayah",
+    "set": 3,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Celestial", "Blademaster"]
+  },
+  {
+    "name": "Xerath",
+    "set": 3,
+    "cost": 5,
+    "range": 5,
+    "gender": "Male",
+    "traits": ["Dark Star", "Sorcerer"]
+  },
+  {
+    "name": "Xin Zhao",
+    "set": 3,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Celestial", "Protector"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 3,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Blademaster"]
+  },
+  {
+    "name": "Ziggs",
+    "set": 3,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Rebel", "Demolitionist"]
+  },
+  {
+    "name": "Zoe",
+    "set": 3,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Sorcerer"]
+  },
+  {
+    "name": "Ahri",
+    "set": 3.5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Sorcerer"]
+  },
+  {
+    "name": "Annie",
+    "set": 3.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Mech-Pilot", "Sorcerer"]
+  },
+  {
+    "name": "Ashe",
+    "set": 3.5,
+    "cost": 3,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Celestial", "Sniper"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 3.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Starship"]
+  },
+  {
+    "name": "Bard",
+    "set": 3.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Astro", "Mystic"]
+  },
+  {
+    "name": "Blitzcrank",
+    "set": 3.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["Chrono", "Brawler"]
+  },
+  {
+    "name": "Caitlyn",
+    "set": 3.5,
+    "cost": 1,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Chrono", "Sniper"]
+  },
+  {
+    "name": "Cassiopeia",
+    "set": 3.5,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Battlecast", "Mystic"]
+  },
+  {
+    "name": "Darius",
+    "set": 3.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Space Pirate", "Mana-Reaver"]
+  },
+  {
+    "name": "Ekko",
+    "set": 3.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Cybernetic", "Infiltrator"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 3.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Chrono", "Blaster"]
+  },
+  {
+    "name": "Fiora",
+    "set": 3.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Blademaster"]
+  },
+  {
+    "name": "Fizz",
+    "set": 3.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mech-Pilot", "Infiltrator"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 3.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Space Pirate", "Demolitionist", "Mercenary"]
+  },
+  {
+    "name": "Gnar",
+    "set": 3.5,
+    "cost": 4,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Astro", "Brawler"]
+  },
+  {
+    "name": "Graves",
+    "set": 3.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Space Pirate", "Blaster"]
+  },
+  {
+    "name": "Illaoi",
+    "set": 3.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Battlecast", "Brawler"]
+  },
+  {
+    "name": "Irelia",
+    "set": 3.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Blademaster", "Mana-Reaver"]
+  },
+  {
+    "name": "Janna",
+    "set": 3.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Paragon"]
+  },
+  {
+    "name": "Jarvan IV",
+    "set": 3.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dark Star", "Protector"]
+  },
+  {
+    "name": "Jayce",
+    "set": 3.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Space Pirate", "Vanguard"]
+  },
+  {
+    "name": "Jhin",
+    "set": 3.5,
+    "cost": 4,
+    "range": 5,
+    "gender": "Male",
+    "traits": ["Dark Star", "Sniper"]
+  },
+  {
+    "name": "Jinx",
+    "set": 3.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Rebel", "Blaster"]
+  },
+  {
+    "name": "Karma",
+    "set": 3.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Dark Star", "Mystic"]
+  },
+  {
+    "name": "KogMaw",
+    "set": 3.5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Battlecast", "Blaster"]
+  },
+  {
+    "name": "Leona",
+    "set": 3.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Vanguard"]
+  },
+  {
+    "name": "Lucian",
+    "set": 3.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Cybernetic", "Blaster"]
+  },
+  {
+    "name": "Lulu",
+    "set": 3.5,
+    "cost": 5,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Celestial", "Mystic"]
+  },
+  {
+    "name": "Malphite",
+    "set": 3.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Brawler"]
+  },
+  {
+    "name": "Master Yi",
+    "set": 3.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Blademaster"]
+  },
+  {
+    "name": "Mordekaiser",
+    "set": 3.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dark Star", "Vanguard"]
+  },
+  {
+    "name": "Nautilus",
+    "set": 3.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Astro", "Vanguard"]
+  },
+  {
+    "name": "Neeko",
+    "set": 3.5,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Protector"]
+  },
+  {
+    "name": "Nocturne",
+    "set": 3.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Battlecast", "Infiltrator"]
+  },
+  {
+    "name": "Poppy",
+    "set": 3.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Vanguard"]
+  },
+  {
+    "name": "Rakan",
+    "set": 3.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Celestial", "Protector"]
+  },
+  {
+    "name": "Riven",
+    "set": 3.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Chrono", "Blademaster"]
+  },
+  {
+    "name": "Rumble",
+    "set": 3.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mech-Pilot", "Demolitionist"]
+  },
+  {
+    "name": "Shaco",
+    "set": 3.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dark Star", "Infiltrator"]
+  },
+  {
+    "name": "Shen",
+    "set": 3.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chrono", "Blademaster"]
+  },
+  {
+    "name": "Soraka",
+    "set": 3.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Mystic"]
+  },
+  {
+    "name": "Syndra",
+    "set": 3.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Sorcerer"]
+  },
+  {
+    "name": "Teemo",
+    "set": 3.5,
+    "cost": 4,
+    "range": 5,
+    "gender": "Male",
+    "traits": ["Astro", "Sniper"]
+  },
+  {
+    "name": "Thresh",
+    "set": 3.5,
+    "cost": 5,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Chrono", "Mana-Reaver"]
+  },
+  {
+    "name": "Twisted Fate",
+    "set": 3.5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Chrono", "Sorcerer"]
+  },
+  {
+    "name": "Urgot",
+    "set": 3.5,
+    "cost": 5,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Battlecast", "Protector"]
+  },
+  {
+    "name": "Vayne",
+    "set": 3.5,
+    "cost": 3,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Sniper"]
+  },
+  {
+    "name": "Vi",
+    "set": 3.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cybernetic", "Brawler"]
+  },
+  {
+    "name": "Viktor",
+    "set": 3.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Battlecast", "Sorcerer"]
+  },
+  {
+    "name": "Wukong",
+    "set": 3.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chrono", "Vanguard"]
+  },
+  {
+    "name": "Xayah",
+    "set": 3.5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Celestial", "Blademaster"]
+  },
+  {
+    "name": "Xerath",
+    "set": 3.5,
+    "cost": 5,
+    "range": 5,
+    "gender": "Male",
+    "traits": ["Dark Star", "Sorcerer"]
+  },
+  {
+    "name": "Xin Zhao",
+    "set": 3.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Celestial", "Protector"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 3.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Blademaster"]
+  },
+  {
+    "name": "Zed",
+    "set": 3.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Rebel", "Infiltrator"]
+  },
+  {
+    "name": "Ziggs",
+    "set": 3.5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Rebel", "Demolitionist"]
+  },
+  {
+    "name": "Zoe",
+    "set": 3.5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Sorcerer"]
+  },
+  {
+    "name": "Aatrox",
+    "set": 4,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Cultist", "Vanguard"]
+  },
+  {
+    "name": "Ahri",
+    "set": 4,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Spirit", "Mage"]
+  },
+  {
+    "name": "Akali",
+    "set": 4,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ninja", "Assassin"]
+  },
+  {
+    "name": "Annie",
+    "set": 4,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Fortune", "Mage"]
+  },
+  {
+    "name": "Aphelios",
+    "set": 4,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Moonlight", "Hunter"]
+  },
+  {
+    "name": "Ashe",
+    "set": 4,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Elderwood", "Hunter"]
+  },
+  {
+    "name": "Azir",
+    "set": 4,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Warlord", "Emperor", "Keeper"]
+  },
+  {
+    "name": "Cassiopeia",
+    "set": 4,
+    "cost": 4,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Dusk", "Mystic"]
+  },
+  {
+    "name": "Diana",
+    "set": 4,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Moonlight", "Assassin"]
+  },
+  {
+    "name": "Elise",
+    "set": 4,
+    "cost": 1,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Cultist", "Keeper"]
+  },
+  {
+    "name": "Evelynn",
+    "set": 4,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Cultist", "Shade"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 4,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Elderwood", "Dazzler"]
+  },
+  {
+    "name": "Fiora",
+    "set": 4,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Enlightened", "Duelist"]
+  },
+  {
+    "name": "Garen",
+    "set": 4,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Warlord", "Vanguard"]
+  },
+  {
+    "name": "Hecarim",
+    "set": 4,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Elderwood", "Vanguard"]
+  },
+  {
+    "name": "Irelia",
+    "set": 4,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Divine", "Enlightened", "Adept"]
+  },
+  {
+    "name": "Janna",
+    "set": 4,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Enlightened", "Mystic"]
+  },
+  {
+    "name": "Jarvan IV",
+    "set": 4,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Warlord", "Keeper"]
+  },
+  {
+    "name": "Jax",
+    "set": 4,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Divine", "Duelist"]
+  },
+  {
+    "name": "Jhin",
+    "set": 4,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Cultist", "Sharpshooter"]
+  },
+  {
+    "name": "Jinx",
+    "set": 4,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Fortune", "Sharpshooter"]
+  },
+  {
+    "name": "Kalista",
+    "set": 4,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Cultist", "Duelist"]
+  },
+  {
+    "name": "Katarina",
+    "set": 4,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Fortune", "Warlord", "Assassin"]
+  },
+  {
+    "name": "Kayn",
+    "set": 4,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Tormented", "Shade"]
+  },
+  {
+    "name": "Kennen",
+    "set": 4,
+    "cost": 3,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Ninja", "Keeper"]
+  },
+  {
+    "name": "Kindred",
+    "set": 4,
+    "cost": 3,
+    "range": 3,
+    "gender": "Other",
+    "traits": ["Spirit", "Hunter"]
+  },
+  {
+    "name": "Lee Sin",
+    "set": 4,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Divine", "Duelist"]
+  },
+  {
+    "name": "Lillia",
+    "set": 4,
+    "cost": 5,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Dusk", "Mage"]
+  },
+  {
+    "name": "Lissandra",
+    "set": 4,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Moonlight", "Dazzler"]
+  },
+  {
+    "name": "Lulu",
+    "set": 4,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Elderwood", "Mage"]
+  },
+  {
+    "name": "Lux",
+    "set": 4,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Divine", "Dazzler"]
+  },
+  {
+    "name": "Maokai",
+    "set": 4,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Elderwood", "Brawler"]
+  },
+  {
+    "name": "Morgana",
+    "set": 4,
+    "cost": 4,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Enlightened", "Dazzler"]
+  },
+  {
+    "name": "Nami",
+    "set": 4,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Enlightened", "Mage"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 4,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Warlord", "Sharpshooter"]
+  },
+  {
+    "name": "Nunu",
+    "set": 4,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Elderwood", "Brawler"]
+  },
+  {
+    "name": "Pyke",
+    "set": 4,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Cultist", "Assassin"]
+  },
+  {
+    "name": "Riven",
+    "set": 4,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Dusk", "Keeper"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 4,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Fortune", "Vanguard"]
+  },
+  {
+    "name": "Sett",
+    "set": 4,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["The Boss", "Brawler"]
+  },
+  {
+    "name": "Shen",
+    "set": 4,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ninja", "Adept", "Mystic"]
+  },
+  {
+    "name": "Sylas",
+    "set": 4,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Moonlight", "Brawler"]
+  },
+  {
+    "name": "Tahm Kench",
+    "set": 4,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Fortune", "Brawler"]
+  },
+  {
+    "name": "Talon",
+    "set": 4,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Enlightened", "Assassin"]
+  },
+  {
+    "name": "Teemo",
+    "set": 4,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Spirit", "Sharpshooter"]
+  },
+  {
+    "name": "Thresh",
+    "set": 4,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Dusk", "Vanguard"]
+  },
+  {
+    "name": "Twisted Fate",
+    "set": 4,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Cultist", "Mage"]
+  },
+  {
+    "name": "Vayne",
+    "set": 4,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Dusk", "Sharpshooter"]
+  },
+  {
+    "name": "Veigar",
+    "set": 4,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Elderwood", "Mage"]
+  },
+  {
+    "name": "Vi",
+    "set": 4,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Warlord", "Brawler"]
+  },
+  {
+    "name": "Warwick",
+    "set": 4,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Divine", "Brawler", "Hunter"]
+  },
+  {
+    "name": "Wukong",
+    "set": 4,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Divine", "Vanguard"]
+  },
+  {
+    "name": "Xin Zhao",
+    "set": 4,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Warlord", "Duelist"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 4,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Exile", "Duelist"]
+  },
+  {
+    "name": "Yone",
+    "set": 4,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Exile", "Adept"]
+  },
+  {
+    "name": "Yuumi",
+    "set": 4,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Spirit", "Mystic"]
+  },
+  {
+    "name": "Zed",
+    "set": 4,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ninja", "Shade"]
+  },
+  {
+    "name": "Zilean",
+    "set": 4,
+    "cost": 5,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Cultist", "Mystic"]
+  },
+  {
+    "name": "Aatrox",
+    "set": 4.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Cultist", "Vanguard"]
+  },
+  {
+    "name": "Akali",
+    "set": 4.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ninja", "Assassin"]
+  },
+  {
+    "name": "Annie",
+    "set": 4.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Fortune", "Mage"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 4.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Dragonsoul", "Mage"]
+  },
+  {
+    "name": "Azir",
+    "set": 4.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Warlord", "Emperor", "Keeper"]
+  },
+  {
+    "name": "Brand",
+    "set": 4.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Dragonsoul", "Mage"]
+  },
+  {
+    "name": "Braum",
+    "set": 4.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dragonsoul", "Vanguard"]
+  },
+  {
+    "name": "Cho`Gath",
+    "set": 4.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Fabled", "Brawler"]
+  },
+  {
+    "name": "Darius",
+    "set": 4.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Fortune", "Slayer"]
+  },
+  {
+    "name": "Diana",
+    "set": 4.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Spirit", "Assassin"]
+  },
+  {
+    "name": "Elise",
+    "set": 4.5,
+    "cost": 1,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Cultist", "Keeper"]
+  },
+  {
+    "name": "Fiora",
+    "set": 4.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Enlightened", "Duelist"]
+  },
+  {
+    "name": "Garen",
+    "set": 4.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Warlord", "Vanguard"]
+  },
+  {
+    "name": "Irelia",
+    "set": 4.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Divine", "Enlightened", "Adept"]
+  },
+  {
+    "name": "Janna",
+    "set": 4.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Enlightened", "Mystic"]
+  },
+  {
+    "name": "Jarvan IV",
+    "set": 4.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Warlord", "Keeper"]
+  },
+  {
+    "name": "Jax",
+    "set": 4.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Divine", "Duelist"]
+  },
+  {
+    "name": "Kalista",
+    "set": 4.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Cultist", "Duelist"]
+  },
+  {
+    "name": "Katarina",
+    "set": 4.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Fortune", "Warlord", "Assassin"]
+  },
+  {
+    "name": "Kayle",
+    "set": 4.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Divine", "Executioner"]
+  },
+  {
+    "name": "Kennen",
+    "set": 4.5,
+    "cost": 3,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Ninja", "Keeper"]
+  },
+  {
+    "name": "Kindred",
+    "set": 4.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Other",
+    "traits": ["Spirit", "Executioner"]
+  },
+  {
+    "name": "Lee Sin",
+    "set": 4.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Divine", "Duelist"]
+  },
+  {
+    "name": "Lulu",
+    "set": 4.5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Elderwood", "Mage"]
+  },
+  {
+    "name": "Maokai",
+    "set": 4.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Elderwood", "Brawler"]
+  },
+  {
+    "name": "Morgana",
+    "set": 4.5,
+    "cost": 4,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Enlightened", "Syphoner"]
+  },
+  {
+    "name": "Nasus",
+    "set": 4.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Divine", "Syphoner"]
+  },
+  {
+    "name": "Nautilus",
+    "set": 4.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Fabled", "Vanguard"]
+  },
+  {
+    "name": "Neeko",
+    "set": 4.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Fabled", "Mystic"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 4.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Warlord", "Sharpshooter"]
+  },
+  {
+    "name": "Nunu",
+    "set": 4.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Elderwood", "Brawler"]
+  },
+  {
+    "name": "Olaf",
+    "set": 4.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dragonsoul", "Slayer"]
+  },
+  {
+    "name": "Ornn",
+    "set": 4.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Elderwood", "Blacksmith", "Vanguard"]
+  },
+  {
+    "name": "Pyke",
+    "set": 4.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Cultist", "Assassin", "Slayer"]
+  },
+  {
+    "name": "Rakan",
+    "set": 4.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Elderwood", "Keeper"]
+  },
+  {
+    "name": "Samira",
+    "set": 4.5,
+    "cost": 5,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Daredevil", "Sharpshooter", "Slayer"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 4.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Fortune", "Vanguard"]
+  },
+  {
+    "name": "Sett",
+    "set": 4.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["The Boss", "Brawler"]
+  },
+  {
+    "name": "Shen",
+    "set": 4.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ninja", "Adept", "Mystic"]
+  },
+  {
+    "name": "Shyvana",
+    "set": 4.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Dragonsoul", "Brawler"]
+  },
+  {
+    "name": "Sivir",
+    "set": 4.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Cultist", "Sharpshooter"]
+  },
+  {
+    "name": "Swain",
+    "set": 4.5,
+    "cost": 5,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Dragonsoul", "Syphoner"]
+  },
+  {
+    "name": "Tahm Kench",
+    "set": 4.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Fortune", "Brawler"]
+  },
+  {
+    "name": "Talon",
+    "set": 4.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Enlightened", "Assassin"]
+  },
+  {
+    "name": "Teemo",
+    "set": 4.5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Spirit", "Sharpshooter"]
+  },
+  {
+    "name": "Tristana",
+    "set": 4.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Dragonsoul", "Sharpshooter"]
+  },
+  {
+    "name": "Tryndamere",
+    "set": 4.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Warlord", "Duelist", "Slayer"]
+  },
+  {
+    "name": "Twisted Fate",
+    "set": 4.5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Cultist", "Mage"]
+  },
+  {
+    "name": "Veigar",
+    "set": 4.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Elderwood", "Mage"]
+  },
+  {
+    "name": "Vi",
+    "set": 4.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Warlord", "Brawler"]
+  },
+  {
+    "name": "Vladimir",
+    "set": 4.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Cultist", "Syphoner"]
+  },
+  {
+    "name": "Wukong",
+    "set": 4.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Divine", "Vanguard"]
+  },
+  {
+    "name": "Xayah",
+    "set": 4.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Elderwood", "Executioner", "Keeper"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 4.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Exile", "Duelist"]
+  },
+  {
+    "name": "Yone",
+    "set": 4.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Exile", "Adept"]
+  },
+  {
+    "name": "Yuumi",
+    "set": 4.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Spirit", "Mystic"]
+  },
+  {
+    "name": "Zed",
+    "set": 4.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ninja", "Slayer"]
+  },
+  {
+    "name": "Zilean",
+    "set": 4.5,
+    "cost": 5,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Cultist", "Mystic"]
+  },
+  {
+    "name": "Aatrox",
+    "set": 5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Redeemed", "Legionnaire"]
+  },
+  {
+    "name": "Aphelios",
+    "set": 5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Nightbringer", "Ranger"]
+  },
+  {
+    "name": "Ashe",
+    "set": 5,
+    "cost": 3,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Draconic", "Verdant", "Ranger"]
+  },
+  {
+    "name": "Brand",
+    "set": 5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Abomination", "Spellweaver"]
+  },
+  {
+    "name": "Darius",
+    "set": 5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Nightbringer", "God-King", "Knight"]
+  },
+  {
+    "name": "Diana",
+    "set": 5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Dragonslayer", "Nightbringer", "Assassin"]
+  },
+  {
+    "name": "Draven",
+    "set": 5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Forgotten", "Legionnaire"]
+  },
+  {
+    "name": "Garen",
+    "set": 5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dawnbringer", "God-King", "Knight"]
+  },
+  {
+    "name": "Gragas",
+    "set": 5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dawnbringer", "Brawler"]
+  },
+  {
+    "name": "Hecarim",
+    "set": 5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Forgotten", "Cavalier"]
+  },
+  {
+    "name": "Heimerdinger",
+    "set": 5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Draconic", "Caretaker", "Renewer"]
+  },
+  {
+    "name": "Ivern",
+    "set": 5,
+    "cost": 4,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Revenant", "Invoker", "Renewer"]
+  },
+  {
+    "name": "Jax",
+    "set": 5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ironclad", "Skirmisher"]
+  },
+  {
+    "name": "Kalista",
+    "set": 5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Abomination", "Legionnaire"]
+  },
+  {
+    "name": "Karma",
+    "set": 5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Dawnbringer", "Invoker"]
+  },
+  {
+    "name": "Katarina",
+    "set": 5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Forgotten", "Assassin"]
+  },
+  {
+    "name": "Kayle",
+    "set": 5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Redeemed", "Verdant", "Legionnaire"]
+  },
+  {
+    "name": "Kennen",
+    "set": 5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Hellion", "Skirmisher"]
+  },
+  {
+    "name": "Khazix",
+    "set": 5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dawnbringer", "Assassin"]
+  },
+  {
+    "name": "Kindred",
+    "set": 5,
+    "cost": 5,
+    "range": 3,
+    "gender": "Other",
+    "traits": ["Eternal", "Mystic", "Ranger"]
+  },
+  {
+    "name": "Kled",
+    "set": 5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Hellion", "Cavalier"]
+  },
+  {
+    "name": "Leblanc",
+    "set": 5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Coven", "Assassin"]
+  },
+  {
+    "name": "LeeSin",
+    "set": 5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Nightbringer", "Skirmisher"]
+  },
+  {
+    "name": "Leona",
+    "set": 5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Redeemed", "Knight"]
+  },
+  {
+    "name": "Lissandra",
+    "set": 5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Coven", "Renewer"]
+  },
+  {
+    "name": "Lulu",
+    "set": 5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Hellion", "Mystic"]
+  },
+  {
+    "name": "Lux",
+    "set": 5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Redeemed", "Mystic"]
+  },
+  {
+    "name": "Mordekaiser",
+    "set": 5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dragonslayer", "Legionnaire"]
+  },
+  {
+    "name": "Morgana",
+    "set": 5,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Coven", "Nightbringer", "Mystic"]
+  },
+  {
+    "name": "Nautilus",
+    "set": 5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ironclad", "Knight"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Dawnbringer", "Skirmisher"]
+  },
+  {
+    "name": "Nocturne",
+    "set": 5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Revenant", "Assassin"]
+  },
+  {
+    "name": "Nunu",
+    "set": 5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Abomination", "Brawler"]
+  },
+  {
+    "name": "Pantheon",
+    "set": 5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dragonslayer", "Skirmisher"]
+  },
+  {
+    "name": "Poppy",
+    "set": 5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Hellion", "Knight"]
+  },
+  {
+    "name": "Rell",
+    "set": 5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ironclad", "Redeemed", "Cavalier"]
+  },
+  {
+    "name": "Riven",
+    "set": 5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Dawnbringer", "Legionnaire"]
+  },
+  {
+    "name": "Ryze",
+    "set": 5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Abomination", "Forgotten", "Mystic"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Nightbringer", "Cavalier"]
+  },
+  {
+    "name": "Sett",
+    "set": 5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Draconic", "Brawler"]
+  },
+  {
+    "name": "Soraka",
+    "set": 5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Dawnbringer", "Renewer"]
+  },
+  {
+    "name": "Syndra",
+    "set": 5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Redeemed", "Invoker"]
+  },
+  {
+    "name": "Taric",
+    "set": 5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Verdant", "Knight"]
+  },
+  {
+    "name": "Teemo",
+    "set": 5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Hellion", "Cruel", "Invoker"]
+  },
+  {
+    "name": "Thresh",
+    "set": 5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Forgotten", "Knight"]
+  },
+  {
+    "name": "Trundle",
+    "set": 5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dragonslayer", "Skirmisher"]
+  },
+  {
+    "name": "Udyr",
+    "set": 5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Draconic", "Skirmisher"]
+  },
+  {
+    "name": "Varus",
+    "set": 5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Redeemed", "Ranger"]
+  },
+  {
+    "name": "Vayne",
+    "set": 5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Forgotten", "Ranger"]
+  },
+  {
+    "name": "Vel`koz",
+    "set": 5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Redeemed", "Spellweaver"]
+  },
+  {
+    "name": "Viego",
+    "set": 5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Forgotten", "Assassin", "Skirmisher"]
+  },
+  {
+    "name": "Viktor",
+    "set": 5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Forgotten", "Spellweaver"]
+  },
+  {
+    "name": "Vladimir",
+    "set": 5,
+    "cost": 1,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Nightbringer", "Renewer"]
+  },
+  {
+    "name": "Volibear",
+    "set": 5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Revenant", "Brawler"]
+  },
+  {
+    "name": "Warwick",
+    "set": 5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Forgotten", "Brawler"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Nightbringer", "Legionnaire"]
+  },
+  {
+    "name": "Ziggs",
+    "set": 5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Hellion", "Spellweaver"]
+  },
+  {
+    "name": "Zyra",
+    "set": 5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Draconic", "Spellweaver"]
+  },
+  {
+    "name": "Aatrox",
+    "set": 5.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Redeemed", "Legionnaire"]
+  },
+  {
+    "name": "Akshan",
+    "set": 5.5,
+    "cost": 5,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Sentinel", "Ranger"]
+  },
+  {
+    "name": "Aphelios",
+    "set": 5.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Nightbringer", "Ranger"]
+  },
+  {
+    "name": "Ashe",
+    "set": 5.5,
+    "cost": 3,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Draconic", "Ranger"]
+  },
+  {
+    "name": "Brand",
+    "set": 5.5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Abomination", "Spellweaver"]
+  },
+  {
+    "name": "Diana",
+    "set": 5.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Nightbringer", "Assassin"]
+  },
+  {
+    "name": "Draven",
+    "set": 5.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Forgotten", "Legionnaire"]
+  },
+  {
+    "name": "Fiddlesticks",
+    "set": 5.5,
+    "cost": 4,
+    "range": 2,
+    "gender": "Other",
+    "traits": ["Abomination", "Revenant", "Mystic"]
+  },
+  {
+    "name": "Galio",
+    "set": 5.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Draconic", "Sentinel", "Knight"]
+  },
+  {
+    "name": "Garen",
+    "set": 5.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dawnbringer", "Victorious", "Knight"]
+  },
+  {
+    "name": "Gragas",
+    "set": 5.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dawnbringer", "Brawler"]
+  },
+  {
+    "name": "Gwen",
+    "set": 5.5,
+    "cost": 5,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Inanimate", "Mystic"]
+  },
+  {
+    "name": "Hecarim",
+    "set": 5.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Forgotten", "Cavalier"]
+  },
+  {
+    "name": "Heimerdinger",
+    "set": 5.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Draconic", "Caretaker", "Renewer"]
+  },
+  {
+    "name": "Irelia",
+    "set": 5.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Sentinel", "Legionnaire", "Skirmisher"]
+  },
+  {
+    "name": "Ivern",
+    "set": 5.5,
+    "cost": 4,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Revenant", "Invoker", "Renewer"]
+  },
+  {
+    "name": "Jax",
+    "set": 5.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ironclad", "Skirmisher"]
+  },
+  {
+    "name": "Kalista",
+    "set": 5.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Abomination", "Legionnaire"]
+  },
+  {
+    "name": "Karma",
+    "set": 5.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Dawnbringer", "Invoker"]
+  },
+  {
+    "name": "Kayle",
+    "set": 5.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Redeemed", "Legionnaire"]
+  },
+  {
+    "name": "Kennen",
+    "set": 5.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Hellion", "Skirmisher"]
+  },
+  {
+    "name": "Khazix",
+    "set": 5.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Dawnbringer", "Assassin"]
+  },
+  {
+    "name": "Kled",
+    "set": 5.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Hellion", "Cavalier"]
+  },
+  {
+    "name": "LeeSin",
+    "set": 5.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Nightbringer", "Skirmisher"]
+  },
+  {
+    "name": "Leona",
+    "set": 5.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Redeemed", "Knight"]
+  },
+  {
+    "name": "Lucian",
+    "set": 5.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Sentinel", "Cannoneer"]
+  },
+  {
+    "name": "Lulu",
+    "set": 5.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Hellion", "Mystic"]
+  },
+  {
+    "name": "Lux",
+    "set": 5.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Redeemed", "Mystic"]
+  },
+  {
+    "name": "Miss Fortune",
+    "set": 5.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Forgotten", "Cannoneer"]
+  },
+  {
+    "name": "Nautilus",
+    "set": 5.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ironclad", "Knight"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 5.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Dawnbringer", "Skirmisher"]
+  },
+  {
+    "name": "Nocturne",
+    "set": 5.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Revenant", "Assassin"]
+  },
+  {
+    "name": "Nunu",
+    "set": 5.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Abomination", "Brawler"]
+  },
+  {
+    "name": "Olaf",
+    "set": 5.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Sentinel", "Skirmisher"]
+  },
+  {
+    "name": "Poppy",
+    "set": 5.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Hellion", "Knight"]
+  },
+  {
+    "name": "Pyke",
+    "set": 5.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Sentinel", "Assassin"]
+  },
+  {
+    "name": "Rakan",
+    "set": 5.5,
+    "cost": 3,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Sentinel", "Renewer"]
+  },
+  {
+    "name": "Rell",
+    "set": 5.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ironclad", "Redeemed", "Cavalier"]
+  },
+  {
+    "name": "Riven",
+    "set": 5.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Dawnbringer", "Legionnaire"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 5.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Nightbringer", "Brawler", "Cavalier"]
+  },
+  {
+    "name": "Senna",
+    "set": 5.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Sentinel", "Cannoneer"]
+  },
+  {
+    "name": "Sett",
+    "set": 5.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Draconic", "Brawler"]
+  },
+  {
+    "name": "Soraka",
+    "set": 5.5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Dawnbringer", "Renewer"]
+  },
+  {
+    "name": "Syndra",
+    "set": 5.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Redeemed", "Invoker"]
+  },
+  {
+    "name": "Teemo",
+    "set": 5.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Hellion", "Cruel", "Invoker"]
+  },
+  {
+    "name": "Thresh",
+    "set": 5.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Forgotten", "Knight"]
+  },
+  {
+    "name": "Tristana",
+    "set": 5.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Hellion", "Cannoneer"]
+  },
+  {
+    "name": "Udyr",
+    "set": 5.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Draconic", "Skirmisher"]
+  },
+  {
+    "name": "Varus",
+    "set": 5.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Redeemed", "Ranger"]
+  },
+  {
+    "name": "Vayne",
+    "set": 5.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Forgotten", "Ranger"]
+  },
+  {
+    "name": "Vel`koz",
+    "set": 5.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Redeemed", "Spellweaver"]
+  },
+  {
+    "name": "Viego",
+    "set": 5.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Forgotten", "Assassin", "Skirmisher"]
+  },
+  {
+    "name": "Vladimir",
+    "set": 5.5,
+    "cost": 1,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Nightbringer", "Renewer"]
+  },
+  {
+    "name": "Volibear",
+    "set": 5.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Revenant", "Brawler"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 5.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Nightbringer", "Legionnaire"]
+  },
+  {
+    "name": "Ziggs",
+    "set": 5.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Hellion", "Spellweaver"]
+  },
+  {
+    "name": "Zyra",
+    "set": 5.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Draconic", "Spellweaver"]
+  },
+  {
+    "name": "Akali",
+    "set": 6,
+    "cost": 5,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Syndicate", "Assassin"]
+  },
+  {
+    "name": "Blitzcrank",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["Scrap", "Bodyguard", "Protector"]
+  },
+  {
+    "name": "Braum",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Syndicate", "Bodyguard"]
+  },
+  {
+    "name": "Caitlyn",
+    "set": 6,
+    "cost": 1,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Enforcer", "Sniper"]
+  },
+  {
+    "name": "Camille",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Clockwork", "Challenger"]
+  },
+  {
+    "name": "Cho`Gath",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mutant", "Bruiser", "Colossus"]
+  },
+  {
+    "name": "Darius",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Syndicate", "Bodyguard"]
+  },
+  {
+    "name": "Dr.Mundo",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chemtech", "Mutant", "Bruiser"]
+  },
+  {
+    "name": "Ekko",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Scrap", "Assassin"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 6,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Scrap", "Innovator"]
+  },
+  {
+    "name": "Fiora",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Enforcer", "Challenger"]
+  },
+  {
+    "name": "Galio",
+    "set": 6,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Socialite", "Bodyguard", "Colossus"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mercenary", "Twinshot"]
+  },
+  {
+    "name": "Garen",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Academy", "Protector"]
+  },
+  {
+    "name": "Graves",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Academy", "Twinshot"]
+  },
+  {
+    "name": "Heimerdinger",
+    "set": 6,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Yordle", "Innovator", "Scholar"]
+  },
+  {
+    "name": "Illaoi",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Mercenary", "Bruiser"]
+  },
+  {
+    "name": "Janna",
+    "set": 6,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Scrap", "Enchanter", "Scholar"]
+  },
+  {
+    "name": "Jayce",
+    "set": 6,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Enforcer", "Innovator", "Transformer"]
+  },
+  {
+    "name": "Jhin",
+    "set": 6,
+    "cost": 4,
+    "range": 5,
+    "gender": "Male",
+    "traits": ["Clockwork", "Sniper"]
+  },
+  {
+    "name": "Jinx",
+    "set": 6,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Scrap", "Sister", "Twinshot"]
+  },
+  {
+    "name": "KaiSa",
+    "set": 6,
+    "cost": 5,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Mutant", "Challenger"]
+  },
+  {
+    "name": "Kassadin",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mutant", "Protector"]
+  },
+  {
+    "name": "Katarina",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Academy", "Assassin"]
+  },
+  {
+    "name": "KogMaw",
+    "set": 6,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Mutant", "Sniper", "Twinshot"]
+  },
+  {
+    "name": "Leona",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Academy", "Bodyguard"]
+  },
+  {
+    "name": "Lissandra",
+    "set": 6,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Chemtech", "Scholar"]
+  },
+  {
+    "name": "Lulu",
+    "set": 6,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Yordle", "Enchanter"]
+  },
+  {
+    "name": "Lux",
+    "set": 6,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Academy", "Arcanist"]
+  },
+  {
+    "name": "Malzahar",
+    "set": 6,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Mutant", "Arcanist"]
+  },
+  {
+    "name": "Miss Fortune",
+    "set": 6,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Mercenary", "Sniper"]
+  },
+  {
+    "name": "Orianna",
+    "set": 6,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Clockwork", "Enchanter"]
+  },
+  {
+    "name": "Poppy",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Yordle", "Bodyguard"]
+  },
+  {
+    "name": "Quinn",
+    "set": 6,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Mercenary", "Challenger"]
+  },
+  {
+    "name": "Samira",
+    "set": 6,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Imperial", "Challenger"]
+  },
+  {
+    "name": "Seraphine",
+    "set": 6,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Socialite", "Innovator"]
+  },
+  {
+    "name": "Shaco",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Syndicate", "Assassin"]
+  },
+  {
+    "name": "Singed",
+    "set": 6,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chemtech", "Innovator"]
+  },
+  {
+    "name": "Sion",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Imperial", "Colossus", "Protector"]
+  },
+  {
+    "name": "Swain",
+    "set": 6,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Imperial", "Arcanist"]
+  },
+  {
+    "name": "TahmKench",
+    "set": 6,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Glutton", "Mercenary", "Bruiser"]
+  },
+  {
+    "name": "Talon",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Imperial", "Assassin"]
+  },
+  {
+    "name": "Taric",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Socialite", "Enchanter"]
+  },
+  {
+    "name": "Tristana",
+    "set": 6,
+    "cost": 2,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Yordle", "Sniper"]
+  },
+  {
+    "name": "Trundle",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Scrap", "Bruiser"]
+  },
+  {
+    "name": "Twisted Fate",
+    "set": 6,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Syndicate", "Arcanist"]
+  },
+  {
+    "name": "Twitch",
+    "set": 6,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Chemtech", "Assassin"]
+  },
+  {
+    "name": "Urgot",
+    "set": 6,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Chemtech", "Twinshot"]
+  },
+  {
+    "name": "Veigar",
+    "set": 6,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Yordle-Lord"]
+  },
+  {
+    "name": "Vex",
+    "set": 6,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Yordle", "Arcanist"]
+  },
+  {
+    "name": "Vi",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Enforcer", "Sister", "Bruiser"]
+  },
+  {
+    "name": "Viktor",
+    "set": 6,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Chemtech", "Arcanist"]
+  },
+  {
+    "name": "Warwick",
+    "set": 6,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chemtech", "Challenger"]
+  },
+  {
+    "name": "Yone",
+    "set": 6,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Academy", "Challenger"]
+  },
+  {
+    "name": "Yuumi",
+    "set": 6,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Academy", "Cuddly", "Scholar"]
+  },
+  {
+    "name": "Zac",
+    "set": 6,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chemtech", "Bruiser"]
+  },
+  {
+    "name": "Ziggs",
+    "set": 6,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Scrap", "Yordle", "Arcanist"]
+  },
+  {
+    "name": "Zilean",
+    "set": 6,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Clockwork", "Innovator"]
+  },
+  {
+    "name": "Zyra",
+    "set": 6,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Syndicate", "Scholar"]
+  },
+  {
+    "name": "Ahri",
+    "set": 6.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Syndicate", "Arcanist"]
+  },
+  {
+    "name": "Alistar",
+    "set": 6.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Hextech", "Colossus"]
+  },
+  {
+    "name": "Ashe",
+    "set": 6.5,
+    "cost": 2,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Syndicate", "Sniper"]
+  },
+  {
+    "name": "Blitzcrank",
+    "set": 6.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["Scrap", "Bodyguard"]
+  },
+  {
+    "name": "Brand",
+    "set": 6.5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Debonair", "Arcanist"]
+  },
+  {
+    "name": "Braum",
+    "set": 6.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Syndicate", "Bodyguard"]
+  },
+  {
+    "name": "Caitlyn",
+    "set": 6.5,
+    "cost": 1,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Enforcer", "Sniper"]
+  },
+  {
+    "name": "Camille",
+    "set": 6.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Clockwork", "Challenger"]
+  },
+  {
+    "name": "Cho`Gath",
+    "set": 6.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mutant", "Bruiser", "Colossus"]
+  },
+  {
+    "name": "Corki",
+    "set": 6.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Yordle", "Twinshot"]
+  },
+  {
+    "name": "Darius",
+    "set": 6.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Syndicate", "Bodyguard"]
+  },
+  {
+    "name": "Draven",
+    "set": 6.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Debonair", "Challenger"]
+  },
+  {
+    "name": "Ekko",
+    "set": 6.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Scrap", "Assassin", "Innovator"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 6.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Scrap", "Innovator"]
+  },
+  {
+    "name": "Galio",
+    "set": 6.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Socialite", "Bodyguard", "Colossus"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 6.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mercenary", "Twinshot"]
+  },
+  {
+    "name": "Gnar",
+    "set": 6.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Socialite", "Yordle", "Striker"]
+  },
+  {
+    "name": "Illaoi",
+    "set": 6.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Mercenary", "Bruiser"]
+  },
+  {
+    "name": "Irelia",
+    "set": 6.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Scrap", "Striker"]
+  },
+  {
+    "name": "JarvanIV",
+    "set": 6.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Hextech", "Striker"]
+  },
+  {
+    "name": "Jayce",
+    "set": 6.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Enforcer", "Innovator", "Transformer"]
+  },
+  {
+    "name": "Jhin",
+    "set": 6.5,
+    "cost": 4,
+    "range": 5,
+    "gender": "Male",
+    "traits": ["Clockwork", "Sniper"]
+  },
+  {
+    "name": "Jinx",
+    "set": 6.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Rival", "Scrap", "Twinshot"]
+  },
+  {
+    "name": "KaiSa",
+    "set": 6.5,
+    "cost": 5,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Mutant", "Challenger"]
+  },
+  {
+    "name": "Kassadin",
+    "set": 6.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mutant", "Scholar"]
+  },
+  {
+    "name": "Khazix",
+    "set": 6.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mutant", "Assassin"]
+  },
+  {
+    "name": "Leona",
+    "set": 6.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Debonair", "Bodyguard"]
+  },
+  {
+    "name": "Lucian",
+    "set": 6.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Hextech", "Twinshot"]
+  },
+  {
+    "name": "Lulu",
+    "set": 6.5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Yordle", "Enchanter"]
+  },
+  {
+    "name": "Malzahar",
+    "set": 6.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Mutant", "Arcanist"]
+  },
+  {
+    "name": "Miss Fortune",
+    "set": 6.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Mercenary", "Sniper"]
+  },
+  {
+    "name": "Morgana",
+    "set": 6.5,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Syndicate", "Enchanter"]
+  },
+  {
+    "name": "Nocturne",
+    "set": 6.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Hextech", "Assassin"]
+  },
+  {
+    "name": "Orianna",
+    "set": 6.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Clockwork", "Enchanter"]
+  },
+  {
+    "name": "Poppy",
+    "set": 6.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Yordle", "Bodyguard"]
+  },
+  {
+    "name": "Quinn",
+    "set": 6.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Mercenary", "Challenger"]
+  },
+  {
+    "name": "RekSai",
+    "set": 6.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Mutant", "Bruiser", "Striker"]
+  },
+  {
+    "name": "Renata Glasc",
+    "set": 6.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Chemtech", "Scholar"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 6.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Enforcer", "Hextech", "Bruiser"]
+  },
+  {
+    "name": "Senna",
+    "set": 6.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Socialite", "Enchanter"]
+  },
+  {
+    "name": "Seraphine",
+    "set": 6.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Socialite", "Innovator"]
+  },
+  {
+    "name": "Silco",
+    "set": 6.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Mastermind", "Scholar"]
+  },
+  {
+    "name": "Singed",
+    "set": 6.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chemtech", "Innovator"]
+  },
+  {
+    "name": "Sivir",
+    "set": 6.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Hextech", "Striker"]
+  },
+  {
+    "name": "Swain",
+    "set": 6.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Hextech", "Arcanist"]
+  },
+  {
+    "name": "Syndra",
+    "set": 6.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Debonair", "Scholar"]
+  },
+  {
+    "name": "Tahm Kench",
+    "set": 6.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Glutton", "Mercenary", "Bruiser"]
+  },
+  {
+    "name": "Talon",
+    "set": 6.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Debonair", "Assassin"]
+  },
+  {
+    "name": "Tryndamere",
+    "set": 6.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chemtech", "Challenger"]
+  },
+  {
+    "name": "Twitch",
+    "set": 6.5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Chemtech", "Assassin"]
+  },
+  {
+    "name": "Veigar",
+    "set": 6.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Yordle-Lord"]
+  },
+  {
+    "name": "Vex",
+    "set": 6.5,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Yordle", "Arcanist"]
+  },
+  {
+    "name": "Vi",
+    "set": 6.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Enforcer", "Rival", "Bruiser"]
+  },
+  {
+    "name": "Viktor",
+    "set": 6.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Chemtech", "Arcanist"]
+  },
+  {
+    "name": "Warwick",
+    "set": 6.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chemtech", "Challenger"]
+  },
+  {
+    "name": "Zac",
+    "set": 6.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Chemtech", "Bruiser"]
+  },
+  {
+    "name": "Zeri",
+    "set": 6.5,
+    "cost": 5,
+    "range": 8,
+    "gender": "Female",
+    "traits": ["Debonair", "Sniper"]
+  },
+  {
+    "name": "Ziggs",
+    "set": 6.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Scrap", "Yordle", "Arcanist"]
+  },
+  {
+    "name": "Zilean",
+    "set": 6.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Clockwork", "Innovator"]
+  },
+  {
+    "name": "Zyra",
+    "set": 6.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Syndicate", "Scholar"]
+  },
+  {
+    "name": "Aatrox",
+    "set": 7,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shimmerscale", "Warrior"]
+  },
+  {
+    "name": "Anivia",
+    "set": 7,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Jade", "Evoker", "Legend"]
+  },
+  {
+    "name": "Ao Shin",
+    "set": 7,
+    "cost": 10,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Tempest", "Dragon"]
+  },
+  {
+    "name": "Ashe",
+    "set": 7,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Jade", "Dragonmancer", "Swiftshot"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 7,
+    "cost": 10,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Astral", "Dragon", "Evoker"]
+  },
+  {
+    "name": "Bard",
+    "set": 7,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Guild", "Bard", "Mystic"]
+  },
+  {
+    "name": "Braum",
+    "set": 7,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Scalescorn", "Guardian"]
+  },
+  {
+    "name": "Corki",
+    "set": 7,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Revel", "Cannoneer"]
+  },
+  {
+    "name": "Daeja",
+    "set": 7,
+    "cost": 8,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Mirage", "Dragon"]
+  },
+  {
+    "name": "Diana",
+    "set": 7,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Scalescorn", "Assassin"]
+  },
+  {
+    "name": "Elise",
+    "set": 7,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Whispers", "Shapeshifter"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 7,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Tempest", "Swiftshot"]
+  },
+  {
+    "name": "Gnar",
+    "set": 7,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Jade", "Shapeshifter"]
+  },
+  {
+    "name": "Hecarim",
+    "set": 7,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ragewing", "Cavalier"]
+  },
+  {
+    "name": "Heimerdinger",
+    "set": 7,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Trainer", "Mage"]
+  },
+  {
+    "name": "Idas",
+    "set": 7,
+    "cost": 8,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Shimmerscale", "Dragon", "Guardian"]
+  },
+  {
+    "name": "Illaoi",
+    "set": 7,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Astral", "Bruiser"]
+  },
+  {
+    "name": "Jinx",
+    "set": 7,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Revel", "Cannoneer"]
+  },
+  {
+    "name": "Karma",
+    "set": 7,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Jade", "Dragonmancer"]
+  },
+  {
+    "name": "Kayn",
+    "set": 7,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ragewing", "Shimmerscale", "Assassin"]
+  },
+  {
+    "name": "Lee Sin",
+    "set": 7,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Tempest", "Dragonmancer"]
+  },
+  {
+    "name": "Leona",
+    "set": 7,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Mirage", "Guardian"]
+  },
+  {
+    "name": "Lillia",
+    "set": 7,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Scalescorn", "Cavalier", "Mage"]
+  },
+  {
+    "name": "Lulu",
+    "set": 7,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Trainer", "Evoker", "Mystic"]
+  },
+  {
+    "name": "Nami",
+    "set": 7,
+    "cost": 2,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Astral", "Mage", "Mystic"]
+  },
+  {
+    "name": "Neeko",
+    "set": 7,
+    "cost": 4,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Jade", "Shapeshifter"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 7,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Astral", "Shapeshifter"]
+  },
+  {
+    "name": "Nunu",
+    "set": 7,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mirage", "Cavalier"]
+  },
+  {
+    "name": "Olaf",
+    "set": 7,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Scalescorn", "Bruiser", "Warrior"]
+  },
+  {
+    "name": "Ornn",
+    "set": 7,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Tempest", "Bruiser", "Legend"]
+  },
+  {
+    "name": "Pyke",
+    "set": 7,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Whispers", "Assassin"]
+  },
+  {
+    "name": "Qiyana",
+    "set": 7,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Tempest", "Assassin"]
+  },
+  {
+    "name": "Ryze",
+    "set": 7,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Guild", "Mage"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 7,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Guild", "Cavalier"]
+  },
+  {
+    "name": "Senna",
+    "set": 7,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Ragewing", "Cannoneer"]
+  },
+  {
+    "name": "Sett",
+    "set": 7,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ragewing", "Dragonmancer"]
+  },
+  {
+    "name": "Shen",
+    "set": 7,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ragewing", "Bruiser", "Warrior"]
+  },
+  {
+    "name": "Shi Oh Yu",
+    "set": 7,
+    "cost": 8,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Jade", "Dragon", "Mystic"]
+  },
+  {
+    "name": "Shyvana",
+    "set": 7,
+    "cost": 10,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ragewing", "Dragon", "Shapeshifter"]
+  },
+  {
+    "name": "Skarner",
+    "set": 7,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Astral", "Bruiser"]
+  },
+  {
+    "name": "Sona",
+    "set": 7,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Revel", "Evoker"]
+  },
+  {
+    "name": "Soraka",
+    "set": 7,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Jade", "Starcaller"]
+  },
+  {
+    "name": "Swain",
+    "set": 7,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Ragewing", "Dragonmancer", "Shapeshifter"]
+  },
+  {
+    "name": "Sy`fen",
+    "set": 7,
+    "cost": 8,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Whispers", "Bruiser", "Dragon"]
+  },
+  {
+    "name": "Sylas",
+    "set": 7,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Whispers", "Bruiser", "Mage"]
+  },
+  {
+    "name": "Tahm Kench",
+    "set": 7,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Revel", "Bruiser"]
+  },
+  {
+    "name": "Talon",
+    "set": 7,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Guild", "Assassin"]
+  },
+  {
+    "name": "Taric",
+    "set": 7,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Jade", "Guardian"]
+  },
+  {
+    "name": "Thresh",
+    "set": 7,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Whispers", "Guardian"]
+  },
+  {
+    "name": "Tristana",
+    "set": 7,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Trainer", "Cannoneer"]
+  },
+  {
+    "name": "Twitch",
+    "set": 7,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Guild", "Swiftshot"]
+  },
+  {
+    "name": "Varus",
+    "set": 7,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Astral", "Swiftshot"]
+  },
+  {
+    "name": "Vladimir",
+    "set": 7,
+    "cost": 1,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Astral", "Mage"]
+  },
+  {
+    "name": "Volibear",
+    "set": 7,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shimmerscale", "Dragonmancer", "Legend"]
+  },
+  {
+    "name": "Xayah",
+    "set": 7,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Ragewing", "Swiftshot"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 7,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mirage", "Dragonmancer", "Warrior"]
+  },
+  {
+    "name": "Yone",
+    "set": 7,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mirage", "Warrior"]
+  },
+  {
+    "name": "Zoe",
+    "set": 7,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Shimmerscale", "Mage", "Spellthief"]
+  },
+  {
+    "name": "Ao Shin",
+    "set": 7.5,
+    "cost": 8,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Tempest", "Dragon"]
+  },
+  {
+    "name": "Aphelios",
+    "set": 7.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Darkflight", "Cannoneer"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 7.5,
+    "cost": 8,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Astral", "Dragon", "Evoker"]
+  },
+  {
+    "name": "Bard",
+    "set": 7.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Guild", "Bard", "Mystic"]
+  },
+  {
+    "name": "Braum",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Scalescorn", "Guardian"]
+  },
+  {
+    "name": "Daeja",
+    "set": 7.5,
+    "cost": 7,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Mirage", "Dragon"]
+  },
+  {
+    "name": "Diana",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Scalescorn", "Assassin"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 7.5,
+    "cost": 1,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Tempest", "Swiftshot"]
+  },
+  {
+    "name": "Gnar",
+    "set": 7.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Jade", "Shapeshifter"]
+  },
+  {
+    "name": "Graves",
+    "set": 7.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Tempest", "Cannoneer"]
+  },
+  {
+    "name": "Hecarim",
+    "set": 7.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ragewing", "Cavalier"]
+  },
+  {
+    "name": "Idas",
+    "set": 7.5,
+    "cost": 7,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shimmerscale", "Dragon", "Guardian"]
+  },
+  {
+    "name": "Jax",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Jade", "Shimmerscale", "Bruiser"]
+  },
+  {
+    "name": "Jayce",
+    "set": 7.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Guild", "Shapeshifter"]
+  },
+  {
+    "name": "Kai`sa",
+    "set": 7.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Lagoon", "Dragonmancer"]
+  },
+  {
+    "name": "Karma",
+    "set": 7.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Jade", "Dragonmancer"]
+  },
+  {
+    "name": "Lee Sin",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Tempest", "Dragonmancer"]
+  },
+  {
+    "name": "Leona",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Mirage", "Guardian"]
+  },
+  {
+    "name": "Lillia",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Scalescorn", "Cavalier", "Mage"]
+  },
+  {
+    "name": "Lux",
+    "set": 7.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Astral", "Mage"]
+  },
+  {
+    "name": "Malphite",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Lagoon", "Bruiser"]
+  },
+  {
+    "name": "Nasus",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shimmerscale", "Guardian"]
+  },
+  {
+    "name": "Nidalee",
+    "set": 7.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Astral", "Shapeshifter"]
+  },
+  {
+    "name": "Nilah",
+    "set": 7.5,
+    "cost": 4,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Lagoon", "Assassin"]
+  },
+  {
+    "name": "Nomsy",
+    "set": 7.5,
+    "cost": 6,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Prodigy", "Dragon"]
+  },
+  {
+    "name": "Nunu",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mirage", "Cavalier"]
+  },
+  {
+    "name": "Olaf",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Scalescorn", "Bruiser", "Warrior"]
+  },
+  {
+    "name": "Pantheon",
+    "set": 7.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Whispers", "Warrior"]
+  },
+  {
+    "name": "Qiyana",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Tempest", "Assassin"]
+  },
+  {
+    "name": "Rakan",
+    "set": 7.5,
+    "cost": 3,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Ragewing", "Guardian", "Mystic"]
+  },
+  {
+    "name": "Rell",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Darkflight", "Cavalier"]
+  },
+  {
+    "name": "Rengar",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Darkflight", "Assassin"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Guild", "Cavalier"]
+  },
+  {
+    "name": "Senna",
+    "set": 7.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Ragewing", "Cannoneer"]
+  },
+  {
+    "name": "Seraphine",
+    "set": 7.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Lagoon", "Evoker", "Mystic"]
+  },
+  {
+    "name": "Sett",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ragewing", "Dragonmancer"]
+  },
+  {
+    "name": "Shi Oh Yu",
+    "set": 7.5,
+    "cost": 7,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Jade", "Dragon", "Mystic"]
+  },
+  {
+    "name": "Shyvana",
+    "set": 7.5,
+    "cost": 8,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ragewing", "Dragon", "Shapeshifter"]
+  },
+  {
+    "name": "Skarner",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Astral", "Bruiser"]
+  },
+  {
+    "name": "Sohm",
+    "set": 7.5,
+    "cost": 7,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Lagoon", "Dragon", "Mage"]
+  },
+  {
+    "name": "Soraka",
+    "set": 7.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Jade", "Starcaller"]
+  },
+  {
+    "name": "Sy`fen",
+    "set": 7.5,
+    "cost": 7,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Whispers", "Bruiser", "Dragon"]
+  },
+  {
+    "name": "Sylas",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Whispers", "Bruiser", "Mage"]
+  },
+  {
+    "name": "Taliyah",
+    "set": 7.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Lagoon", "Mage"]
+  },
+  {
+    "name": "Terra",
+    "set": 7.5,
+    "cost": 8,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["Monolith", "Dragon"]
+  },
+  {
+    "name": "Twitch",
+    "set": 7.5,
+    "cost": 2,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Guild", "Swiftshot"]
+  },
+  {
+    "name": "Tyrant Swain",
+    "set": 7.5,
+    "cost": 7,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Darkflight", "Dragon"]
+  },
+  {
+    "name": "Varus",
+    "set": 7.5,
+    "cost": 3,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Astral", "Swiftshot"]
+  },
+  {
+    "name": "Vladimir",
+    "set": 7.5,
+    "cost": 1,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Astral", "Mage"]
+  },
+  {
+    "name": "Volibear",
+    "set": 7.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shimmerscale", "Dragonmancer"]
+  },
+  {
+    "name": "Wukong",
+    "set": 7.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Jade", "Warrior"]
+  },
+  {
+    "name": "Xayah",
+    "set": 7.5,
+    "cost": 4,
+    "range": 3,
+    "gender": "Female",
+    "traits": ["Ragewing", "Swiftshot"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 7.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mirage", "Dragonmancer", "Warrior"]
+  },
+  {
+    "name": "Yone",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mirage", "Warrior"]
+  },
+  {
+    "name": "Zac",
+    "set": 7.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Lagoon", "Guardian"]
+  },
+  {
+    "name": "Zeri",
+    "set": 7.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Lagoon", "Cannoneer"]
+  },
+  {
+    "name": "Zippy",
+    "set": 7.5,
+    "cost": 6,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Guild", "Dragon"]
+  },
+  {
+    "name": "Zoe",
+    "set": 7.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Shimmerscale", "Mage", "Spell Thief"]
+  },
+  {
+    "name": "Zyra",
+    "set": 7.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Whispers", "Evoker"]
+  },
+  {
+    "name": "Alistar",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ox Force", "Aegis", "Mascot"]
+  },
+  {
+    "name": "Annie",
+    "set": 8,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Gadgeteen", "Ox Force", "Spellslinger"]
+  },
+  {
+    "name": "Aphelios",
+    "set": 8,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Arsenal", "Ox Force", "Sureshot"]
+  },
+  {
+    "name": "Ashe",
+    "set": 8,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["LaserCorps", "Recon"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 8,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "BelVeth",
+    "set": 8,
+    "cost": 4,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Blitzcrank",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["A.D.M.I.N.", "Brawler"]
+  },
+  {
+    "name": "Camille",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["A.D.M.I.N.", "Renegade"]
+  },
+  {
+    "name": "Cho`Gath",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Draven",
+    "set": 8,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Mecha: PRIME", "Ace"]
+  },
+  {
+    "name": "Ekko",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Star Guardian", "Aegis", "Prankster"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 8,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Underground", "Recon"]
+  },
+  {
+    "name": "Fiddlesticks",
+    "set": 8,
+    "cost": 5,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["Threat", "Corrupted"]
+  },
+  {
+    "name": "Fiora",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ox Force", "Duelist"]
+  },
+  {
+    "name": "Galio",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Civilian", "Mascot"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Supers", "Duelist"]
+  },
+  {
+    "name": "Janna",
+    "set": 8,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Civilian", "Forecaster", "Spellslinger"]
+  },
+  {
+    "name": "Jax",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mecha: PRIME", "Brawler"]
+  },
+  {
+    "name": "Jinx",
+    "set": 8,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Anima Squad", "Prankster"]
+  },
+  {
+    "name": "Kai`Sa",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Recon"]
+  },
+  {
+    "name": "Kayle",
+    "set": 8,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Underground", "Duelist"]
+  },
+  {
+    "name": "LeBlanc",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["A.D.M.I.N.", "Hacker", "Spellslinger"]
+  },
+  {
+    "name": "Lee Sin",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Supers", "Brawler", "Heart"]
+  },
+  {
+    "name": "Leona",
+    "set": 8,
+    "cost": 5,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Mecha: PRIME", "Aegis", "Renegade"]
+  },
+  {
+    "name": "Lulu",
+    "set": 8,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Gadgeteen", "Heart"]
+  },
+  {
+    "name": "Lux",
+    "set": 8,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Spellslinger"]
+  },
+  {
+    "name": "Malphite",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Supers", "Mascot"]
+  },
+  {
+    "name": "Miss Fortune",
+    "set": 8,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Anima Squad", "Ace"]
+  },
+  {
+    "name": "Mordekaiser",
+    "set": 8,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["LaserCorps", "Ace"]
+  },
+  {
+    "name": "Nasus",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Anima Squad", "Mascot"]
+  },
+  {
+    "name": "Nilah",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Duelist"]
+  },
+  {
+    "name": "Nunu",
+    "set": 8,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Gadgeteen", "Mascot"]
+  },
+  {
+    "name": "Poppy",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Gadgeteen", "Defender"]
+  },
+  {
+    "name": "Rammus",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Rell",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Defender"]
+  },
+  {
+    "name": "Renekton",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["LaserCorps", "Brawler"]
+  },
+  {
+    "name": "Riven",
+    "set": 8,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Anima Squad", "Brawler", "Defender"]
+  },
+  {
+    "name": "Samira",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Underground", "Ace", "Sureshot"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["LaserCorps", "Brawler"]
+  },
+  {
+    "name": "Senna",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["LaserCorps", "Sureshot"]
+  },
+  {
+    "name": "Sett",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mecha: PRIME", "Defender"]
+  },
+  {
+    "name": "Sivir",
+    "set": 8,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Civilian", "Sureshot"]
+  },
+  {
+    "name": "Sona",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Underground", "Heart", "Spellslinger"]
+  },
+  {
+    "name": "Soraka",
+    "set": 8,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["A.D.M.I.N.", "Heart"]
+  },
+  {
+    "name": "Sylas",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Anima Squad", "Renegade"]
+  },
+  {
+    "name": "Syndra",
+    "set": 8,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Heart"]
+  },
+  {
+    "name": "Taliyah",
+    "set": 8,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Spellslinger"]
+  },
+  {
+    "name": "Talon",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ox Force", "Renegade"]
+  },
+  {
+    "name": "Urgot",
+    "set": 8,
+    "cost": 5,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Vayne",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Anima Squad", "Duelist", "Recon"]
+  },
+  {
+    "name": "Velkoz",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Vi",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Underground", "Aegis", "Brawler"]
+  },
+  {
+    "name": "Viego",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ox Force", "Renegade"]
+  },
+  {
+    "name": "Wukong",
+    "set": 8,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mecha: PRIME", "Defender"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 8,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["LaserCorps", "Duelist"]
+  },
+  {
+    "name": "Yuumi",
+    "set": 8,
+    "cost": 2,
+    "range": 5,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Heart", "Mascot"]
+  },
+  {
+    "name": "Zac",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Zed",
+    "set": 8,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["LaserCorps", "Duelist", "Hacker"]
+  },
+  {
+    "name": "Zoe",
+    "set": 8,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Gadgeteen", "Hacker", "Prankster"]
+  },
+
+  {
+    "name": "Aatrox",
+    "set": 8.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Alistar",
+    "set": 8.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ox Force", "Aegis", "Mascot"]
+  },
+  {
+    "name": "Annie",
+    "set": 8.5,
+    "cost": 2,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Gadgeteen", "Ox Force", "Spellslinger"]
+  },
+  {
+    "name": "Ashe",
+    "set": 8.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["LaserCorps", "Sureshot"]
+  },
+  {
+    "name": "Aurelion Sol",
+    "set": 8.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "BelVeth",
+    "set": 8.5,
+    "cost": 4,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Blitzcrank",
+    "set": 8.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["A.D.M.I.N.", "Brawler"]
+  },
+  {
+    "name": "Camille",
+    "set": 8.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["A.D.M.I.N.", "Renegade"]
+  },
+  {
+    "name": "Draven",
+    "set": 8.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Mecha: PRIME", "Ace"]
+  },
+  {
+    "name": "Ekko",
+    "set": 8.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Star Guardian", "Aegis", "Prankster"]
+  },
+  {
+    "name": "Ezreal",
+    "set": 8.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Underground", "Parallel", "Quickdraw"]
+  },
+  {
+    "name": "Fiddlesticks",
+    "set": 8.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Other",
+    "traits": ["Threat", "Corrupted"]
+  },
+  {
+    "name": "Fiora",
+    "set": 8.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Ox Force", "Duelist"]
+  },
+  {
+    "name": "Gangplank",
+    "set": 8.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Supers", "Duelist"]
+  },
+  {
+    "name": "Garen",
+    "set": 8.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mecha: PRIME", "Defender"]
+  },
+  {
+    "name": "Gnar",
+    "set": 8.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Gadgeteen", "Prankster"]
+  },
+  {
+    "name": "Janna",
+    "set": 8.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Forecaster", "Spellslinger"]
+  },
+  {
+    "name": "Jax",
+    "set": 8.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mecha: PRIME", "Brawler"]
+  },
+  {
+    "name": "Jhin",
+    "set": 8.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Riftwalker", "Renegade"]
+  },
+  {
+    "name": "Jinx",
+    "set": 8.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Anima Squad", "Prankster"]
+  },
+  {
+    "name": "Kai`Sa",
+    "set": 8.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Quickdraw"]
+  },
+  {
+    "name": "Kayle",
+    "set": 8.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Underground", "Duelist"]
+  },
+  {
+    "name": "LeBlanc",
+    "set": 8.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["A.D.M.I.N.", "Hacker", "Spellslinger"]
+  },
+  {
+    "name": "Lee Sin",
+    "set": 8.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Supers", "Brawler", "Heart"]
+  },
+  {
+    "name": "Leona",
+    "set": 8.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Mecha: PRIME", "Aegis", "Renegade"]
+  },
+  {
+    "name": "Lucian",
+    "set": 8.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["InfiniTeam", "Quickdraw", "Renegade"]
+  },
+  {
+    "name": "Lulu",
+    "set": 8.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Gadgeteen", "Heart"]
+  },
+  {
+    "name": "Lux",
+    "set": 8.5,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Spellslinger"]
+  },
+  {
+    "name": "Malphite",
+    "set": 8.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Supers", "Mascot"]
+  },
+  {
+    "name": "Miss Fortune",
+    "set": 8.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Anima Squad", "Ace", "Quickdraw"]
+  },
+  {
+    "name": "Mordekaiser",
+    "set": 8.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["LaserCorps", "Ace"]
+  },
+  {
+    "name": "Morgana",
+    "set": 8.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Nasus",
+    "set": 8.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Anima Squad", "Mascot"]
+  },
+  {
+    "name": "Neeko",
+    "set": 8.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Spellslinger"]
+  },
+  {
+    "name": "Nilah",
+    "set": 8.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Duelist"]
+  },
+  {
+    "name": "Nunu",
+    "set": 8.5,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Gadgeteen", "Mascot"]
+  },
+  {
+    "name": "Pantheon",
+    "set": 8.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["InfiniTeam", "Heart"]
+  },
+  {
+    "name": "Poppy",
+    "set": 8.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Gadgeteen", "Defender"]
+  },
+  {
+    "name": "Pyke",
+    "set": 8.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Riftwalker", "Hacker"]
+  },
+  {
+    "name": "Rammus",
+    "set": 8.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Rell",
+    "set": 8.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Defender"]
+  },
+  {
+    "name": "Renekton",
+    "set": 8.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["LaserCorps", "Brawler"]
+  },
+  {
+    "name": "Riven",
+    "set": 8.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Anima Squad", "Brawler", "Defender"]
+  },
+  {
+    "name": "Samira",
+    "set": 8.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Underground", "Ace", "Sureshot"]
+  },
+  {
+    "name": "Shen",
+    "set": 8.5,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["InfiniTeam", "Defender", "Hacker"]
+  },
+  {
+    "name": "Sivir",
+    "set": 8.5,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["InfiniTeam", "Sureshot"]
+  },
+  {
+    "name": "Sona",
+    "set": 8.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Underground", "Heart", "Spellslinger"]
+  },
+  {
+    "name": "Sylas",
+    "set": 8.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Anima Squad", "Renegade"]
+  },
+  {
+    "name": "Syndra",
+    "set": 8.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Star Guardian", "Heart"]
+  },
+  {
+    "name": "Twisted Fate",
+    "set": 8.5,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["InfiniTeam", "Duelist", "Spellslinger"]
+  },
+  {
+    "name": "Ultimate Ezreal",
+    "set": 8.5,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["InfiniTeam", "Parallel", "Sureshot"]
+  },
+  {
+    "name": "Urgot",
+    "set": 8.5,
+    "cost": 5,
+    "range": 3,
+    "gender": "Male",
+    "traits": ["Threat"]
+  },
+  {
+    "name": "Vayne",
+    "set": 8.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Anima Squad", "Duelist", "Recon"]
+  },
+  {
+    "name": "Vex",
+    "set": 8.5,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Riftwalker", "Mascot"]
+  },
+  {
+    "name": "Vi",
+    "set": 8.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Underground", "Aegis", "Brawler"]
+  },
+  {
+    "name": "Viego",
+    "set": 8.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ox Force", "Renegade"]
+  },
+  {
+    "name": "Warwick",
+    "set": 8.5,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["A.D.M.I.N.", "LaserCorps", "Brawler"]
+  },
+  {
+    "name": "Wukong",
+    "set": 8.5,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Mecha: PRIME", "Defender"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 8.5,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["LaserCorps", "Duelist"]
+  },
+  {
+    "name": "Aatrox",
+    "set": 9,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Darkin", "Juggernaut", "Slayer"]
+  },
+  {
+    "name": "Ahri",
+    "set": 9,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Ionia", "Sorcerer"]
+  },
+  {
+    "name": "Akshan",
+    "set": 9,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Shurima", "Deadeye"]
+  },
+  {
+    "name": "Aphelios",
+    "set": 9,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Targon", "Deadeye"]
+  },
+  {
+    "name": "Ashe",
+    "set": 9,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Freljord", "Deadeye"]
+  },
+  {
+    "name": "Azir",
+    "set": 9,
+    "cost": 4,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Shurima", "Strategist"]
+  },
+  {
+    "name": "BelVeth",
+    "set": 9,
+    "cost": 5,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Void", "Empress"]
+  },
+  {
+    "name": "Cassiopeia",
+    "set": 9,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Noxus", "Shurima", "Invoker"]
+  },
+  {
+    "name": "Cho`Gath",
+    "set": 9,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Void", "Bruiser"]
+  },
+  {
+    "name": "Darius",
+    "set": 9,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Noxus", "Juggernaut"]
+  },
+  {
+    "name": "Ekko",
+    "set": 9,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Piltover", "Zaun", "Rogue"]
+  },
+  {
+    "name": "Galio",
+    "set": 9,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Demacia", "Invoker"]
+  },
+  {
+    "name": "Garen",
+    "set": 9,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Demacia", "Juggernaut"]
+  },
+  {
+    "name": "Gwen",
+    "set": 9,
+    "cost": 4,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Shadow Isles", "Slayer"]
+  },
+  {
+    "name": "Heimerdinger",
+    "set": 9,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Yordle", "Piltover", "Technogenius"]
+  },
+  {
+    "name": "Irelia",
+    "set": 9,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Challenger", "Ionia"]
+  },
+  {
+    "name": "Jarvan IV",
+    "set": 9,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Demacia", "Strategist"]
+  },
+  {
+    "name": "Jayce",
+    "set": 9,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Piltover", "Gunner"]
+  },
+  {
+    "name": "Jhin",
+    "set": 9,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Ionia", "Deadeye"]
+  },
+  {
+    "name": "Jinx",
+    "set": 9,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Zaun", "Gunner"]
+  },
+  {
+    "name": "K`Sante",
+    "set": 9,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shurima", "Bastion"]
+  },
+  {
+    "name": "Kai`Sa",
+    "set": 9,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Void", "Challenger"]
+  },
+  {
+    "name": "Kalista",
+    "set": 9,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Shadow Isles", "Challenger"]
+  },
+  {
+    "name": "Karma",
+    "set": 9,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Ionia", "Invoker"]
+  },
+  {
+    "name": "Kassadin",
+    "set": 9,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Void", "Bastion"]
+  },
+  {
+    "name": "Katarina",
+    "set": 9,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Noxus", "Rogue"]
+  },
+  {
+    "name": "Kayle",
+    "set": 9,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Demacia", "Slayer"]
+  },
+  {
+    "name": "Kled",
+    "set": 9,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Noxus", "Yordle", "Slayer"]
+  },
+  {
+    "name": "Lissandra",
+    "set": 9,
+    "cost": 3,
+    "range": 2,
+    "gender": "Female",
+    "traits": ["Freljord", "Invoker"]
+  },
+  {
+    "name": "Lux",
+    "set": 9,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Demacia", "Sorcerer"]
+  },
+  {
+    "name": "Malzahar",
+    "set": 9,
+    "cost": 1,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Void", "Sorcerer"]
+  },
+  {
+    "name": "Maokai",
+    "set": 9,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shadow Isles", "Bastion"]
+  },
+  {
+    "name": "Nasus",
+    "set": 9,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shurima", "Juggernaut"]
+  },
+  {
+    "name": "Orianna",
+    "set": 9,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Piltover", "Sorcerer"]
+  },
+  {
+    "name": "Poppy",
+    "set": 9,
+    "cost": 1,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Demacia", "Yordle", "Bastion"]
+  },
+  {
+    "name": "Rek`Sai",
+    "set": 9,
+    "cost": 3,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Void", "Bruiser"]
+  },
+  {
+    "name": "Renekton",
+    "set": 9,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shurima", "Bruiser"]
+  },
+  {
+    "name": "Ryze",
+    "set": 9,
+    "cost": 5,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Wanderer", "Invoker"]
+  },
+  {
+    "name": "Samira",
+    "set": 9,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Noxus", "Challenger"]
+  },
+  {
+    "name": "Sejuani",
+    "set": 9,
+    "cost": 4,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Freljord", "Bruiser"]
+  },
+  {
+    "name": "Senna",
+    "set": 9,
+    "cost": 5,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Shadow Isles", "Gunner", "Redeemer"]
+  },
+  {
+    "name": "Sett",
+    "set": 9,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ionia", "Juggernaut"]
+  },
+  {
+    "name": "Shen",
+    "set": 9,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ionia", "Bastion", "Invoker"]
+  },
+  {
+    "name": "Sion",
+    "set": 9,
+    "cost": 5,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Noxus", "Bruiser"]
+  },
+  {
+    "name": "Sona",
+    "set": 9,
+    "cost": 3,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Demacia", "Multicaster"]
+  },
+  {
+    "name": "Soraka",
+    "set": 9,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Targon", "Invoker"]
+  },
+  {
+    "name": "Swain",
+    "set": 9,
+    "cost": 2,
+    "range": 2,
+    "gender": "Male",
+    "traits": ["Noxus", "Sorcerer", "Strategist"]
+  },
+  {
+    "name": "Taliyah",
+    "set": 9,
+    "cost": 2,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Shurima", "Multicaster"]
+  },
+  {
+    "name": "Taric",
+    "set": 9,
+    "cost": 3,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Targon", "Bastion", "Sorcerer"]
+  },
+  {
+    "name": "Teemo",
+    "set": 9,
+    "cost": 2,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Yordle", "Multicaster", "Strategist"]
+  },
+  {
+    "name": "Tristana",
+    "set": 9,
+    "cost": 1,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Yordle", "Gunner"]
+  },
+  {
+    "name": "Urgot",
+    "set": 9,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Zaun", "Deadeye"]
+  },
+  {
+    "name": "Vel`Koz",
+    "set": 9,
+    "cost": 3,
+    "range": 4,
+    "gender": "Male",
+    "traits": ["Void", "Multicaster", "Sorcerer"]
+  },
+  {
+    "name": "Vi",
+    "set": 9,
+    "cost": 2,
+    "range": 1,
+    "gender": "Female",
+    "traits": ["Piltover", "Bruiser"]
+  },
+  {
+    "name": "Viego",
+    "set": 9,
+    "cost": 1,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Shadow Isles", "Rogue"]
+  },
+  {
+    "name": "Warwick",
+    "set": 9,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Zaun", "Challenger", "Juggernaut"]
+  },
+  {
+    "name": "Yasuo",
+    "set": 9,
+    "cost": 4,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ionia", "Challenger"]
+  },
+  {
+    "name": "Zed",
+    "set": 9,
+    "cost": 2,
+    "range": 1,
+    "gender": "Male",
+    "traits": ["Ionia", "Rogue", "Slayer"]
+  },
+  {
+    "name": "Zeri",
+    "set": 9,
+    "cost": 4,
+    "range": 4,
+    "gender": "Female",
+    "traits": ["Zaun", "Gunner"]
+  }
+]
