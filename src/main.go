@@ -14,6 +14,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	controllers.InitCorrectGuessController(mux)
+	controllers.InitChampionGuessController(mux)
 
 	http.ListenAndServe("localhost:8080", mux)
 

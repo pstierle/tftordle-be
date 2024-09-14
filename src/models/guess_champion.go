@@ -3,8 +3,9 @@ package models
 import "tftordle/src/utils"
 
 type GuessChampion struct {
-	ID         string
-	Date       string
-	GuessType  utils.GuessType
-	ChampionId uint8
+	ID         string          `json:"id"`
+	Date       string          `json:"date"`
+	GuessType  utils.GuessType `json:"guessType"`
+	ChampionId string          `json:"championId"`
+	Champion   Champion        `json:"champion"`
 }
