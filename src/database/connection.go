@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"tftordle/src/models"
-	"tftordle/src/respositories"
+	"tftordle/src/repositories"
 	"tftordle/src/utils"
 
 	"database/sql"
@@ -55,7 +55,7 @@ func ImportChampions(db *sql.DB) {
 		os.Exit(1)
 	}
 
-	champions := respositories.FindAllChampions(db)
+	champions := repositories.FindAllChampions(db)
 
 	for _, importChampion := range importChampions {
 		championImported := false
@@ -70,7 +70,7 @@ func ImportChampions(db *sql.DB) {
 			continue
 		}
 
-		respositories.InsertChampionImport(db, importChampion)
+		repositories.InsertChampionImport(db, importChampion)
 
 		fmt.Println("Importet Champion: ", importChampion.Name, importChampion.Set)
 	}
@@ -143,20 +143,20 @@ func Initialize() {
 }
 
 func InitializeGuessChampionSync(db *sql.DB) {
-	SyncGuessChampion(db, "CHAMPION")
-	SyncGuessChampion(db, "TRAIT")
+	SyncGuessChampion(db, utils.CHAMPION)
+	SyncGuessChampion(db, utils.TRAIT)
 
 	c := cron.New()
-	c.AddFunc("@every day", func() { SyncGuessChampion(db, "CHAMPION") })
-	c.AddFunc("@every day", func() { SyncGuessChampion(db, "TRAIT") })
+	c.AddFunc("@every day", func() { SyncGuessChampion(db, utils.CHAMPION) })
+	c.AddFunc("@every day", func() { SyncGuessChampion(db, utils.TRAIT) })
 	c.Start()
 }
 
-func SyncGuessChampion(db *sql.DB, guessType string) {
+func SyncGuessChampion(db *sql.DB, guessType utils.GuessType) {
 	fmt.Println("Checking Guess Champion of Type", guessType)
 
-	respositories.CreateGuessChampionIfNotExists(db, guessType, utils.GuessChampionDateToday())
-	respositories.CreateGuessChampionIfNotExists(db, guessType, utils.GuessChampionDateYesterday())
+	repositories.CreateGuessChampionIfNotExists(db, guessType, utils.GuessChampionDateToday())
+	repositories.CreateGuessChampionIfNotExists(db, guessType, utils.GuessChampionDateYesterday())
 }
 
 func IsFileMigrated(fileName string, db *sql.DB) bool {
