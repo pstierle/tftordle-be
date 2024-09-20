@@ -63,6 +63,8 @@ func InsertChampionImport(db *sql.DB, champion models.ChampionImport) error {
 			return fetchErr
 		}
 
+		var targetTraitId string = trait.ID
+
 		if trait.ID == "" {
 			traitId, insertErr := InsertTrait(db, traitName)
 
@@ -71,10 +73,16 @@ func InsertChampionImport(db *sql.DB, champion models.ChampionImport) error {
 				return insertErr
 			}
 
+			targetTraitId = traitId
+
 			fmt.Println("Importet Trait: ", traitName)
-			InsertChampionTrait(db, championId, traitId)
-		} else {
-			InsertChampionTrait(db, championId, trait.ID)
+		}
+
+		insertErr := InsertChampionTrait(db, championId, targetTraitId)
+
+		if insertErr != nil {
+			fmt.Println("Error inserting champion: ", champion, row.Err())
+			return insertErr
 		}
 	}
 
