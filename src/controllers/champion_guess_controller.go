@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"encoding/json"
 	"net/http"
 	"tftordle/src/database"
 	"tftordle/src/services"
@@ -34,12 +33,5 @@ func GetLastChampionGuess(w http.ResponseWriter, r *http.Request) {
 		utils.UnexpectedError(w, err)
 	}
 
-	response, jsonErr := json.Marshal(guessChampion)
-
-	if jsonErr != nil {
-		utils.UnexpectedError(w, jsonErr)
-		return
-	}
-
-	utils.SendJsonResponse(w, http.StatusOK, response)
+	utils.SendJsonResponse(w, http.StatusOK, guessChampion)
 }

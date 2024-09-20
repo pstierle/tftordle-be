@@ -28,10 +28,5 @@ func SetupControllerRoute(mux *http.ServeMux, method string, controllerPath stri
 func SendJsonResponse(w http.ResponseWriter, status int, response any) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
-
-	err := json.NewEncoder(w).Encode(response)
-
-	if err != nil {
-		UnexpectedError(w, err)
-	}
+	json.NewEncoder(w).Encode(response)
 }
