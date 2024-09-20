@@ -3,6 +3,7 @@ package database
 import (
 	"encoding/json"
 	"fmt"
+	"net/http"
 	"os"
 	"time"
 
@@ -24,18 +25,23 @@ const (
 	dbname   = "postgres"
 )
 
-func OpenConnection() *sql.DB {
+func OpenConnection() (*sql.DB, error) {
 	connectionInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
 		host, port, user, password, dbname)
 
 	db, err := sql.Open("postgres", connectionInfo)
 
+	return db, err
+}
+
+func OpenDatabaseConnectionForHttp(w http.ResponseWriter) *sql.DB {
+	conn, err := OpenConnection()
+
 	if err != nil {
-		fmt.Println("Database Connection failed: ", err)
-		os.Exit(1)
+		utils.UnexpectedError(w, err)
 	}
 
-	return db
+	return conn
 }
 
 func ImportChampions(db *sql.DB) {
@@ -55,7 +61,12 @@ func ImportChampions(db *sql.DB) {
 		os.Exit(1)
 	}
 
-	champions := repositories.FindAllChampions(db)
+	champions, fetchErr := repositories.FindAllChampions(db)
+
+	if fetchErr != nil {
+		fmt.Println("Error fetching champions: ", fetchErr)
+		os.Exit(1)
+	}
 
 	for _, importChampion := range importChampions {
 		championImported := false
@@ -130,7 +141,12 @@ func RunMigrations(db *sql.DB) {
 func Initialize() {
 	fmt.Println("Initializing Database ...")
 
-	db := OpenConnection()
+	db, err := OpenConnection()
+
+	if err != nil {
+		fmt.Println("Failed to Connect to Database: ", err)
+		os.Exit(1)
+	}
 
 	defer db.Close()
 

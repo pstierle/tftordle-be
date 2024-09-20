@@ -3,7 +3,6 @@ package repositories
 import (
 	"database/sql"
 	"fmt"
-	"os"
 	"tftordle/src/models"
 	"tftordle/src/utils"
 )
@@ -33,6 +32,7 @@ func FindGuessChampionByDate(db *sql.DB, date string, guessType utils.GuessType)
 	)
 
 	if err != nil {
+		fmt.Println("Error fetching guess champion", err)
 		return guessChampion, err
 	}
 
@@ -41,29 +41,43 @@ func FindGuessChampionByDate(db *sql.DB, date string, guessType utils.GuessType)
 	return guessChampion, nil
 }
 
-func CreateGuessChampionIfNotExists(db *sql.DB, guessType utils.GuessType, date string) {
+func CreateGuessChampionIfNotExists(db *sql.DB, guessType utils.GuessType, date string) error {
 	row := db.QueryRow("SELECT id FROM guess_champion WHERE guess_type = $1 AND date = $2", guessType, date)
 
 	err := row.Scan()
 
 	if err.Error() == sql.ErrNoRows.Error() {
 		fmt.Println("No Guess Champion found for", guessType, date)
-		InsertGuessChampion(db, guessType, date)
+		insertErr := InsertGuessChampion(db, guessType, date)
+
+		if insertErr != nil {
+			fmt.Println("Error creating guess champion", insertErr)
+			return insertErr
+		}
 	}
+
+	return nil
 }
 
-func InsertGuessChampion(db *sql.DB, guessType utils.GuessType, date string) {
-	championId := RandomChampionId(db)
+func InsertGuessChampion(db *sql.DB, guessType utils.GuessType, date string) error {
+	championId, fetchErr := RandomChampionId(db)
+
+	if fetchErr != nil {
+		fmt.Println("Error fetching random champion id", fetchErr)
+		return fetchErr
+	}
 
 	query := `
 		INSERT INTO guess_champion (date, guess_type, champion_id)
 		VALUES ($1, $2, $3);
 	`
 
-	_, err := db.Exec(query, date, guessType, championId)
+	_, insertErr := db.Exec(query, date, guessType, championId)
 
-	if err != nil {
-		fmt.Println("Error inserting guess champion", err)
-		os.Exit(1)
+	if insertErr != nil {
+		fmt.Println("Error inserting guess champion", insertErr)
+		return insertErr
 	}
+
+	return nil
 }

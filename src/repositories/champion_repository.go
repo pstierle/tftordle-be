@@ -3,16 +3,15 @@ package repositories
 import (
 	"database/sql"
 	"fmt"
-	"os"
 	"tftordle/src/models"
 )
 
-func FindAllChampions(db *sql.DB) []models.Champion {
+func FindAllChampions(db *sql.DB) ([]models.Champion, error) {
 	rows, queryErr := db.Query("SELECT * FROM champion")
 
 	if queryErr != nil {
 		fmt.Println("Error fetching champions: ", queryErr)
-		os.Exit(1)
+		return nil, queryErr
 	}
 
 	defer rows.Close()
@@ -25,16 +24,16 @@ func FindAllChampions(db *sql.DB) []models.Champion {
 
 		if scanErr != nil {
 			fmt.Println("Error scanning trait: ", scanErr)
-			os.Exit(1)
+			return nil, scanErr
 		}
 
 		champions = append(champions, champion)
 	}
 
-	return champions
+	return champions, nil
 }
 
-func InsertChampionImport(db *sql.DB, champion models.ChampionImport) {
+func InsertChampionImport(db *sql.DB, champion models.ChampionImport) error {
 	query := `
 		INSERT INTO champion (name, set, cost, range, gender)
 		VALUES ($1, $2, $3, $4, $5) RETURNING id;
@@ -50,17 +49,28 @@ func InsertChampionImport(db *sql.DB, champion models.ChampionImport) {
 
 	if row.Err() != nil {
 		fmt.Println("Error inserting champion: ", champion, row.Err())
-		os.Exit(1)
+		return row.Err()
 	}
 
 	var championId string
 	row.Scan(&championId)
 
 	for _, traitName := range champion.Traits {
-		trait := FindTraitByName(db, traitName)
+		trait, fetchErr := FindTraitByName(db, traitName)
+
+		if fetchErr != nil {
+			fmt.Println("Error inserting champion: ", champion, row.Err())
+			return fetchErr
+		}
 
 		if trait.ID == "" {
-			traitId := InsertTrait(db, traitName)
+			traitId, insertErr := InsertTrait(db, traitName)
+
+			if insertErr != nil {
+				fmt.Println("Error inserting champion: ", champion, row.Err())
+				return insertErr
+			}
+
 			fmt.Println("Importet Trait: ", traitName)
 			InsertChampionTrait(db, championId, traitId)
 		} else {
@@ -68,9 +78,10 @@ func InsertChampionImport(db *sql.DB, champion models.ChampionImport) {
 		}
 	}
 
+	return nil
 }
 
-func InsertChampionTrait(db *sql.DB, championId string, traitId string) {
+func InsertChampionTrait(db *sql.DB, championId string, traitId string) error {
 	query := `
 		INSERT INTO champion_traits (champion_id, trait_id)
 		VALUES ($1, $2);
@@ -80,11 +91,13 @@ func InsertChampionTrait(db *sql.DB, championId string, traitId string) {
 
 	if err != nil {
 		fmt.Println("Error inserting champion_traits: ", championId, traitId, err)
-		os.Exit(1)
+		return err
 	}
+
+	return nil
 }
 
-func RandomChampionId(db *sql.DB) string {
+func RandomChampionId(db *sql.DB) (string, error) {
 	row := db.QueryRow("SELECT id FROM champion ORDER BY RANDOM() LIMIT 1")
 
 	var championId string
@@ -92,8 +105,8 @@ func RandomChampionId(db *sql.DB) string {
 
 	if err != nil {
 		fmt.Println("Error selecting random champion", err)
-		os.Exit(1)
+		return "", err
 	}
 
-	return championId
+	return championId, nil
 }

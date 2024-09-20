@@ -3,11 +3,10 @@ package repositories
 import (
 	"database/sql"
 	"fmt"
-	"os"
 	"tftordle/src/utils"
 )
 
-func CountCorrectGuessByType(db *sql.DB, guessType utils.GuessType) uint64 {
+func CountCorrectGuessByType(db *sql.DB, guessType utils.GuessType) (uint64, error) {
 	row := db.QueryRow("SELECT COUNT(*) FROM correct_guess WHERE guess_type = $1", guessType)
 
 	var count uint64
@@ -16,8 +15,8 @@ func CountCorrectGuessByType(db *sql.DB, guessType utils.GuessType) uint64 {
 
 	if err != nil {
 		fmt.Println("Error counting CorrectGuess by Type", err)
-		os.Exit(1)
+		return 0, err
 	}
 
-	return count
+	return count, nil
 }

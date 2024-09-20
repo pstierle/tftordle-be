@@ -20,19 +20,19 @@ func InitChampionGuessController(mux *http.ServeMux) {
 }
 
 func GetLastChampionGuess(w http.ResponseWriter, r *http.Request) {
-	db := database.OpenConnection()
+	db := database.OpenDatabaseConnectionForHttp(w)
 	defer db.Close()
 
 	guessChampion, err := services.FindGuessChampionByDate(db, utils.GuessChampionDateYesterday(), utils.CHAMPION)
 
 	if err != nil {
-		http.Error(w, "Cant handle your Request", http.StatusInternalServerError)
+		utils.UnexpectedError(w, err)
 	}
 
 	response, jsonErr := json.Marshal(guessChampion)
 
 	if jsonErr != nil {
-		http.Error(w, "Error creating response", http.StatusInternalServerError)
+		utils.UnexpectedError(w, jsonErr)
 		return
 	}
 
