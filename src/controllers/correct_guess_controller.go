@@ -23,7 +23,12 @@ func CountCorrectGuessByType(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, fmt.Sprintf("Invalid Guess Type provided: '%s'", guessType), http.StatusBadRequest)
 	}
 
-	db := database.OpenDatabaseConnectionForHttp(w)
+	db, dbErr := database.OpenConnection()
+
+	if dbErr != nil {
+		utils.UnexpectedError(w, dbErr)
+	}
+
 	defer db.Close()
 
 	count, err := services.CountCorrectGuessByType(db, utils.GuessType(guessType))

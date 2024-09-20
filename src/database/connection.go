@@ -3,7 +3,6 @@ package database
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
 	"os"
 	"time"
 
@@ -32,16 +31,6 @@ func OpenConnection() (*sql.DB, error) {
 	db, err := sql.Open("postgres", connectionInfo)
 
 	return db, err
-}
-
-func OpenDatabaseConnectionForHttp(w http.ResponseWriter) *sql.DB {
-	conn, err := OpenConnection()
-
-	if err != nil {
-		utils.UnexpectedError(w, err)
-	}
-
-	return conn
 }
 
 func ImportChampions(db *sql.DB) {

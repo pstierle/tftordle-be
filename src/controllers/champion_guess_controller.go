@@ -20,7 +20,12 @@ func InitChampionGuessController(mux *http.ServeMux) {
 }
 
 func GetLastChampionGuess(w http.ResponseWriter, r *http.Request) {
-	db := database.OpenDatabaseConnectionForHttp(w)
+	db, dbErr := database.OpenConnection()
+
+	if dbErr != nil {
+		utils.UnexpectedError(w, dbErr)
+	}
+
 	defer db.Close()
 
 	guessChampion, err := services.FindGuessChampionByDate(db, utils.GuessChampionDateYesterday(), utils.CHAMPION)
