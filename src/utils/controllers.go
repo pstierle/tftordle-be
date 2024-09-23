@@ -18,6 +18,10 @@ func UnexpectedError(w http.ResponseWriter, err error) {
 	http.Error(w, "Unexpected Internal Error", http.StatusInternalServerError)
 }
 
+func BadRequest(w http.ResponseWriter, message string) {
+	http.Error(w, fmt.Sprintf("Bad Request %s", message), http.StatusBadRequest)
+}
+
 func SetupControllerRoute(mux *http.ServeMux, method string, controllerPath string, routePath string, handler func(http.ResponseWriter, *http.Request)) {
 	fullPath := fmt.Sprintf("%s /%s/%s", method, controllerPath, routePath)
 	wrappedHandler := LoggingMiddleware(http.HandlerFunc(handler))

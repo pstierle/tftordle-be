@@ -6,6 +6,7 @@ import (
 
 	"tftordle/src/controllers"
 	"tftordle/src/database"
+	"tftordle/src/utils"
 )
 
 func main() {
@@ -15,8 +16,8 @@ func main() {
 
 	controllers.InitCorrectGuessController(mux)
 	controllers.InitChampionGuessController(mux)
+	controllers.InitChampionController(mux)
 
+	utils.Log(fmt.Sprintf("Server started on Port %s", "8080"))
 	http.ListenAndServe("localhost:8080", mux)
-
-	fmt.Println("Server started")
 }

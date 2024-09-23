@@ -11,7 +11,6 @@ func InitChampionGuessController(mux *http.ServeMux) {
 	utils.SetupControllerRoute(mux, "GET", "champion-guess", "last", GetLastChampionGuess)
 	/*
 		@TODO implement Routes:
-		POST /query-champions
 		GET /stat-clue
 		GET /icon-clue
 		GET /check
@@ -23,6 +22,7 @@ func GetLastChampionGuess(w http.ResponseWriter, r *http.Request) {
 
 	if dbErr != nil {
 		utils.UnexpectedError(w, dbErr)
+		return
 	}
 
 	defer db.Close()
@@ -31,6 +31,7 @@ func GetLastChampionGuess(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		utils.UnexpectedError(w, err)
+		return
 	}
 
 	utils.SendJsonResponse(w, http.StatusOK, guessChampion)

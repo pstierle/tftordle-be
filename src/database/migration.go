@@ -27,7 +27,7 @@ func RunInitSql(db *sql.DB) {
 }
 
 func RunMigrations(db *sql.DB) {
-	fmt.Println("Running Migrations ...")
+	utils.Log("Running Migrations ...")
 
 	migrationsPath := "src/database/migrations"
 

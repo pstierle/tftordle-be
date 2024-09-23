@@ -4,7 +4,57 @@ import (
 	"database/sql"
 	"fmt"
 	"tftordle/src/models"
+	"tftordle/src/models/requests"
 )
+
+func QueryChampions(db *sql.DB, filter requests.QueryRequest) ([]models.Champion, error) {
+	var excludeCondition string
+	var args []interface{}
+
+	query := "SELECT * FROM champion WHERE name LIKE '%' || $1 || '%'"
+
+	args = append(args, filter.Query)
+
+	if len(filter.ExcludeIds) > 0 {
+		excludeCondition = " AND id NOT IN ("
+		for i, id := range filter.ExcludeIds {
+			if i > 0 {
+				excludeCondition += ", "
+			}
+			excludeCondition += fmt.Sprintf("$%d", i+2)
+			args = append(args, id)
+		}
+		excludeCondition += ")"
+		query += excludeCondition
+	}
+
+	query += " ORDER BY name, set LIMIT 20"
+
+	rows, queryErr := db.Query(query, args...)
+
+	if queryErr != nil {
+		fmt.Println("Error quering champions: ", queryErr)
+		return nil, queryErr
+	}
+
+	defer rows.Close()
+
+	var champions []models.Champion
+
+	for rows.Next() {
+		var champion models.Champion
+		scanErr := rows.Scan(&champion.ID, &champion.Name, &champion.Set, &champion.Cost, &champion.Range, &champion.Gender)
+
+		if scanErr != nil {
+			fmt.Println("Error scanning champion: ", scanErr)
+			return nil, scanErr
+		}
+
+		champions = append(champions, champion)
+	}
+
+	return champions, nil
+}
 
 func FindAllChampions(db *sql.DB) ([]models.Champion, error) {
 	rows, queryErr := db.Query("SELECT * FROM champion")
@@ -23,7 +73,7 @@ func FindAllChampions(db *sql.DB) ([]models.Champion, error) {
 		scanErr := rows.Scan(&champion.ID, &champion.Name, &champion.Set, &champion.Cost, &champion.Range, &champion.Gender)
 
 		if scanErr != nil {
-			fmt.Println("Error scanning trait: ", scanErr)
+			fmt.Println("Error scanning champion: ", scanErr)
 			return nil, scanErr
 		}
 
