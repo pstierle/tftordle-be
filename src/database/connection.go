@@ -16,7 +16,7 @@ const (
 	dbname   = "postgres"
 )
 
-func OpenConnection() (*sql.DB, error) {
+func CreateConnection() (*sql.DB, error) {
 	connectionInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
 		host, port, user, password, dbname)
 

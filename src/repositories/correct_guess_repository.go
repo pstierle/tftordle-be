@@ -6,8 +6,12 @@ import (
 	"tftordle/src/utils"
 )
 
-func CountCorrectGuessByType(db *sql.DB, guessType utils.GuessType) (uint64, error) {
-	row := db.QueryRow("SELECT COUNT(*) FROM correct_guess WHERE guess_type = $1", guessType)
+type CorrectGuessRepository struct {
+	Db *sql.DB
+}
+
+func (r *CorrectGuessRepository) CountByType(guessType utils.GuessType) (uint64, error) {
+	row := r.Db.QueryRow("SELECT COUNT(*) FROM correct_guess WHERE guess_type = $1", guessType)
 
 	var count uint64
 

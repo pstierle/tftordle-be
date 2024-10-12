@@ -7,7 +7,11 @@ import (
 	"tftordle/src/models/requests"
 )
 
-func QueryChampions(db *sql.DB, filter requests.QueryRequest) ([]models.Champion, error) {
+type ChampionRepository struct {
+	Db *sql.DB
+}
+
+func (r *ChampionRepository) FindByFilter(filter requests.QueryRequest) ([]models.Champion, error) {
 	var excludeCondition string
 	var args []interface{}
 
@@ -30,7 +34,7 @@ func QueryChampions(db *sql.DB, filter requests.QueryRequest) ([]models.Champion
 
 	query += " ORDER BY name, set LIMIT 20"
 
-	rows, queryErr := db.Query(query, args...)
+	rows, queryErr := r.Db.Query(query, args...)
 
 	if queryErr != nil {
 		fmt.Println("Error quering champions: ", queryErr)

@@ -7,8 +7,12 @@ import (
 	"tftordle/src/utils"
 )
 
-func FindGuessChampionByDate(db *sql.DB, date string, guessType utils.GuessType) (models.GuessChampion, error) {
-	row := db.QueryRow(`
+type GuessChampionRepository struct {
+	Db *sql.DB
+}
+
+func (r *GuessChampionRepository) FindByDateAndGuessType(date string, guessType utils.GuessType) (models.GuessChampion, error) {
+	row := r.Db.QueryRow(`
 	    SELECT gc.id, gc.date, gc.guess_type, gc.champion_id, c.id, c.name, c.set, c.cost, c.range, c.gender 
     	FROM guess_champion gc
     	JOIN champion c ON gc.champion_id = c.id
@@ -41,14 +45,14 @@ func FindGuessChampionByDate(db *sql.DB, date string, guessType utils.GuessType)
 	return guessChampion, nil
 }
 
-func CreateGuessChampionIfNotExists(db *sql.DB, guessType utils.GuessType, date string) error {
-	row := db.QueryRow("SELECT id FROM guess_champion WHERE guess_type = $1 AND date = $2", guessType, date)
+func (r *GuessChampionRepository) CreateIfNotExists(guessType utils.GuessType, date string) error {
+	row := r.Db.QueryRow("SELECT id FROM guess_champion WHERE guess_type = $1 AND date = $2", guessType, date)
 
 	err := row.Scan()
 
 	if err.Error() == sql.ErrNoRows.Error() {
 		fmt.Println("No Guess Champion found for", guessType, date)
-		insertErr := InsertGuessChampion(db, guessType, date)
+		insertErr := r.Create(guessType, date)
 
 		if insertErr != nil {
 			fmt.Println("Error creating guess champion", insertErr)
@@ -59,8 +63,8 @@ func CreateGuessChampionIfNotExists(db *sql.DB, guessType utils.GuessType, date 
 	return nil
 }
 
-func InsertGuessChampion(db *sql.DB, guessType utils.GuessType, date string) error {
-	championId, fetchErr := RandomChampionId(db)
+func (r *GuessChampionRepository) Create(guessType utils.GuessType, date string) error {
+	championId, fetchErr := RandomChampionId(r.Db)
 
 	if fetchErr != nil {
 		fmt.Println("Error fetching random champion id", fetchErr)
@@ -72,7 +76,7 @@ func InsertGuessChampion(db *sql.DB, guessType utils.GuessType, date string) err
 		VALUES ($1, $2, $3);
 	`
 
-	_, insertErr := db.Exec(query, date, guessType, championId)
+	_, insertErr := r.Db.Exec(query, date, guessType, championId)
 
 	if insertErr != nil {
 		fmt.Println("Error inserting guess champion", insertErr)
