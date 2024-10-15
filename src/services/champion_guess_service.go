@@ -9,6 +9,7 @@ import (
 
 type ChampionGuessService struct {
 	ChampionRepository      repositories.ChampionRepository
+	TraitRepository         repositories.TraitRepository
 	GuessChampionRepository repositories.GuessChampionRepository
 	CorrectGuessRepository  repositories.CorrectGuessRepository
 }
@@ -24,7 +25,6 @@ func (s *ChampionGuessService) FindLastGuessChampion() (models.GuessChampion, er
 func (s *ChampionGuessService) FindTodayGuessChampion() (models.GuessChampion, error) {
 	return s.GuessChampionRepository.FindByDateAndGuessType(utils.GuessChampionDateToday(), utils.CHAMPION)
 }
-
 
 func (s *ChampionGuessService) CountCorrectGuess() (uint64, error) {
 	return s.CorrectGuessRepository.CountByType(utils.CHAMPION)

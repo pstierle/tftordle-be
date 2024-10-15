@@ -1,7 +1,6 @@
 package database
 
 import (
-	"database/sql"
 	"encoding/json"
 	"fmt"
 	"os"
@@ -10,7 +9,7 @@ import (
 	"tftordle/src/utils"
 )
 
-func ImportChampions(db *sql.DB) {
+func ImportChampions(cr *repositories.ChampionRepository, tr *repositories.TraitRepository) {
 	championsContent, readErr := utils.ReadFile("src/database/imports/champions.json")
 
 	if readErr != nil {
@@ -27,7 +26,7 @@ func ImportChampions(db *sql.DB) {
 		os.Exit(1)
 	}
 
-	champions, fetchErr := repositories.FindAllChampions(db)
+	champions, fetchErr := cr.FindAllChampions()
 
 	if fetchErr != nil {
 		fmt.Println("Error fetching champions: ", fetchErr)
@@ -47,7 +46,7 @@ func ImportChampions(db *sql.DB) {
 			continue
 		}
 
-		repositories.InsertChampionImport(db, importChampion)
+		cr.InsertChampionImport(importChampion, tr)
 
 		fmt.Println("Importet Champion: ", importChampion.Name, importChampion.Set)
 	}

@@ -60,8 +60,8 @@ func (r *ChampionRepository) FindByFilter(filter requests.QueryRequest) ([]model
 	return champions, nil
 }
 
-func FindAllChampions(db *sql.DB) ([]models.Champion, error) {
-	rows, queryErr := db.Query("SELECT * FROM champion")
+func (r *ChampionRepository) FindAllChampions() ([]models.Champion, error) {
+	rows, queryErr := r.Db.Query("SELECT * FROM champion")
 
 	if queryErr != nil {
 		fmt.Println("Error fetching champions: ", queryErr)
@@ -87,13 +87,13 @@ func FindAllChampions(db *sql.DB) ([]models.Champion, error) {
 	return champions, nil
 }
 
-func InsertChampionImport(db *sql.DB, champion models.ChampionImport) error {
+func (r *ChampionRepository) InsertChampionImport(champion models.ChampionImport, tr *TraitRepository) error {
 	query := `
 		INSERT INTO champion (name, set, cost, range, gender)
 		VALUES ($1, $2, $3, $4, $5) RETURNING id;
 	`
 
-	row := db.QueryRow(query,
+	row := r.Db.QueryRow(query,
 		champion.Name,
 		models.ParseChampionImportSet(champion.Set),
 		champion.Cost,
@@ -110,7 +110,7 @@ func InsertChampionImport(db *sql.DB, champion models.ChampionImport) error {
 	row.Scan(&championId)
 
 	for _, traitName := range champion.Traits {
-		trait, fetchErr := FindTraitByName(db, traitName)
+		trait, fetchErr := tr.FindTraitByName(traitName)
 
 		if fetchErr != nil {
 			fmt.Println("Error inserting champion: ", champion, row.Err())
@@ -120,7 +120,7 @@ func InsertChampionImport(db *sql.DB, champion models.ChampionImport) error {
 		var targetTraitId string = trait.ID
 
 		if trait.ID == "" {
-			traitId, insertErr := InsertTrait(db, traitName)
+			traitId, insertErr := tr.InsertTrait(traitName)
 
 			if insertErr != nil {
 				fmt.Println("Error inserting champion: ", champion, row.Err())
@@ -132,7 +132,7 @@ func InsertChampionImport(db *sql.DB, champion models.ChampionImport) error {
 			fmt.Println("Importet Trait: ", traitName)
 		}
 
-		insertErr := InsertChampionTrait(db, championId, targetTraitId)
+		insertErr := r.InsertChampionTrait(championId, targetTraitId)
 
 		if insertErr != nil {
 			fmt.Println("Error inserting champion: ", champion, row.Err())
@@ -143,13 +143,13 @@ func InsertChampionImport(db *sql.DB, champion models.ChampionImport) error {
 	return nil
 }
 
-func InsertChampionTrait(db *sql.DB, championId string, traitId string) error {
+func (r *ChampionRepository) InsertChampionTrait(championId string, traitId string) error {
 	query := `
 		INSERT INTO champion_traits (champion_id, trait_id)
 		VALUES ($1, $2);
 	`
 
-	_, err := db.Exec(query, championId, traitId)
+	_, err := r.Db.Exec(query, championId, traitId)
 
 	if err != nil {
 		fmt.Println("Error inserting champion_traits: ", championId, traitId, err)
@@ -159,8 +159,8 @@ func InsertChampionTrait(db *sql.DB, championId string, traitId string) error {
 	return nil
 }
 
-func RandomChampionId(db *sql.DB) (string, error) {
-	row := db.QueryRow("SELECT id FROM champion ORDER BY RANDOM() LIMIT 1")
+func (r *ChampionRepository) RandomChampionId() (string, error) {
+	row := r.Db.QueryRow("SELECT id FROM champion ORDER BY RANDOM() LIMIT 1")
 
 	var championId string
 	err := row.Scan(&championId)

@@ -6,8 +6,46 @@ import (
 	"tftordle/src/models"
 )
 
-func FindTraitByName(db *sql.DB, name string) (models.Trait, error) {
-	row := db.QueryRow("SELECT * FROM trait WHERE name = $1", name)
+type TraitRepository struct {
+	Db *sql.DB
+}
+
+func (r *TraitRepository) FindTraitsByChampionId(championId string) ([]models.Trait, error) {
+	query := `
+        SELECT t.id, t.name 
+        FROM trait t
+        JOIN champions_traits ct ON t.id = ct.trait_id
+        WHERE ct.champion_id = $1`
+
+	rows, err := r.Db.Query(query)
+
+	if err != nil {
+		fmt.Println("Error fetching traits: ", err)
+		return nil, err
+	}
+
+	defer rows.Close()
+
+	var traits []models.Trait
+
+	for rows.Next() {
+		var trait models.Trait
+
+		err := rows.Scan(&trait.ID, &trait.ID)
+
+		if err != nil {
+			fmt.Println("Error scanning trait: ", err)
+			return nil, err
+		}
+
+		traits = append(traits, trait)
+	}
+
+	return traits, nil
+}
+
+func (r *TraitRepository) FindTraitByName(name string) (models.Trait, error) {
+	row := r.Db.QueryRow("SELECT * FROM trait WHERE name = $1", name)
 
 	var trait models.Trait
 	err := row.Scan(&trait.ID, &trait.Name)
@@ -20,8 +58,8 @@ func FindTraitByName(db *sql.DB, name string) (models.Trait, error) {
 	return trait, nil
 }
 
-func FindAllTraits(db *sql.DB) ([]models.Trait, error) {
-	rows, queryErr := db.Query("SELECT * FROM trait")
+func (r *TraitRepository) FindAllTraits() ([]models.Trait, error) {
+	rows, queryErr := r.Db.Query("SELECT * FROM trait")
 
 	if queryErr != nil {
 		fmt.Println("Error fetching traits: ", queryErr)
@@ -47,13 +85,13 @@ func FindAllTraits(db *sql.DB) ([]models.Trait, error) {
 	return traits, nil
 }
 
-func InsertTrait(db *sql.DB, traitName string) (string, error) {
+func (r *TraitRepository) InsertTrait(traitName string) (string, error) {
 	query := `
 		INSERT INTO trait (name)
 		VALUES ($1) RETURNING id;
 	`
 
-	row := db.QueryRow(query,
+	row := r.Db.QueryRow(query,
 		traitName,
 	)
 

@@ -8,7 +8,7 @@ import (
 	"tftordle/src/tasks"
 )
 
-func Initialize() (*sql.DB, repositories.ChampionRepository, repositories.GuessChampionRepository, repositories.CorrectGuessRepository) {
+func Initialize() (*sql.DB, repositories.ChampionRepository, repositories.GuessChampionRepository, repositories.CorrectGuessRepository, repositories.TraitRepository) {
 	fmt.Println("Initializing Database ...")
 
 	db, err := CreateConnection()
@@ -30,13 +30,17 @@ func Initialize() (*sql.DB, repositories.ChampionRepository, repositories.GuessC
 		Db: db,
 	}
 
+	traitRepository := repositories.TraitRepository{
+		Db: db,
+	}
+
 	RunInitSql(db)
 	RunMigrations(db)
-	ImportChampions(db)
+	ImportChampions(&championRepository, &traitRepository)
 
-	tasks.StartGuessChampionTask(&guessChampionRepository)
+	tasks.StartGuessChampionTask(&guessChampionRepository, &championRepository)
 
 	fmt.Println("Initialized Database!")
 
-	return db, championRepository, guessChampionRepository, correctGuessRepository
+	return db, championRepository, guessChampionRepository, correctGuessRepository, traitRepository
 }

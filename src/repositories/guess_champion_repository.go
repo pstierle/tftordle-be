@@ -45,32 +45,33 @@ func (r *GuessChampionRepository) FindByDateAndGuessType(date string, guessType 
 	return guessChampion, nil
 }
 
-func (r *GuessChampionRepository) CreateIfNotExists(guessType utils.GuessType, date string) error {
+func (r *GuessChampionRepository) CreateIfNotExists(guessType utils.GuessType, date string, cr *ChampionRepository) error {
 	row := r.Db.QueryRow("SELECT id FROM guess_champion WHERE guess_type = $1 AND date = $2", guessType, date)
 
 	err := row.Scan()
 
 	if err.Error() == sql.ErrNoRows.Error() {
-		fmt.Println("No Guess Champion found for", guessType, date)
-		insertErr := r.Create(guessType, date)
+		championId, err := cr.RandomChampionId()
 
-		if insertErr != nil {
-			fmt.Println("Error creating guess champion", insertErr)
-			return insertErr
+		if err != nil {
+			fmt.Println("Error creating guess champion", err)
+			return err
+		}
+
+		fmt.Println("No Guess Champion found for", guessType, date)
+
+		err = r.Create(guessType, date, championId)
+
+		if err != nil {
+			fmt.Println("Error creating guess champion", err)
+			return err
 		}
 	}
 
 	return nil
 }
 
-func (r *GuessChampionRepository) Create(guessType utils.GuessType, date string) error {
-	championId, fetchErr := RandomChampionId(r.Db)
-
-	if fetchErr != nil {
-		fmt.Println("Error fetching random champion id", fetchErr)
-		return fetchErr
-	}
-
+func (r *GuessChampionRepository) Create(guessType utils.GuessType, date string, championId string) error {
 	query := `
 		INSERT INTO guess_champion (date, guess_type, champion_id)
 		VALUES ($1, $2, $3);
