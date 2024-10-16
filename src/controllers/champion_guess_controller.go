@@ -42,10 +42,23 @@ func GetChampionGuessStatClue(w http.ResponseWriter, r *http.Request, c *Champio
 		utils.UnexpectedError(w, err)
 		return
 	}
+    
+    traits, err := c.ChampionGuessService.TraitRepository.FindTraitsByChampionId(guessChampion.ID)
 
-	utils.SendJsonResponse(w, http.StatusOK, responses.ChampionGuessStatClueResponse{
+	if err != nil {
+		utils.UnexpectedError(w, err)
+		return
+	}  
+    
+    var traitsFirstChars []string
+
+    for _, trait := range traits {
+        traitsFirstChars = append(traitsFirstChars, string(trait.Name[0]))
+    }
+
+    utils.SendJsonResponse(w, http.StatusOK, responses.ChampionGuessStatClueResponse{
 		Set:              guessChampion.Champion.Set,
-		TraitsFirstChars: "todo!!",
+		TraitsFirstChars: traitsFirstChars,
 	})
 }
 
